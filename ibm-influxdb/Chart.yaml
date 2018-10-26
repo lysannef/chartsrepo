@@ -1,0 +1,21 @@
+appVersion: "1.4"
+description: Scalable datastore for metrics, events, and real-time analytics.
+engine: gotpl
+home: https://www.influxdata.com/time-series-platform/influxdb/
+icon: https://github.com/ppc64le/charts/tree/master/logo/influxdb.png
+keywords:
+- influxdb
+- database
+- timeseries
+- Limited
+- ppc64le
+- Tools
+- ICP
+maintainers:
+- email: smohite@us.ibm.com
+  name: IBM ISV Team
+name: ibm-influxdb
+sources:
+- https://github.com/influxdata/influxdb
+tillerVersion: '>=2.7.2'
+version: 0.10.0
