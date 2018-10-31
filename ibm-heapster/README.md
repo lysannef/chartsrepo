@@ -24,7 +24,7 @@ The original work for this helm chart is present @ [Helm Charts Charts]( https:/
 ## QuickStart
 
 ```bash
-$ helm install stable/heapster
+$ helm install stable/ibm-heapster
 ```
 
 ## Installing the Chart
@@ -32,7 +32,7 @@ $ helm install stable/heapster
 To install the chart with the release name `my-release`:
 
 ```bash
-$ helm install --name my-release stable/heapster
+$ helm install --name my-release stable/ibm-heapster
 ```
 
 ## Uninstalling the Chart

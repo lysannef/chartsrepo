@@ -2,6 +2,7 @@ description: MariaDB is developed as open source software and as a relational da
   it provides an SQL interface for accessing data.
 engine: gotpl
 home: https://www.mariadb.org/
+icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/mariadb.png?sanitize=true
 keywords:
 - mariadb
 - mysql

@@ -21,7 +21,7 @@ The chart deploys pods consuming minimum resources as specified in the resources
 To install the chart with the release name `my-release`:
 
 ```bash
-$ helm install stable/kube-state-metrics
+$ helm install stable/ibm-kube-state-metrics
 ```
 
 ## Configuration

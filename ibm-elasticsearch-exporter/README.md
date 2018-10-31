@@ -8,7 +8,7 @@ Learn more: https://github.com/justwatchcom/elasticsearch_exporter
 The original work for this helm chart is present @ [Helm Charts Charts]( https://github.com/helm/charts) Based on the [elasticsearch-exporter]( https://github.com/helm/charts/tree/master/stable/elasticsearch-exporter) chart
 
 ```bash
-$ helm install stable/elasticsearch-exporter
+$ helm install stable/ibm-elasticsearch-exporter
 ```
 
 ## Introduction
@@ -32,7 +32,7 @@ This chart installs Prometheus exporter
 To install the chart with the release name `my-release`:
 
 ```bash
-$ helm install --name my-release stable/elasticsearch-exporter
+$ helm install --name my-release stable/ibm-elasticsearch-exporter
 ```
 
 The command deploys Elasticsearch-Exporter on the Kubernetes cluster using the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -77,14 +77,14 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```bash
 $ helm install --name my-release \
     --set key_1=value_1,key_2=value_2 \
-    stable/elasticsearch-exporter
+    stable/ibm-elasticsearch-exporter
 ```
 
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
 # example for staging
-$ helm install --name my-release -f values.yaml stable/elasticsearch-exporter
+$ helm install --name my-release -f values.yaml stable/ibm-elasticsearch-exporter
 ```
 
 > **Tip**: You can use the default `values.yaml`

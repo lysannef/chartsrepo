@@ -5,7 +5,7 @@
 The original work for this helm chart is present @ [kubernetes Charts](https://github.com/kubernetes/charts/tree/master/stable/memcached) Based on the [memcached](https://github.com/bitnami/charts/tree/master/incubator/memcached) chart from the [Bitnami Charts](https://github.com/bitnami/charts) repository.
 
 ```bash
-$ helm install stable/memcached
+$ helm install stable/ibm-memcached
 ```
 ## Resources Required
 The chart deploys pods consuming minimum resources as specified in the resources configuration parameter (default: Memory: 200Mi, CPU: 100m)
@@ -22,7 +22,7 @@ This chart bootstraps a [Memcached](https://hub.docker.com/_/memcached/) deploym
 To install the chart with the release name `my-release`:
 
 ```bash
-$ helm install --name my-release stable/memcached
+$ helm install --name my-release stable/ibm-memcached
 ```
 
 The command deploys Memcached on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -82,7 +82,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```bash
 $ helm install --name my-release \
   --set memcached.verbosity=v \
-    stable/memcached
+    stable/ibm-memcached
 ```
 
 The above command sets the Memcached verbosity to `v`.
@@ -90,7 +90,7 @@ The above command sets the Memcached verbosity to `v`.
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
-$ helm install --name my-release -f values.yaml stable/memcached
+$ helm install --name my-release -f values.yaml stable/ibm-memcached
 ```
 
 > **Tip**: You can use the default `values.yaml`

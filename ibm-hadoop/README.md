@@ -20,7 +20,7 @@ The chart deploys pods consuming minimum resources as specified in the resources
 To install the chart with the release name `hadoop` that utilizes 50% of the available node resources:
 
 ```
-$ helm install --name hadoop $(stable/hadoop/tools/calc_resources.sh 50) stable/hadoop
+$ helm install --name hadoop $(stable/hadoop/tools/calc_resources.sh 50) stable/ibm-hadoop
 ```
 
 > Note that you need at least 2GB of free memory per NodeManager pod, if your cluster isn't large enough, not all pods will be scheduled.
@@ -37,7 +37,7 @@ $ helm install --name hadoop $(stable/hadoop/tools/calc_resources.sh 50) \
   --set persistence.nameNode.storageClass=standard \
   --set persistence.dataNode.enabled=true \
   --set persistence.dataNode.storageClass=standard \
-  stable/hadoop
+  stable/ibm-hadoop
 ```
 
 > Change the value of `storageClass` to match your volume driver. `standard` works for Google Container Engine clusters.
