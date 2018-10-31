@@ -1,6 +1,6 @@
 # Etcd
 
-[Etcd](https://coreos.com/etcd/)Distributed reliable key-value store for the most critical data of a distributed system.
+[Etcd](https://coreos.com/etcd/) Distributed reliable key-value store for the most critical data of a distributed system.
 
 ```console
 $ helm install stable/ibm-etcd
@@ -62,6 +62,6 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 $ helm install --name my-release -f values.yaml stable/ibm-etcd
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default `values.yaml`
 
 ## Limitations

@@ -1,6 +1,5 @@
-## Introduction
 # MongoDB Helm Chart
-
+## Introduction
 ## Prerequisites
 
 * Kubernetes 1.7+ 

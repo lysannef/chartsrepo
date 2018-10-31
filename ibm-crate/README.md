@@ -1,6 +1,6 @@
 # CrateDB
 
-[CrateDB](https://crate.io/)A distributed SQL DBMS built atop NoSQL storage & indexing delivers the best of SQL & NoSQL in one database. 
+[CrateDB](https://crate.io/) A distributed SQL DBMS built atop NoSQL storage & indexing delivers the best of SQL & NoSQL in one database. 
 
 ```console
 $ helm install stable/ibm-crate
@@ -62,6 +62,6 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 $ helm install --name my-release -f values.yaml stable/ibm-crate
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default `values.yaml`
 
 ## Limitations

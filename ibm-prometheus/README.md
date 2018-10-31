@@ -7,8 +7,6 @@ $ helm install stable/prometheus
 ```
 ## Chart Details
 
-## Introduction
-
 This chart bootstraps a [Prometheus](https://prometheus.io/) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Note 
@@ -27,7 +25,7 @@ The chart deploys pods consuming minimum resources as specified in the resources
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install --name my-release stable/prometheus
+$ helm install --name my-release stable/ibm-prometheus
 ```
 
 The command deploys Prometheus on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -281,14 +279,14 @@ Parameter | Description | Default
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
 ```console
-$ helm install stable/prometheus --name my-release \
+$ helm install stable/ibm-prometheus --name my-release \
     --set server.terminationGracePeriodSeconds=360
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart. For example,
 
 ```console
-$ helm install stable/prometheus --name my-release -f values.yaml
+$ helm install stable/ibm-prometheus --name my-release -f values.yaml
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)

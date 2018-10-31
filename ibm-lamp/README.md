@@ -1,6 +1,5 @@
-## Chart Details
 # LAMP
-
+## Chart Details
 Ever wanted to deploy a [LAMP Stack](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) on Kubernetes?
 
 ```console
@@ -94,7 +93,7 @@ Alternatively, a YAML file that specifies the values for the above parameters ca
 $ helm install --name my-release -f values.yaml stable/lamp
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml) file as a template
+> **Tip**: You can use the default `values.yaml` file as a template
 
 ### Manually preparing the webroot and database
 

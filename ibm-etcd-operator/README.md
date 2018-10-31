@@ -21,7 +21,7 @@ The chart deploys pods consuming minimum resources as specified in the resources
 Deploys etcd cluster on kubernetes cluster
 ## Prerequisites
 
-- Kubernetes 1.4+ with Beta APIs enabled
+- Kubernetes 1.7+ 
 - __Suggested:__ PV provisioner support in the underlying infrastructure to support backups
 
 ## Installing the Chart

@@ -4,7 +4,7 @@
 
 
 ```bash
-$ helm install stable/postgresql
+$ helm install stable/ibm-postgresql
 ```
 
 ## Introduction
@@ -27,7 +27,7 @@ The chart deploys pods consuming minimum resources as specified in the resources
 To install the chart with the release name `my-release`:
 
 ```bash
-$ helm install --name my-release stable/postgresql
+$ helm install --name my-release stable/ibm-postgresql
 ```
 
 The command deploys PostgreSQL on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
@@ -93,7 +93,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 ```bash
 $ helm install --name my-release \
   --set postgresUser=my-user,postgresPassword=secretpassword,postgresDatabase=my-database \
-    stable/postgresql
+    stable/ibm-postgresql
 ```
 
 The above command creates a PostgreSQL user named `my-user` with password `secretpassword`. Additionally it creates a database named `my-database`.
@@ -101,10 +101,10 @@ The above command creates a PostgreSQL user named `my-user` with password `secre
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
-$ helm install --name my-release -f values.yaml stable/postgresql
+$ helm install --name my-release -f values.yaml stable/ibm-postgresql
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default `values.yaml`
 
 ## Persistence
 
@@ -118,7 +118,7 @@ The chart mounts a [Persistent Volume](http://kubernetes.io/docs/user-guide/pers
 1. Create the PersistentVolumeClaim
 1. Install the chart
 ```bash
-$ helm install --set persistence.existingClaim=PVC_NAME postgresql
+$ helm install --set persistence.existingClaim=PVC_NAME ibm-postgresql
 ```
 
 The volume defaults to mount at a subdirectory of the volume instead of the volume root to avoid the volume's hidden directories from interfering with `initdb`.  If you are upgrading this chart from before version `0.4.0`, set `persistence.subPath` to `""`.

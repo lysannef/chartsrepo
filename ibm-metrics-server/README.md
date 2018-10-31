@@ -13,7 +13,8 @@ The chart deploys pods consuming minimum resources as specified in the resources
 The Chart is used to deploy Metrics Server.
 
 ## Prerequisites
--Tiller 2.7.2 or later 
+- Kubernetes 1.7+
+- Tiller 2.7.2 or later 
 
 ## Installing the Chart
 To install the chart

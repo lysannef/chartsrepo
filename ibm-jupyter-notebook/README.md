@@ -1,6 +1,6 @@
 # Jupyter Notebook
 
-[Jupyter Notebook](https://jupyter-notebook.readthedocs.io/)The Jupyter notebook is a web-based notebook environment for interactive computing.
+[Jupyter Notebook](https://jupyter-notebook.readthedocs.io/) The Jupyter notebook is a web-based notebook environment for interactive computing.
 
 ```console
 $ helm install stable/ibm-jupyter-notebook
@@ -62,6 +62,6 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 $ helm install --name my-release -f values.yaml stable/ibm-jupyter-notebook
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default `values.yaml`
 
 ## Limitations

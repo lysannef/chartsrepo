@@ -1,6 +1,6 @@
-## Introduction
 # Chaoskube Helm Chart
 
+## Introduction
 [chaoskube](https://github.com/linki/chaoskube) periodically kills random pods in your Kubernetes cluster.
 
 ## Note 
@@ -16,7 +16,8 @@ The chart deploys pods consuming minimum resources as specified in the resources
 Chaoskube Helm Chart which periodically kills random pods in your Kubernetes cluster.
 
 ## Prerequisites 
--Tiller 2.7.2 or later
+- Kubernetes 1.7+
+- Tiller 2.7.2 or later
  
 ## Installing the Chart
 
@@ -26,7 +27,7 @@ To install the chart with the release name `my-release`:
 $ helm install --name my-release stable/chaoskube
 ```
 
-The command deploys chaoskube on the Kubernetes cluster in the default configuration. The [configuration](#configuration) section lists the parameters that can be configured during installation.
+The command deploys chaoskube on the Kubernetes cluster in the default configuration. The configuration section lists the parameters that can be configured during installation.
 
 ## Uninstalling the Chart
 

@@ -1,6 +1,6 @@
 # Node Exporter
 
-[Node Exporter](https://prometheus.io/)An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
+[Node Exporter](https://prometheus.io/) An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.
 
 ```console
 $ helm install stable/ibm-node-exporter

@@ -34,13 +34,13 @@ The original work for this helm chart is present @ [Helm Charts Charts]( https:/
 * To install the chart with the release name `notebook`:
 
   ```bash
-  $ helm install --name notebook stable/tensorflow-notebook
+  $ helm install --name notebook stable/ibm-tensorflow-notebook
   ```
 
 * To install with custom values via file :
   
   ```
-  $ helm install  --values values.yaml  --name notebook  stable/tensorflow-notebook
+  $ helm install  --values values.yaml  --name notebook  stable/ibm-tensorflow-notebook
   ```
   
   Below is an example of the custom value file values.yaml with GPU support.
@@ -48,7 +48,7 @@ The original work for this helm chart is present @ [Helm Charts Charts]( https:/
   ```
   jupyter:
     image:
-      repository: ibmcom/tensorflow-ppc64le
+      repository: ibmcom/ibm-tensorflow-ppc64le
       tag: 1.3.1-gpu
       pullPolicy: IfNotPresent
     password: tensorflow

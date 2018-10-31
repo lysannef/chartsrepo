@@ -1,6 +1,6 @@
 # Node Red
 
-[Node Red](http://nodered.org/)A visual tool for wiring the Internet of Things.
+[Node Red](http://nodered.org/) A visual tool for wiring the Internet of Things.
 
 ```console
 $ helm install stable/ibm-node-red
@@ -62,6 +62,6 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 $ helm install --name my-release -f values.yaml stable/ibm-node-red
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default `values.yaml`
 
 ## Limitations

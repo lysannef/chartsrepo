@@ -19,6 +19,6 @@ maintainers:
 
 name: ibm-strongloop
 sources:
-- https://github.com/docker-library/memcached
+- https://hub.docker.com/r/ibmcom/strongloop-ppc64le/
 tillerVersion: '>=2.7.2'
 version: 0.1.0

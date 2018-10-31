@@ -6,16 +6,14 @@
 This chart is primarily intended to be used for YARN and MapReduce job execution where HDFS is just used as a means to transport small artifacts within the framework and not for a distributed filesystem. Data should be read from cloud based datastores such as Google Cloud Storage, S3 or Swift.
 
 ## Chart Details
-
-## Note
 The original work for this helm chart is present @ [Helm Charts]( https://github.com/helm/charts) Based on the [hadoop]( https://github.com/helm/charts/tree/master/stable/hadoop) chart
 
 ## Resources Required
 The chart deploys pods consuming minimum resources as specified in the resources configuration parameter (default: Memory: 200Mi, CPU: 100m)
 
 ## Prerequisites
--Kubernetes 1.7+ with Beta APIs enabled
--Tiller 2.7.2 or later
+- Kubernetes 1.7+
+- Tiller 2.7.2 or later
 
 ## Installing the Chart
 

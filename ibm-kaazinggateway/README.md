@@ -24,7 +24,7 @@ This chart bootstraps a [ibm-kaazinggateway](https://hub.docker.com/r/ibmcom/kaa
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install --name my-release stable/ibm-ibm-kaazinggateway
+$ helm install --name my-release stable/ibm-kaazinggateway
 ```
 
 ## Uninstalling the Chart
@@ -62,6 +62,6 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 $ helm install --name my-release -f values.yaml stable/ibm-kaazinggateway
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default `values.yaml`
 
 ## Limitations

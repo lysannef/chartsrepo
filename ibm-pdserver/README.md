@@ -1,6 +1,6 @@
 # Pd Server
 
-[Pd Server](https://github.com/pingcap/pd)PD is the abbreviation for Placement Driver. It is used to manage and schedule the TiKV cluster.
+[Pd Server](https://github.com/pingcap/pd) PD is the abbreviation for Placement Driver. It is used to manage and schedule the TiKV cluster.
 
 ```console
 $ helm install stable/ibm-pdserver
@@ -62,6 +62,6 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 $ helm install --name my-release -f values.yaml stable/ibm-pdserver
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default `values.yaml`
 
 ## Limitations

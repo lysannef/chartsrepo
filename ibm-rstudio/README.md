@@ -1,6 +1,6 @@
 # RStudio
 
-[RStudio](https://www.rstudio.com/products/rstudio/)RStudio is an integrated development environment (IDE) for R
+[RStudio](https://www.rstudio.com/products/rstudio/) RStudio is an integrated development environment (IDE) for R
 
 ```console
 $ helm install stable/ibm-rstudio
@@ -62,6 +62,6 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 $ helm install --name my-release -f values.yaml stable/ibm-rstudio
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default `values.yaml`
 
 ## Limitations

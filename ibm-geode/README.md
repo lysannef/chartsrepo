@@ -1,6 +1,6 @@
 # Geode
 
-[Geode](http://geode.apache.org/)Apache Geode provides a database-like consistency model, reliable transaction processing and a shared-nothing architecture to maintain very low latency performance with high concurrency processing.
+[Geode](http://geode.apache.org/) Apache Geode provides a database-like consistency model, reliable transaction processing and a shared-nothing architecture to maintain very low latency performance with high concurrency processing.
 
 ```console
 $ helm install stable/ibm-geode
@@ -8,7 +8,7 @@ $ helm install stable/ibm-geode
 
 ## Prerequisites
 
-- Kubernetes 1.7+ with Beta APIs enabled
+- Kubernetes 1.7+
 - Tiller 2.7.2 or later
 
 ## Resources Required
@@ -62,6 +62,6 @@ Alternatively, a YAML file that specifies the values for the parameters can be p
 $ helm install --name my-release -f values.yaml stable/ibm-geode
 ```
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default `values.yaml`
 
 ## Limitations
