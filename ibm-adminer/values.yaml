@@ -38,6 +38,9 @@ resources: {}
   #  cpu: 100m
   #  memory: 128Mi
 
+arch:
+  amd64: "2 - No preference"
+  ppc64le: "2 - No preference"
+  s390x: "2 - No preference"
 
-node: "ppc64le"
 tolerations: []

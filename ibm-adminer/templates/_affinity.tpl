@@ -22,16 +22,9 @@
         - key: beta.kubernetes.io/arch
           operator: In
           values:
-          - "{{ .Values.node }}"
+        {{- range $key, $val := .Values.arch }}
+          {{- if gt ($val | trunc 1 | int) 0 }}
+          - {{ $key }}
+          {{- end }}
+        {{- end }}
 {{- end }}
-
-{{- define "nodeAffinityPreferredDuringScheduling" }}
-      preference:
-        matchExpressions:
-        - key: beta.kubernetes.io/arch
-          operator: In
-          values:
-          - "{{ .Values.node }}"
-{{- end }}
-
-
