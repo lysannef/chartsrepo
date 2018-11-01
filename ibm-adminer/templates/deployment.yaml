@@ -40,14 +40,8 @@ spec:
               port: http
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-    {{- with .Values.nodeSelector }}
-      nodeSelector:
-{{ toYaml . | indent 8 }}
-    {{- end }}
-    {{- with .Values.affinity }}
       affinity:
-{{ toYaml . | indent 8 }}
-    {{- end }}
+      {{- include "nodeaffinity" . | indent 6 }}
     {{- with .Values.tolerations }}
       tolerations:
 {{ toYaml . | indent 8 }}
