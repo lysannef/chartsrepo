@@ -41,5 +41,3 @@ resources: {}
 
 node: "ppc64le"
 tolerations: []
-
-affinity: {}

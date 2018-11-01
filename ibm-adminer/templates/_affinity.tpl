@@ -22,7 +22,7 @@
         - key: beta.kubernetes.io/arch
           operator: In
           values:
-          - {{ .Values.node }}
+          - "{{ .Values.node }}"
 {{- end }}
 
 {{- define "nodeAffinityPreferredDuringScheduling" }}
@@ -31,7 +31,7 @@
         - key: beta.kubernetes.io/arch
           operator: In
           values:
-          - {{ .Values.node }}
+          - "{{ .Values.node }}"
 {{- end }}
 
 
