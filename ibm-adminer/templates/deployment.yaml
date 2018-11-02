@@ -40,9 +40,15 @@ spec:
               port: http
           resources:
 {{ toYaml .Values.resources | indent 12 }}
+{{- if .Values.node }}
       affinity:
-      {{- include "nodeaffinity" . | indent 6 }}
-    {{- with .Values.tolerations }}
-      tolerations:
-{{ toYaml . | indent 8 }}
-    {{- end }}
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: beta.kubernetes.io/arch
+                operator: In
+                values:
+                - {{ .Values.node }}
+{{- end }}
+
