@@ -38,15 +38,8 @@ spec:
               port: http
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-    {{- with .Values.nodeSelector }}
-      nodeSelector:
-{{ toYaml . | indent 8 }}
-    {{- end }}
-    {{- with .Values.affinity }}
+    {{- with .Values.node }}
       affinity:
-{{ toYaml . | indent 8 }}
+      {{- include "nodeaffinity" . | indent 6 }}
     {{- end }}
-    {{- with .Values.tolerations }}
-      tolerations:
-{{ toYaml . | indent 8 }}
-    {{- end }}
+

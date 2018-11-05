@@ -43,13 +43,5 @@ spec:
 {{- if .Values.node }}
       affinity:
         {{- include "nodeaffinity" . | indent 6 }}
-#        nodeAffinity:
-#          requiredDuringSchedulingIgnoredDuringExecution:
-#            nodeSelectorTerms:
-#            - matchExpressions:
-#              - key: beta.kubernetes.io/arch
-#                operator: In
-#                values:
-#                - {{ .Values.node }}
 {{- end }}
 
