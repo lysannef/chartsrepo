@@ -38,8 +38,8 @@ spec:
               port: http
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-    {{- with .Values.node }}
+{{- if .Values.node }} 
       affinity:
         {{- include "nodeaffinity" . | indent 6 }}
-    {{- end }}
+{{- end }}
 
