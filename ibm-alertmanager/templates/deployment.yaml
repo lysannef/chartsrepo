@@ -40,6 +40,6 @@ spec:
 {{ toYaml .Values.resources | indent 12 }}
     {{- with .Values.node }}
       affinity:
-      {{- include "nodeaffinity" . | indent 6 }}
+        {{- include "nodeaffinity" . | indent 6 }}
     {{- end }}
 
