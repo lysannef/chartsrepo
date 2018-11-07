@@ -93,7 +93,7 @@ Alternatively, a YAML file that specifies the values for the above parameters ca
 $ helm install --name my-release -f values.yaml stable/ibm-lamp
 ```
 
-> **Tip**: You can use the default `values.yaml` file as a template
+> **Tip**: You can use the default [values.yaml](values.yaml) file as a template
 
 ### Manually preparing the webroot and database
 

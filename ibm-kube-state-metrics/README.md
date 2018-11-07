@@ -1,9 +1,8 @@
 # kube-state-metrics Helm Chart
-
 ## Introduction
+
 ## Note
 The original work for this helm chart is present @ [Helm Charts Charts]( https://github.com/helm/charts) Based on the [kube-state-metrics]( https://github.com/helm/charts/tree/master/stable/kube-state-metrics) chart
-
 
 ## Chart Details
 * Installs the [kube-state-metrics agent](https://github.com/kubernetes/kube-state-metrics).

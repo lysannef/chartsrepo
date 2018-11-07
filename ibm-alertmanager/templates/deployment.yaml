@@ -38,7 +38,11 @@ spec:
               port: http
           resources:
 {{ toYaml .Values.resources | indent 12 }}
-{{- if .Values.node }} 
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+{{- if .Values.node }}
       affinity:
         {{- include "nodeaffinity" . | indent 6 }}
 {{- end }}

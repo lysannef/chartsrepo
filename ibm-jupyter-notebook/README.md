@@ -1,6 +1,6 @@
 # Jupyter Notebook
 
-[Jupyter Notebook](https://jupyter-notebook.readthedocs.io/) The Jupyter notebook is a web-based notebook environment for interactive computing.
+[Jupyter Notebook](https://jupyter-notebook.readthedocs.io/)The Jupyter notebook is a web-based notebook environment for interactive computing.
 
 ```console
 $ helm install stable/ibm-jupyter-notebook

@@ -8,7 +8,7 @@ $ helm install stable/ibm-geode
 
 ## Prerequisites
 
-- Kubernetes 1.7+
+- Kubernetes 1.7+ 
 - Tiller 2.7.2 or later
 
 ## Resources Required

@@ -1,7 +1,7 @@
 node:
    __metadata:
      name: "Node"
-     label: "node"
+     label: "beta.kubernetes.io/arch"
      description: "Node Prefernce"
      type: "string"
      immutable: "false"

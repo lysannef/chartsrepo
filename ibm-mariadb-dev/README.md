@@ -1,5 +1,4 @@
 # MariaDB
-
 ## Chart Details
 [MariaDB](https://www.mariadb.org/) is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL.
 
@@ -91,7 +90,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
-> **Tip**: You can use the default [values.yaml](values.yaml)
+> **Tip**: You can use the default `values.yaml`
 
 ## Architecture
 

@@ -12,15 +12,15 @@ The original work for this helm chart is present @ [Helm Charts]( https://github
 The chart deploys pods consuming minimum resources as specified in the resources configuration parameter (default: Memory: 200Mi, CPU: 100m)
 
 ## Prerequisites
-- Kubernetes 1.7+
-- Tiller 2.7.2 or later
+-Kubernetes 1.7+
+-Tiller 2.7.2 or later
 
 ## Installing the Chart
 
 To install the chart with the release name `hadoop` that utilizes 50% of the available node resources:
 
 ```
-$ helm install --name hadoop $(stable/hadoop/tools/calc_resources.sh 50) stable/ibm-hadoop
+$ helm install --name hadoop $(stable/hadoop/tools/calc_resources.sh 50) stable/hadoop
 ```
 
 > Note that you need at least 2GB of free memory per NodeManager pod, if your cluster isn't large enough, not all pods will be scheduled.

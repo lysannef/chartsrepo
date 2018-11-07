@@ -1,14 +1,64 @@
 apiVersion: v1
 entries:
+  bpstest-orderdemo-db2:
+  - apiVersion: v1
+    created: 2018-11-07T02:06:55.505797088-08:00
+    description: IBM Db2 Developer-C Edition 11.1.2.2 iFix002
+    digest: 8b9654edded80993a32f249fae33e5d09a821b821df8218877d778795ce2c1f6
+    engine: gotpl
+    home: https://www.ibm.com/analytics/us/en/db2/
+    icon: https://na.cumulusrepo.com/assetswithkey/ba5345023eb40c21d01ad81bc927a36f/db2logoicp-01.png/v1
+    keywords:
+    - db2
+    - database
+    - sql
+    maintainers:
+    - name: IBM Analytics
+    name: bpstest-orderdemo-db2
+    sources:
+    - https://github.com/IBM/charts/tree/master/stable
+    tillerVersion: '>=2.4.0'
+    urls:
+    - https://lysannef.github.io/chartsrepo/bpstest-orderdemo-db2-1.1.1.tgz
+    version: 1.1.1
+  bpstest-orderdemo-liberty:
+  - created: 2018-11-07T02:06:55.506418282-08:00
+    description: HELM Chart to deploy the WAS OrderDemo (not including the backend)
+    digest: 65e0b4d34c03a739a074a39486929d9362d403509c5e0d74f8b43aac7abf0b55
+    maintainers:
+    - email: sempleb@us.ibm.com
+      name: Bruce Semple
+    name: bpstest-orderdemo-liberty
+    urls:
+    - https://lysannef.github.io/chartsrepo/bpstest-orderdemo-liberty-0.1.0.tgz
+    version: 0.1.0
+  dai-gpu:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-11-07T02:06:55.507159601-08:00
+    description: DriverlessAI distribution for Kubernetes
+    digest: 981c8a3ca0ee43bb5f516522e019251d246f8299e35f4797e31ade0c54daeeb8
+    icon: http://docs.h2o.ai/driverless-ai/latest-stable/docs/userguide/_static/favicon.ico
+    keywords:
+    - ppc64le
+    - ml
+    - Analytics
+    - Commercial
+    - ICP
+    name: dai-gpu
+    tillerVersion: '>=2.6.0'
+    urls:
+    - https://lysannef.github.io/chartsrepo/dai-gpu-1.1.4.tgz
+    version: 1.1.4
   ibm-adminer:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.476086439-08:00
+    created: 2018-11-07T02:06:55.508096078-08:00
     description: Database management in a single PHP file
-    digest: 0e311f7488fb73f4eb4ce2d1b989e107bb78581bd30d24bab594289a3e73cf4a
+    digest: 92966185457da43b717a834b8a2d308059a6d6f03149e4f345a8806763b4eae9
     engine: gotpl
     home: https://www.adminer.org/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/adminer.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/adminer.png?sanitize=true
     keywords:
     - Database management
     - database
@@ -30,15 +80,15 @@ entries:
   ibm-alertmanager:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.477163132-08:00
+    created: 2018-11-07T02:06:55.51035541-08:00
     description: The Alertmanager handles alerts sent by client applications such
       as the Prometheus server. It takes care of deduplicating, grouping, and routing
       them to the correct receiver integrations such as email, PagerDuty, or OpsGenie.
       It also takes care of silencing and inhibition of alerts.
-    digest: b41d7c931459bcb68554e7f64d5efebddcc2d33ab64751f799657649c6bbc4ce
+    digest: 86e3e630b626238df13ad3a62c2e389dc73e3ec694ca910f1081210478ee9ef6
     engine: gotpl
     home: https://prometheus.io/docs/alerting/alertmanager/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/prometheus-alertmanager.jpg?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/prometheus-alertmanager.jpg?sanitize=true
     keywords:
     - alertmanager
     - prometheus
@@ -59,13 +109,13 @@ entries:
   ibm-cadvisor:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.478172784-08:00
+    created: 2018-11-07T02:06:55.513230816-08:00
     description: Analyzes resource usage and performance characteristics of running
       containers.
-    digest: c8846336764655b820f887c3b65df320c7f4d676b35922515eb22a1122e3422d
+    digest: b8e9e6a4f647c784064daf10c221f332c081d4b772f7c54fd4b0d47233464f70
     engine: gotpl
     home: https://prometheus.io/docs/guides/cadvisor/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/cadvisor.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/cadvisor.png?sanitize=true
     keywords:
     - cadvisor
     - analyser
@@ -86,12 +136,12 @@ entries:
     version: 0.1.0
   ibm-chaoskube:
   - appVersion: 0.8.0
-    created: 2018-11-04T20:48:38.479115155-08:00
+    created: 2018-11-07T02:06:55.515624187-08:00
     description: Chaoskube periodically kills random pods in your Kubernetes cluster.
-    digest: a56a2f70ae1140246152d7b63cf2c5e7cee01123301572a8834ccd642e97469f
+    digest: a4a91077862080b0a63dbb6f21f93f1d0ea397eb3ba1a63496cb82f1484b98fd
     engine: gotpl
     home: https://github.com/linki/chaoskube
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/ibm-default-icon.svg?sanitize=true
+    icon: https://github.com/ppc64le/charts/tree/master/logo/ibm-default-icon.svg?sanitize=true
     keywords:
     - adapter
     - chaoskube
@@ -112,11 +162,11 @@ entries:
   ibm-collectd:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.480049194-08:00
+    created: 2018-11-07T02:06:55.517088061-08:00
     description: Collectd-exporter
-    digest: e0e91a65d22aca1f9b84cc4d1d0ddca52d888745f0803cd9f2a1597543aa5919
+    digest: d7761930a1460483c42b0285070d9ebe76338daacb8826bdcf39a1b5705a4ee1
     engine: gotpl
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/collectd.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/collectd.png?sanitize=true
     keywords:
     - Limited
     - ppc64le
@@ -136,13 +186,13 @@ entries:
   ibm-crate:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.481000116-08:00
+    created: 2018-11-07T02:06:55.518632986-08:00
     description: A distributed SQL DBMS built atop NoSQL storage & indexing delivers
       the best of SQL & NoSQL in one database.
-    digest: 29f7fbbdf2f36b1f036b341d57eed89737a980c17743b4783449a75b306b0f48
+    digest: 79183735dc550ddfecce392e66604bc9a938c01bfdddb533dd3a3a46769c6927
     engine: gotpl
     home: https://crate.io/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/crateDB.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/crateDB.png?sanitize=true
     keywords:
     - crateDB
     - database
@@ -162,11 +212,11 @@ entries:
   ibm-elasticsearch-exporter:
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2018-11-04T20:48:38.481964058-08:00
+    created: 2018-11-07T02:06:55.520193299-08:00
     description: Elasticsearch stats exporter for Prometheus
-    digest: 595e50acccbc8486eacd26126f6d844fe518c89d704c36799b1f1b520ea9d569
+    digest: aba47fa35a3db922696f35fc7b729f58e27e2554ecdaea021bd873cdc5a9b828
     home: https://github.com/justwatchcom/elasticsearch_exporter
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/elasticsearch_exporter.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/elasticsearch_exporter.png?sanitize=true
     keywords:
     - metrics
     - elasticsearch
@@ -189,13 +239,13 @@ entries:
   ibm-etcd:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.48287044-08:00
+    created: 2018-11-07T02:06:55.521901284-08:00
     description: Distributed reliable key-value store for the most critical data of
       a distributed system.
-    digest: 35756bd3614a6c50733606f8f7e584afcc0ff767872bdf93cc46d87cc5de0bf9
+    digest: 5e4c291a6be0ed39549f50aa14583b67b905081869d997e18690bd910dd76e09
     engine: gotpl
     home: https://coreos.com/etcd/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/etcd-horizontal-color.png
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/etcd.png?sanitize=true
     keywords:
     - etcd
     - storage
@@ -216,11 +266,11 @@ entries:
   ibm-etcd-operator:
   - apiVersion: v1
     appVersion: 0.7.0
-    created: 2018-11-04T20:48:38.484218999-08:00
+    created: 2018-11-07T02:06:55.524211153-08:00
     description: CoreOS etcd-operator Helm chart for Kubernetes
-    digest: 3c4e9f318792573c582a47968c1f5b97ac83638d428102ca00ddff2f6417eb4d
+    digest: 28497e438ee886f05833de31b163235b497ba17cde708d0f5baa9c1f66ac88a3
     home: https://github.com/coreos/etcd-operator
-    icon: https://github.com/ppc64le/charts/tree/master/logo/etcd-horizontal-color.png
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/etcd-horizontal-color.png?sanitize=true
     keywords:
     - Limited
     - ppc64le
@@ -240,14 +290,14 @@ entries:
   ibm-geode:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.485166667-08:00
+    created: 2018-11-07T02:06:55.525829505-08:00
     description: Apache Geode provides a database-like consistency model, reliable
       transaction processing and a shared-nothing architecture to maintain very low
       latency performance with high concurrency processing.
-    digest: 1d162e26e5b98297b045f087b9fa6f9489246127daf0c84b9d70c5300387c89a
+    digest: 54cee3f55217be3f606c74114573a363fcb9a9168438b0b4db89eda7a6e7ebfb
     engine: gotpl
     home: http://geode.apache.org/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/geode.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/geode.png?sanitize=true
     keywords:
     - apache
     - geode
@@ -268,11 +318,11 @@ entries:
   ibm-gerrit:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.486281951-08:00
+    created: 2018-11-07T02:06:55.52729284-08:00
     description: Basic gerrit server.
-    digest: 588c14f82e2bb90a8b9e9eab6c1e7d099092c6a51074f9e3939e34392520f1a9
+    digest: 8886af0cb4588ff7ea9fe27f3be9724aa999af400be6197d3180c8c8aa69076e
     engine: gotpl
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/gerrit.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/gerrit.png?sanitize=true
     keywords:
     - gerrit
     - Limited
@@ -293,12 +343,12 @@ entries:
   ibm-glassfish:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.487238383-08:00
+    created: 2018-11-07T02:06:55.528815223-08:00
     description: The Open Source Java EE Reference Implementation
-    digest: d3ad2e31ffd8d6486e88cb4cd1ab5450a4c65702e48a9799e55c1509b5d32695
+    digest: c9a0600b30ef9b5359507217de03be6155690cd037aeaa060f77eb33c2e34aa3
     engine: gotpl
     home: https://javaee.github.io/glassfish/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/glassfish.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/glassfish.png?sanitize=true
     keywords:
     - glassfish
     - deploy
@@ -320,13 +370,13 @@ entries:
   ibm-hadoop:
   - apiVersion: v1
     appVersion: 2.7.3
-    created: 2018-11-04T20:48:38.488784607-08:00
+    created: 2018-11-07T02:06:55.531313143-08:00
     description: The Apache Hadoop software library is a framework that allows for
       the distributed processing of large data sets across clusters of computers using
       simple programming models.
-    digest: 26443018995ae86b48a5692716486b7ce32a74b79bbf4df82e38591d39ec9c2d
+    digest: 2271df87fe61ab9c301a925b58bdead81eea5bc6ac2132aac75bee5cbc2fb7c6
     home: https://hadoop.apache.org/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/hadoop-logo.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/hadoop-logo.png?sanitize=true
     keywords:
     - Limited
     - ppc64le
@@ -346,11 +396,12 @@ entries:
   ibm-heapster:
   - apiVersion: v1
     appVersion: 1.3.0
-    created: 2018-11-04T20:48:38.489848461-08:00
+    created: 2018-11-07T02:06:55.533069393-08:00
     description: Heapster enables Container Cluster Monitoring and Performance Analysis.
-    digest: 476f32fb652c2882f4d0efd57f38856897ce8dc8329cd90ffa7c6e87fca6d389
+    digest: d987cd88c29a088e45ad869d9dc2a7f375fdbcc4aeed9861adc35fbb59af14d6
     engine: gotpl
     home: https://github.com/kubernetes/heapster
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
     keywords:
     - metrics
     - cadvisor
@@ -372,12 +423,12 @@ entries:
     version: 0.2.10
   ibm-influxdb:
   - appVersion: "1.4"
-    created: 2018-11-04T20:48:38.49122479-08:00
+    created: 2018-11-07T02:06:55.53516912-08:00
     description: Scalable datastore for metrics, events, and real-time analytics.
-    digest: a957d02d4efb94cba983cc6e5406f155662a4c274f95fc6fa95f9b1df2c63c78
+    digest: 6683adef7f77e6ce3d9db47db26ef691efcd6c71c4edffad4debd8311f70304f
     engine: gotpl
     home: https://www.influxdata.com/time-series-platform/influxdb/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/influxdb.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/influxdb.png?sanitize=true
     keywords:
     - influxdb
     - database
@@ -399,13 +450,13 @@ entries:
   ibm-jetty:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.492275028-08:00
+    created: 2018-11-07T02:06:55.536773821-08:00
     description: Eclipse Jetty® - Web Container & Clients - supports HTTP/2, HTTP/1.1,
       HTTP/1.0, websocket, servlets, and more
-    digest: 27ab870f5044d3e9aa0715012892b1787b759085bef2a764a96719163d567a11
+    digest: 89ab088fb3b90d3e95f1b7b0307e22d7f69e14322064fc49b9aa13b88a227a8e
     engine: gotpl
     home: https://www.eclipse.org/jetty
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/jetty.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/jetty.png?sanitize=true
     keywords:
     - eclipse
     - jetty
@@ -428,13 +479,13 @@ entries:
   ibm-jupyter-notebook:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.493214061-08:00
+    created: 2018-11-07T02:06:55.542231158-08:00
     description: The Jupyter notebook is a web-based notebook environment for interactive
       computing.
-    digest: ab681a9c31e0fc812b59a154f3e90f8dc30528b819159ef6de3726a3fbc44b99
+    digest: a7474a1966e526f385a90a03f51e716d4a278989bd414e53d52de0e42d6635ee
     engine: gotpl
     home: https://jupyter-notebook.readthedocs.io/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/jupyter-notebook.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/jupyter-notebook.png?sanitize=true
     keywords:
     - jupyter-notebook
     - Limited
@@ -454,13 +505,13 @@ entries:
   ibm-kaazinggateway:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.494192082-08:00
+    created: 2018-11-07T02:06:55.544117073-08:00
     description: The Gateway is a network gateway created to provide a single access
       point for real-time web based protocol elevation that supports load balancing,
       clustering, and security management.
-    digest: cb1ce9612368b0b2cacfa2a2ff372e8ea33d00b212131c767fc0d428fcc8a642
+    digest: 59aded962f4bab4d0beb01316cc52500601bcf653aad6ac256938c58338bf19d
     engine: gotpl
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/kaazing_gateway.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/kaazing_gateway.png?sanitize=true
     keywords:
     - Gateway
     - Limited
@@ -480,12 +531,12 @@ entries:
     version: 0.1.0
   ibm-kibana:
   - appVersion: 6.3.1
-    created: 2018-11-04T20:48:38.495196758-08:00
+    created: 2018-11-07T02:06:55.545082101-08:00
     description: Kibana is an open source data visualization plugin for Elasticsearch
-    digest: 6a09b8505a82fc32dd4038f14e6a51d8a1e3b875c3de815c797a9954913cbd73
+    digest: c4342ecf5f7925f52eb7deeadcfa7c5694ca082fabf46188fecd3b19b1103ccc
     engine: gotpl
     home: https://www.elastic.co/products/kibana
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/kibana.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/kibana.png?sanitize=true
     keywords:
     - elasticsearch
     - kibana
@@ -506,11 +557,11 @@ entries:
   ibm-kube-state-metrics:
   - apiVersion: v1
     appVersion: 1.3.1
-    created: 2018-11-04T20:48:38.497640863-08:00
+    created: 2018-11-07T02:06:55.546021389-08:00
     description: Install kube-state-metrics to generate and expose cluster-level metrics
-    digest: d4a485be69c5cdf798a2b276e2bb0401bf337cd5f56058065f58de9614d73893
+    digest: abded49f9945c3a5e4ecb5fb5361fceb67dda8bac0469146353274136d09731f
     home: https://github.com/kubernetes/kube-state-metrics/
-    icon: https://github.com/ppc64le/charts/tree/master/logo/ibm-default-icon.svg?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
     keywords:
     - metric
     - monitoring
@@ -532,12 +583,12 @@ entries:
   ibm-lamp:
   - apiVersion: v1
     appVersion: "5.7"
-    created: 2018-11-04T20:48:38.504083454-08:00
+    created: 2018-11-07T02:06:55.550175452-08:00
     description: Modular and transparent LAMP stack chart supporting PHP-FPM, Release
       Cloning, LoadBalancer, Ingress, SSL and lots more!
-    digest: 788d771a07586431d4f61b63c9f998fc158936e7ecb6d40bdd5435ec7c9f3df9
+    digest: c7367f613e8ce5601bce3ead5dc102b48a169fb004a2a52c28254dc0ea8f67eb
     home: https://github.com/lead4good/helm-lamp-stack
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/lamp.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/lamp.png?sanitize=true
     keywords:
     - Limited
     - ppc64le
@@ -554,13 +605,13 @@ entries:
     - https://lysannef.github.io/chartsrepo/ibm-lamp-0.1.5.tgz
     version: 0.1.5
   ibm-mariadb-dev:
-  - created: 2018-11-04T20:48:38.52178358-08:00
+  - created: 2018-11-07T02:06:55.57040118-08:00
     description: MariaDB is developed as open source software and as a relational
       database it provides an SQL interface for accessing data.
-    digest: b1174a5f26a0e55054a1e9e48f05508f36ad506e0417295760f29924c509bebb
+    digest: 11c8b185c7b438886fa7622c5c99f5dddd8e244f48f38525bc7aff86b06612c4
     engine: gotpl
     home: https://www.mariadb.org/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/mariadb.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/mariadb.png?sanitize=true
     keywords:
     - mariadb
     - mysql
@@ -580,13 +631,13 @@ entries:
     version: 1.1.2
   ibm-memcached:
   - appVersion: 1.5.6
-    created: 2018-11-04T20:48:38.523246096-08:00
+    created: 2018-11-07T02:06:55.571956755-08:00
     description: Free & open source, high-performance, distributed memory object caching
       system.
-    digest: 99c6573da41a956886ee501728cb4ff2d99a3612a6d4461d9eaf10ef47c07ac5
+    digest: baca9f16cc49454f40d5f707b8923a69e0f2d32143dba6cc2131de98a2810dc9
     engine: gotpl
     home: http://memcached.org/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/memcached.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/memcached.png?sanitize=true
     keywords:
     - memcached
     - cache
@@ -608,14 +659,14 @@ entries:
   ibm-mesos:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.524943313-08:00
+    created: 2018-11-07T02:06:55.573668023-08:00
     description: Apache Mesos abstracts CPU, memory, storage, and other compute resources
       away from machines (physical or virtual), enabling fault-tolerant and elastic
       distributed systems to easily be built and run effectively.
-    digest: 90f7e73e2b8a54eb1400ba3599762e89c64513786c79597db4806cd7a2ec92c1
+    digest: c4fbc7f9ee8cf6b1a9097cd054583ceeaebeff06de8344026135c506ac025e84
     engine: gotpl
     home: http://mesos.apache.org/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/mesos.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/mesos.png?sanitize=true
     keywords:
     - mesos
     - kernel
@@ -636,11 +687,11 @@ entries:
   ibm-metrics-server:
   - apiVersion: v1
     appVersion: 0.2.1
-    created: 2018-11-04T20:48:38.526509632-08:00
+    created: 2018-11-07T02:06:55.575299935-08:00
     description: Metrics Server is a cluster-wide aggregator of resource usage data.
-    digest: fca9600bb3723989371233dfe9657e57d20569bbf43c98ecf6f59ba3ad8aa11b
+    digest: 62a51a4573a9308abf539564601475ba6a9a3f97b848403b4eb1f68a41ac5fa6
     home: https://github.com/kubernetes-incubator/metrics-server
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/ibm-default-icon.svg?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
     keywords:
     - metrics-server
     - Limited
@@ -659,13 +710,13 @@ entries:
     version: 0.0.2
   ibm-mongodb-replicaset:
   - appVersion: "3.6"
-    created: 2018-11-04T20:48:38.5292741-08:00
+    created: 2018-11-07T02:06:55.578311862-08:00
     description: NoSQL document-oriented database that stores JSON-like documents
       with dynamic schemas, simplifying the integration of data in content-driven
       applications.
-    digest: d8079b35b01d0bfe9dc981374b21d71542efd2fb4ffe0a17897887d6a8e09d10
+    digest: cd13dfce2ad4b6377ce9f7df2f4475bf00b13ab1714e8a06b3319a80538627a5
     home: https://github.com/mongodb/mongo
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/mongodb.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/mongodb.png?sanitize=true
     keywords:
     - Limited
     - ppc64le
@@ -685,13 +736,13 @@ entries:
     version: 3.5.6
   ibm-nginx-ingress:
   - appVersion: 0.19.0
-    created: 2018-11-04T20:48:38.531685798-08:00
+    created: 2018-11-07T02:06:55.581343058-08:00
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
-    digest: e516f9d0a66571874e272cb358a5c642cc6e350b7317b370a79a31fa67ade90c
+    digest: 3b4330b4e0ca8f41dfca80ddcb813af8e1eb6dfa47f816fdde2069cbb31912d5
     engine: gotpl
     home: https://github.com/kubernetes/ingress-nginx
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/nginx_ingress.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/nginx_ingress.png?sanitize=true
     keywords:
     - ingress
     - nginx
@@ -712,13 +763,13 @@ entries:
   ibm-node-exporter:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.532642536-08:00
+    created: 2018-11-07T02:06:55.582924077-08:00
     description: Prometheus exporter for hardware and OS metrics exposed by *NIX kernels,
       written in Go with pluggable metric collectors.
-    digest: ed0e741520604664a7c024c3dc963a042bc0696bab931034edf5c778f93d4f38
+    digest: 5659661910803f919d682448d7ad5ee171f38ef28c610a101e22ee32a2a7cc35
     engine: gotpl
     home: https://prometheus.io/
-    icon: https://github.com/ppc64le/charts/tree/master/logo/ibm-default-icon.svg
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
     keywords:
     - node-exporter
     - prometheus
@@ -739,12 +790,12 @@ entries:
   ibm-node-red:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.53628493-08:00
+    created: 2018-11-07T02:06:55.584428755-08:00
     description: A visual tool for wiring the Internet of Things system.
-    digest: 7dea095722dc883180a2259036566541cc38682bb32e558c31e1efa7d7e29fa0
+    digest: 6613edcf39488e5219b3457e8152b82da2762d8af24635293e3fda4850924411
     engine: gotpl
     home: http://nodered.org/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/node-red.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/node-red.png?sanitize=true
     keywords:
     - node-red
     - IOT
@@ -766,12 +817,12 @@ entries:
   ibm-open-liberty:
   - apiVersion: "1"
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.537517286-08:00
+    created: 2018-11-07T02:06:55.585944954-08:00
     description: Open Liberty is a highly composable, fast to start, dynamic application
       server runtime environment.
-    digest: 39acf8fa11d13650e83faf95dd9e0a41a7dbf64282a910affc49155e6012b7d8
+    digest: a4b9a05e659866ede8df2e3a1e9f763320e5a2b673023e4398abea2fe1dcb8fb
     home: https://openliberty.io/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/open-liberty.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/open-liberty.png?sanitize=true
     keywords:
     - server
     - runtime
@@ -790,12 +841,12 @@ entries:
     version: 0.1.0
   ibm-openldap:
   - appVersion: 2.4.44
-    created: 2018-11-04T20:48:38.539012846-08:00
+    created: 2018-11-07T02:06:55.587744543-08:00
     description: Community developed LDAP software
-    digest: 61a1571c5800f92f33ad19348ddccf34523f4cdf9284796328a1ab03ae64515b
+    digest: 0dc9d62a3e265736d490c92767069c16bc1ace41abeac38befd56ee6063165bd
     engine: gotpl
     home: https://www.openldap.org
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/OpenLDAP.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/OpenLDAP.png?sanitize=true
     keywords:
     - ldap
     - openldap
@@ -816,13 +867,13 @@ entries:
   ibm-orientdb:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.539922869-08:00
+    created: 2018-11-07T02:06:55.58940989-08:00
     description: OrientDB is the most versatile DBMS supporting Graph, Document, Reactive,
       Full-Text, Geospatial and Key-Value models in one Multi-Model product.
-    digest: dce557ada9147e32f6c37f187ca12ed48d959ec8804d4efb787ea209eb49692b
+    digest: a984dea6701a384154403d50b7848d224991ede4d9d2f26d8f55673c0309f183
     engine: gotpl
     home: http://orientdb.com/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/Orientdb.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/Orientdb.png?sanitize=true
     keywords:
     - orientdb
     - DBMS
@@ -843,12 +894,12 @@ entries:
   ibm-pdserver:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.540877621-08:00
+    created: 2018-11-07T02:06:55.590895888-08:00
     description: Placement driver for TiKV.
-    digest: 008755ed6b96c725a368d67af27c9ec615d26dca4b3c4654fa067de2ab3ad773
+    digest: 739bf36718318bc6a88afae4daa8e8cd952177aaeee41c9081b799cd0212cdef
     engine: gotpl
     home: https://github.com/pingcap/pd
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/ibm-default-icon.svg?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
     keywords:
     - placement
     - driver
@@ -868,10 +919,10 @@ entries:
     version: 0.1.0
   ibm-postgresql:
   - appVersion: 9.6.2
-    created: 2018-11-04T20:48:38.542030699-08:00
+    created: 2018-11-07T02:06:55.592913778-08:00
     description: Object-relational database management system (ORDBMS) with an emphasis
       on extensibility and on standards-compliance.
-    digest: 8119e445495e0cafe1e1099abd3fd4b6b093e7ea9eb9e8d8877a7848e4255beb
+    digest: 242911a9894ae214a7f6452344ab63a8296dab835b2c26026d2ca8959a5bf9e0
     engine: gotpl
     home: https://www.postgresql.org/
     icon: https://www.postgresql.org/media/img/about/press/elephant.png
@@ -897,9 +948,9 @@ entries:
     version: 0.11.0
   ibm-prometheus:
   - appVersion: 2.3.2
-    created: 2018-11-04T20:48:38.544146091-08:00
+    created: 2018-11-07T02:06:55.596742899-08:00
     description: Prometheus is a monitoring system and time series database.
-    digest: 64d352d0de409e2ab67b6945851e295c807bb5108083b229e9f35330d2321d63
+    digest: 4c6d731e7229218add14ee378400f8b815e0eac1e62cb28eff26973c78f3052c
     engine: gotpl
     home: https://prometheus.io/
     icon: https://raw.githubusercontent.com/prometheus/prometheus.github.io/master/assets/prometheus_logo-cb55bb5c346.png
@@ -927,11 +978,11 @@ entries:
     version: 7.0.0
   ibm-prometheus-adapter:
   - appVersion: 0.2.1
-    created: 2018-11-04T20:48:38.545251043-08:00
+    created: 2018-11-07T02:06:55.598634463-08:00
     description: A Helm chart for k8s prometheus adapter
-    digest: fbbb7f17dc065643827b32f4243d36638bd198d5f54a38eeda687b14b4497e18
+    digest: 8ec9230ef26e3827e2cd2fe264aabf6a71cd2d5beea68a17cc7d900e8cdaa344
     home: https://github.com/DirectXMan12/k8s-prometheus-adapter
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/ibm-default-icon.svg?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
     keywords:
     - hpa
     - prometheus
@@ -954,11 +1005,11 @@ entries:
   ibm-prometheus-pushgateway:
   - apiVersion: v1
     appVersion: 0.4.0
-    created: 2018-11-04T20:48:38.546189676-08:00
+    created: 2018-11-07T02:06:55.600368508-08:00
     description: A Helm chart for prometheus pushgateway
-    digest: cfe8d07583bf06c565a0e90ac53ca6f59c19449541cfa949b5cafa60bb15aef8
+    digest: 6c788ba263c18ae99510caec19b7fbb56f05db44888f37f8662d16c6f9a70b8f
     home: https://github.com/prometheus/pushgateway
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/ibm-default-icon.svg?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
     keywords:
     - pushgateway
     - prometheus
@@ -980,12 +1031,12 @@ entries:
   ibm-rabbitmq-ha:
   - apiVersion: v1
     appVersion: 3.7.4
-    created: 2018-11-04T20:48:38.547824808-08:00
+    created: 2018-11-07T02:06:55.603057919-08:00
     description: Highly available RabbitMQ cluster, the open source message broker
       software that implements the Advanced Message Queuing Protocol (AMQP).
-    digest: c359ca1519c20bb520d859fc1343e6e968ffa33e47518e3ec85ed3cac3b65b08
+    digest: b4b18a6f4773c8a381dae6f38214d30484c13a650c8ae0c378cb10fff7e55a02
     home: https://www.rabbitmq.com
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/rabbitmq.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/rabbitmq.png?sanitize=true
     keywords:
     - rabbitmq
     - message queue
@@ -1010,12 +1061,12 @@ entries:
     version: 1.6.3
   ibm-redis-ha:
   - appVersion: 4.0.8-r0
-    created: 2018-11-04T20:48:38.548901939-08:00
+    created: 2018-11-07T02:06:55.604770938-08:00
     description: Highly available Redis cluster with multiple sentinels and standbys.
-    digest: c10993937e5e8629cfd9cf6e813c4c0c502664771e6f377a6eaf3e3550ad7047
+    digest: e4baa1a12d4f5cf0279f5d515d96f241027917aeef16d32016a25318db9d4aa6
     engine: gotpl
     home: http://redis.io/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/redis.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/redis.png?sanitize=true
     keywords:
     - redis
     - keyvalue
@@ -1038,14 +1089,14 @@ entries:
   ibm-rethinkdb:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.549792085-08:00
+    created: 2018-11-07T02:06:55.605988731-08:00
     description: RethinkDB is an open-source scalable database built for realtime
       applications. It exposes a new database access model -- instead of polling for
       changes, the developer can tell the database to continuously push updated query
       results to applications in realtime. RebirthDB allows developers to build scalable
-      realtime apps in a fraction of the time with less effort.
-    digest: 0b86a71a44a98c4ad58fb6977649153396598b37cd97a583157fbb09c9a131ed
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/rethinkdb.svg?sanitize=true
+      realtime apps in a fraction of the time with less effort
+    digest: fc6fcd691f12374034ff7b1c139e30fb7ad076cd625a79e7a19abce4085ae9fa
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/rethinkdb.svg?sanitize=true
     keywords:
     - Limited
     - ppc64le
@@ -1057,8 +1108,6 @@ entries:
     - email: smohite@us.ibm.com
       name: IBM ISV Team
     name: ibm-rethinkdb
-    sources:
-    - https://github.com/rethinkdb/rethinkdb
     tillerVersion: '>=2.7.2'
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-rethinkdb-0.1.0.tgz
@@ -1066,12 +1115,12 @@ entries:
   ibm-rstudio:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.550749884-08:00
+    created: 2018-11-07T02:06:55.607105742-08:00
     description: RStudio is an integrated development environment (IDE) for R
-    digest: 6a9fe92b93e0015441ff9217fc82477bac3d216ce71864e19e31fbc2a302fd69
+    digest: 16876b327bd95c6f01e34f3d660a4f87f766048f04037783433db3470dfb9e27
     engine: gotpl
     home: https://www.rstudio.com/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/rstudio.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/rstudio.png?sanitize=true
     keywords:
     - rstudio
     - R
@@ -1092,12 +1141,12 @@ entries:
   ibm-strongloop:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.551626996-08:00
+    created: 2018-11-07T02:06:55.608116302-08:00
     description: Open-source solutions for the API developer community
-    digest: c8179e12a7438ecd95baddfb1e7fe6bc850fad3b4ff30177f59f61e6dc5dfb33
+    digest: 81dbe61493794602524b6b8c587b96eab2ac88114fab9d8c73b30bb71d489b70
     engine: gotpl
     home: https://strongloop.com/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/strongloop.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/strongloop.png?sanitize=true
     keywords:
     - strongloop
     - IBM
@@ -1117,14 +1166,14 @@ entries:
     version: 0.1.0
   ibm-telegraf:
   - appVersion: "1.5"
-    created: 2018-11-04T20:48:38.55279154-08:00
+    created: 2018-11-07T02:06:55.609459264-08:00
     deprecated: true
     description: Telegraf is an agent written in Go for collecting, processing, aggregating,
       and writing metrics.
-    digest: 87b33a8f2d91a90d25d482ce7567bbfc1076d0f1ee3daf5a93e962c97336d7dc
+    digest: ae8939ada3c9b8053e25cb3cb875b24a4111f517f1ee0a63632f0fae8c791482
     engine: gotpl
     home: https://www.influxdata.com/time-series-platform/telegraf/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/telegraf.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/telegraf.png?sanitize=true
     keywords:
     - telegraf
     - collector
@@ -1145,11 +1194,11 @@ entries:
   ibm-tensorflow-notebook:
   - apiVersion: v1
     appVersion: 1.6.0
-    created: 2018-11-04T20:48:38.553629831-08:00
+    created: 2018-11-07T02:06:55.614232148-08:00
     description: A Helm chart for tensorflow notebook and tensorboard
-    digest: 0904a1c22a4fa33ca054800ab33e66fa44c1f419ba728a7ef62633bad3c2fcfc
+    digest: 07c2627ecae5227a046a55ec3ca6fd47c2fb2f0cb4227ffdd9e2b9399e8f489f
     home: https://www.tensorflow.org
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/tensorflow-notebook.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/tensorflow-notebook.png?sanitize=true
     keywords:
     - tenserflow
     - adapter
@@ -1171,11 +1220,11 @@ entries:
   ibm-tidb:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.554487266-08:00
+    created: 2018-11-07T02:06:55.615131054-08:00
     description: TiDB is a distributed NewSQL database compatible with MySQL protocol
-    digest: b14eca816f479974e27da0eb75b59d19c95ac49aff847f8dbefa5f91c7a4fe40
+    digest: 051bdc2748d6bba5942734ad831053d66de95a4e644df6db371409e7609c87b3
     engine: gotpl
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/tidb.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/tidb.png?sanitize=true
     keywords:
     - TiDB
     - database
@@ -1198,13 +1247,13 @@ entries:
   ibm-tomcat:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.555322604-08:00
+    created: 2018-11-07T02:06:55.616127635-08:00
     description: Apache Tomcat, often referred to as Tomcat Server, is an open-source
       Java Servlet Container
-    digest: 617847fb3d0b551b02b8e63ab7b46c98e7914486967913ac8ed454da6e8c20b4
+    digest: 75764d55d5debe0faf10b9e48b095c1bd12999fc7f56a994e93389f69607c2c6
     engine: gotpl
     home: http://tomcat.apache.org/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/tomcat.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/tomcat.png?sanitize=true
     keywords:
     - apache
     - tomcat
@@ -1229,15 +1278,15 @@ entries:
   ibm-tomee:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-04T20:48:38.556196745-08:00
+    created: 2018-11-07T02:06:55.617017176-08:00
     description: Apache TomEE, pronounced "Tommy", is an all-Apache Java EE Web Profile
       certified stack where Apache Tomcat is top dog. Apache TomEE is assembled from
       a vanilla Apache Tomcat zip file. We start with Apache Tomcat, add our jars
       and zip up the rest. The result is Tomcat with added EE features - TomEE
-    digest: 50b80fee603fa708100c345320bb36b32340ca6b3c720adc46895fa0d5974afd
+    digest: b2077be092d85c2fd5cbdd6077b2f691d02aefef531499bc0c308502915412b5
     engine: gotpl
     home: http://tomee.apache.org/
-    icon: https://raw.githubusercontent.com/lysannef/chartsrepo/master/logo/tomee.png?sanitize=true
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/tomee.png?sanitize=true
     keywords:
     - tomee
     - apache
@@ -1256,4 +1305,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-tomee-0.1.0.tgz
     version: 0.1.0
-generated: 2018-11-04T20:48:38.474818549-08:00
+generated: 2018-11-07T02:06:55.494225823-08:00
