@@ -59,6 +59,3 @@ spec:
       affinity:
         {{- include "nodeaffinity" . | indent 6 }}
 {{- end }}
-
-{{- end }}
-
