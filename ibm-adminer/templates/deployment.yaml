@@ -44,12 +44,8 @@ spec:
       tolerations:
 {{ toYaml . | indent 8 }}
     {{- end }}
-#{{- if .Values.node }}
-#      affinity:
-#        {{- include "nodeaffinity" . | indent 6 }}
-#{{- end }}
-    {{- with .Values.affinity }}
+{{- if .Values.node }}
       affinity:
-{{ toYaml . | indent 8 }}
-    {{- end }}
+        {{- include "nodeaffinity" . | indent 6 }}
+{{- end }}
 

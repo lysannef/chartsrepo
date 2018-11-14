@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   bpstest-orderdemo-db2:
   - apiVersion: v1
-    created: 2018-11-13T22:50:59.391704918-08:00
+    created: 2018-11-08T04:25:14.124587789-08:00
     description: IBM Db2 Developer-C Edition 11.1.2.2 iFix002
     digest: 8b9654edded80993a32f249fae33e5d09a821b821df8218877d778795ce2c1f6
     engine: gotpl
@@ -19,10 +19,10 @@ entries:
     - https://github.com/IBM/charts/tree/master/stable
     tillerVersion: '>=2.4.0'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/bpstest-orderdemo-db2-1.1.1.tgz
+    - https://lysannef.github.io/chartsrepo/bpstest-orderdemo-db2-1.1.1.tgz
     version: 1.1.1
   bpstest-orderdemo-liberty:
-  - created: 2018-11-13T22:50:59.400274591-08:00
+  - created: 2018-11-08T04:25:14.135117675-08:00
     description: HELM Chart to deploy the WAS OrderDemo (not including the backend)
     digest: 65e0b4d34c03a739a074a39486929d9362d403509c5e0d74f8b43aac7abf0b55
     maintainers:
@@ -30,12 +30,12 @@ entries:
       name: Bruce Semple
     name: bpstest-orderdemo-liberty
     urls:
-    - https://github.com/lysannef/chartsrepo.git/bpstest-orderdemo-liberty-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/bpstest-orderdemo-liberty-0.1.0.tgz
     version: 0.1.0
   dai-gpu:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.402036182-08:00
+    created: 2018-11-08T04:25:14.13754001-08:00
     description: DriverlessAI distribution for Kubernetes
     digest: 981c8a3ca0ee43bb5f516522e019251d246f8299e35f4797e31ade0c54daeeb8
     icon: http://docs.h2o.ai/driverless-ai/latest-stable/docs/userguide/_static/favicon.ico
@@ -48,14 +48,14 @@ entries:
     name: dai-gpu
     tillerVersion: '>=2.6.0'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/dai-gpu-1.1.4.tgz
+    - https://lysannef.github.io/chartsrepo/dai-gpu-1.1.4.tgz
     version: 1.1.4
   ibm-adminer:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.403417772-08:00
+    created: 2018-11-08T04:25:14.139551632-08:00
     description: Database management in a single PHP file
-    digest: dbf610d6df4f6b3a5b2743d8a01b9f3d6a56a5ac8ac3b7d361d882f50270b710
+    digest: 92966185457da43b717a834b8a2d308059a6d6f03149e4f345a8806763b4eae9
     engine: gotpl
     home: https://www.adminer.org/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/adminer.png?sanitize=true
@@ -75,12 +75,12 @@ entries:
     - https://hub.docker.com/_/adminer/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-adminer-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-adminer-0.1.0.tgz
     version: 0.1.0
   ibm-alertmanager:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.409047002-08:00
+    created: 2018-11-08T04:25:14.14121587-08:00
     description: The Alertmanager handles alerts sent by client applications such
       as the Prometheus server. It takes care of deduplicating, grouping, and routing
       them to the correct receiver integrations such as email, PagerDuty, or OpsGenie.
@@ -104,12 +104,12 @@ entries:
     - https://github.com/prometheus/alertmanager
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-alertmanager-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-alertmanager-0.1.0.tgz
     version: 0.1.0
   ibm-cadvisor:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.410844324-08:00
+    created: 2018-11-08T04:25:14.142856114-08:00
     description: Analyzes resource usage and performance characteristics of running
       containers.
     digest: b8e9e6a4f647c784064daf10c221f332c081d4b772f7c54fd4b0d47233464f70
@@ -132,11 +132,11 @@ entries:
     - https://github.com/google/cadvisor
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-cadvisor-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-cadvisor-0.1.0.tgz
     version: 0.1.0
   ibm-chaoskube:
   - appVersion: 0.8.0
-    created: 2018-11-13T22:50:59.412303949-08:00
+    created: 2018-11-08T04:25:14.144567165-08:00
     description: Chaoskube periodically kills random pods in your Kubernetes cluster.
     digest: a4a91077862080b0a63dbb6f21f93f1d0ea397eb3ba1a63496cb82f1484b98fd
     engine: gotpl
@@ -157,12 +157,12 @@ entries:
     - https://github.com/linki/chaoskube
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-chaoskube-0.7.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-chaoskube-0.7.0.tgz
     version: 0.7.0
   ibm-collectd:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.41387789-08:00
+    created: 2018-11-08T04:25:14.146268372-08:00
     description: Collectd-exporter
     digest: d7761930a1460483c42b0285070d9ebe76338daacb8826bdcf39a1b5705a4ee1
     engine: gotpl
@@ -181,12 +181,12 @@ entries:
     - https://hub.docker.com/r/ibmcom/collectd-exporter-ppc64le/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-collectd-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-collectd-0.1.0.tgz
     version: 0.1.0
   ibm-crate:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.415447497-08:00
+    created: 2018-11-08T04:25:14.147861571-08:00
     description: A distributed SQL DBMS built atop NoSQL storage & indexing delivers
       the best of SQL & NoSQL in one database.
     digest: 79183735dc550ddfecce392e66604bc9a938c01bfdddb533dd3a3a46769c6927
@@ -207,12 +207,12 @@ entries:
     - https://hub.docker.com/r/ibmcom/crate-ppc64le/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-crate-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-crate-0.1.0.tgz
     version: 0.1.0
   ibm-elasticsearch-exporter:
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2018-11-13T22:50:59.420619677-08:00
+    created: 2018-11-08T04:25:14.153458331-08:00
     description: Elasticsearch stats exporter for Prometheus
     digest: 74cc9e9f91e00874ed675bd2e33c88b1f70ac595900f786040ff15ca11c4b53b
     home: https://github.com/justwatchcom/elasticsearch_exporter
@@ -234,12 +234,12 @@ entries:
     - https://github.com/justwatchcom/elasticsearch_exporter
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-elasticsearch-exporter-0.2.2.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-elasticsearch-exporter-0.2.2.tgz
     version: 0.2.2
   ibm-etcd:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.422369006-08:00
+    created: 2018-11-08T04:25:14.154658951-08:00
     description: Distributed reliable key-value store for the most critical data of
       a distributed system.
     digest: 5e4c291a6be0ed39549f50aa14583b67b905081869d997e18690bd910dd76e09
@@ -261,12 +261,12 @@ entries:
     - https://github.com/etcd-io/etcd
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-etcd-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-etcd-0.1.0.tgz
     version: 0.1.0
   ibm-etcd-operator:
   - apiVersion: v1
     appVersion: 0.7.0
-    created: 2018-11-13T22:50:59.424565223-08:00
+    created: 2018-11-08T04:25:14.155888481-08:00
     description: CoreOS etcd-operator Helm chart for Kubernetes
     digest: f6158176b71b7602fed2123aa833fde1329d51373732e68918d5ef2317134750
     home: https://github.com/coreos/etcd-operator
@@ -285,12 +285,12 @@ entries:
     - https://github.com/coreos/etcd-operator
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-etcd-operator-0.7.7.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-etcd-operator-0.7.7.tgz
     version: 0.7.7
   ibm-geode:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.426044567-08:00
+    created: 2018-11-08T04:25:14.156744108-08:00
     description: Apache Geode provides a database-like consistency model, reliable
       transaction processing and a shared-nothing architecture to maintain very low
       latency performance with high concurrency processing.
@@ -313,12 +313,12 @@ entries:
     - https://github.com/apache/geode
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-geode-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-geode-0.1.0.tgz
     version: 0.1.0
   ibm-gerrit:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.42762487-08:00
+    created: 2018-11-08T04:25:14.157563341-08:00
     description: Basic gerrit server.
     digest: 8886af0cb4588ff7ea9fe27f3be9724aa999af400be6197d3180c8c8aa69076e
     engine: gotpl
@@ -338,12 +338,12 @@ entries:
     - https://hub.docker.com/r/geissonator/ubuntu-gerrit-ppc64le/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-gerrit-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-gerrit-0.1.0.tgz
     version: 0.1.0
   ibm-glassfish:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.432504467-08:00
+    created: 2018-11-08T04:25:14.158461371-08:00
     description: The Open Source Java EE Reference Implementation
     digest: c9a0600b30ef9b5359507217de03be6155690cd037aeaa060f77eb33c2e34aa3
     engine: gotpl
@@ -365,12 +365,12 @@ entries:
     - https://javaee.github.io/glassfish/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-glassfish-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-glassfish-0.1.0.tgz
     version: 0.1.0
   ibm-hadoop:
   - apiVersion: v1
     appVersion: 2.7.3
-    created: 2018-11-13T22:50:59.438642419-08:00
+    created: 2018-11-08T04:25:14.159796124-08:00
     description: The Apache Hadoop software library is a framework that allows for
       the distributed processing of large data sets across clusters of computers using
       simple programming models.
@@ -391,12 +391,12 @@ entries:
     - https://github.com/apache/hadoop
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-hadoop-1.0.5.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-hadoop-1.0.5.tgz
     version: 1.0.5
   ibm-heapster:
   - apiVersion: v1
     appVersion: 1.3.0
-    created: 2018-11-13T22:50:59.440725037-08:00
+    created: 2018-11-08T04:25:14.160758119-08:00
     description: Heapster enables Container Cluster Monitoring and Performance Analysis.
     digest: 6a32dd190b3a347f20cac42c4c2bdeb16429bae4b5a2337edf54398966e3aaee
     engine: gotpl
@@ -419,11 +419,11 @@ entries:
     - https://github.com/kubernetes/contrib/tree/master/addon-resizer
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-heapster-0.2.10.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-heapster-0.2.10.tgz
     version: 0.2.10
   ibm-influxdb:
   - appVersion: "1.4"
-    created: 2018-11-13T22:50:59.443173827-08:00
+    created: 2018-11-08T04:25:14.161922468-08:00
     description: Scalable datastore for metrics, events, and real-time analytics.
     digest: 6683adef7f77e6ce3d9db47db26ef691efcd6c71c4edffad4debd8311f70304f
     engine: gotpl
@@ -445,12 +445,12 @@ entries:
     - https://github.com/influxdata/influxdb
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-influxdb-0.10.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-influxdb-0.10.0.tgz
     version: 0.10.0
   ibm-jetty:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.444959663-08:00
+    created: 2018-11-08T04:25:14.162785116-08:00
     description: Eclipse Jetty® - Web Container & Clients - supports HTTP/2, HTTP/1.1,
       HTTP/1.0, websocket, servlets, and more
     digest: 89ab088fb3b90d3e95f1b7b0307e22d7f69e14322064fc49b9aa13b88a227a8e
@@ -474,12 +474,12 @@ entries:
     - https://hub.docker.com/r/ppc64le/jetty/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-jetty-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-jetty-0.1.0.tgz
     version: 0.1.0
   ibm-jupyter-notebook:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.446769319-08:00
+    created: 2018-11-08T04:25:14.163628979-08:00
     description: The Jupyter notebook is a web-based notebook environment for interactive
       computing.
     digest: a7474a1966e526f385a90a03f51e716d4a278989bd414e53d52de0e42d6635ee
@@ -500,12 +500,12 @@ entries:
     - https://github.com/jupyter/notebook
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-jupyter-notebook-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-jupyter-notebook-0.1.0.tgz
     version: 0.1.0
   ibm-kaazinggateway:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.454455432-08:00
+    created: 2018-11-08T04:25:14.164475933-08:00
     description: The Gateway is a network gateway created to provide a single access
       point for real-time web based protocol elevation that supports load balancing,
       clustering, and security management.
@@ -527,11 +527,11 @@ entries:
     - https://hub.docker.com/r/ibmcom/kaazing-gateway-ppc64le/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-kaazinggateway-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-kaazinggateway-0.1.0.tgz
     version: 0.1.0
   ibm-kibana:
   - appVersion: 6.3.1
-    created: 2018-11-13T22:50:59.457527796-08:00
+    created: 2018-11-08T04:25:14.16538773-08:00
     description: Kibana is an open source data visualization plugin for Elasticsearch
     digest: c4342ecf5f7925f52eb7deeadcfa7c5694ca082fabf46188fecd3b19b1103ccc
     engine: gotpl
@@ -552,12 +552,12 @@ entries:
     - https://github.com/elastic/kibana
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-kibana-0.10.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-kibana-0.10.0.tgz
     version: 0.10.0
   ibm-kube-state-metrics:
   - apiVersion: v1
     appVersion: 1.3.1
-    created: 2018-11-13T22:50:59.459393814-08:00
+    created: 2018-11-08T04:25:14.166322434-08:00
     description: Install kube-state-metrics to generate and expose cluster-level metrics
     digest: abded49f9945c3a5e4ecb5fb5361fceb67dda8bac0469146353274136d09731f
     home: https://github.com/kubernetes/kube-state-metrics/
@@ -578,12 +578,12 @@ entries:
     - https://github.com/kubernetes/kube-state-metrics/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-kube-state-metrics-0.8.1.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-kube-state-metrics-0.8.1.tgz
     version: 0.8.1
   ibm-lamp:
   - apiVersion: v1
     appVersion: "5.7"
-    created: 2018-11-13T22:50:59.464187438-08:00
+    created: 2018-11-08T04:25:14.168853618-08:00
     description: Modular and transparent LAMP stack chart supporting PHP-FPM, Release
       Cloning, LoadBalancer, Ingress, SSL and lots more!
     digest: c7367f613e8ce5601bce3ead5dc102b48a169fb004a2a52c28254dc0ea8f67eb
@@ -602,10 +602,10 @@ entries:
     name: ibm-lamp
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-lamp-0.1.5.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-lamp-0.1.5.tgz
     version: 0.1.5
   ibm-mariadb-dev:
-  - created: 2018-11-13T22:50:59.482996098-08:00
+  - created: 2018-11-08T04:25:14.186510779-08:00
     description: MariaDB is developed as open source software and as a relational
       database it provides an SQL interface for accessing data.
     digest: 11c8b185c7b438886fa7622c5c99f5dddd8e244f48f38525bc7aff86b06612c4
@@ -627,11 +627,11 @@ entries:
     - https://github.com/IBM/charts/tree/master/stable
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-mariadb-dev-1.1.2.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-mariadb-dev-1.1.2.tgz
     version: 1.1.2
   ibm-memcached:
   - appVersion: 1.5.6
-    created: 2018-11-13T22:50:59.485638034-08:00
+    created: 2018-11-08T04:25:14.188054741-08:00
     description: Free & open source, high-performance, distributed memory object caching
       system.
     digest: baca9f16cc49454f40d5f707b8923a69e0f2d32143dba6cc2131de98a2810dc9
@@ -654,12 +654,12 @@ entries:
     - https://github.com/docker-library/memcached
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-memcached-2.1.1.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-memcached-2.1.1.tgz
     version: 2.1.1
   ibm-mesos:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.488679352-08:00
+    created: 2018-11-08T04:25:14.189810175-08:00
     description: Apache Mesos abstracts CPU, memory, storage, and other compute resources
       away from machines (physical or virtual), enabling fault-tolerant and elastic
       distributed systems to easily be built and run effectively.
@@ -682,12 +682,12 @@ entries:
     - https://hub.docker.com/r/ibmcom/mesos-ppc64le/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-mesos-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-mesos-0.1.0.tgz
     version: 0.1.0
   ibm-metrics-server:
   - apiVersion: v1
     appVersion: 0.2.1
-    created: 2018-11-13T22:50:59.491121234-08:00
+    created: 2018-11-08T04:25:14.191398077-08:00
     description: Metrics Server is a cluster-wide aggregator of resource usage data.
     digest: 62a51a4573a9308abf539564601475ba6a9a3f97b848403b4eb1f68a41ac5fa6
     home: https://github.com/kubernetes-incubator/metrics-server
@@ -706,11 +706,11 @@ entries:
     - https://github.com/kubernetes-incubator/metrics-server
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-metrics-server-0.0.2.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-metrics-server-0.0.2.tgz
     version: 0.0.2
   ibm-mongodb-replicaset:
   - appVersion: "3.6"
-    created: 2018-11-13T22:50:59.494461958-08:00
+    created: 2018-11-08T04:25:14.194827162-08:00
     description: NoSQL document-oriented database that stores JSON-like documents
       with dynamic schemas, simplifying the integration of data in content-driven
       applications.
@@ -732,11 +732,11 @@ entries:
     - https://github.com/percona/mongodb_exporter
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-mongodb-replicaset-3.5.6.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-mongodb-replicaset-3.5.6.tgz
     version: 3.5.6
   ibm-nginx-ingress:
   - appVersion: 0.19.0
-    created: 2018-11-13T22:50:59.499662636-08:00
+    created: 2018-11-08T04:25:14.197811293-08:00
     description: An nginx Ingress controller that uses ConfigMap to store the nginx
       configuration.
     digest: 3b4330b4e0ca8f41dfca80ddcb813af8e1eb6dfa47f816fdde2069cbb31912d5
@@ -758,12 +758,12 @@ entries:
     - https://github.com/kubernetes/ingress-nginx
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-nginx-ingress-0.28.1.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-nginx-ingress-0.28.1.tgz
     version: 0.28.1
   ibm-node-exporter:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.501485245-08:00
+    created: 2018-11-08T04:25:14.199318824-08:00
     description: Prometheus exporter for hardware and OS metrics exposed by *NIX kernels,
       written in Go with pluggable metric collectors.
     digest: 59dd57d8ce65afa2a61b94645facceb4c0cb17a0892e489f915e527745a66771
@@ -785,12 +785,12 @@ entries:
     - https://github.com/prometheus/node_exporter
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-node-exporter-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-node-exporter-0.1.0.tgz
     version: 0.1.0
   ibm-node-red:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.503383911-08:00
+    created: 2018-11-08T04:25:14.201026538-08:00
     description: A visual tool for wiring the Internet of Things system.
     digest: 6613edcf39488e5219b3457e8152b82da2762d8af24635293e3fda4850924411
     engine: gotpl
@@ -812,12 +812,12 @@ entries:
     - https://github.com/node-red/node-red
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-node-red-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-node-red-0.1.0.tgz
     version: 0.1.0
   ibm-open-liberty:
   - apiVersion: "1"
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.50518377-08:00
+    created: 2018-11-08T04:25:14.202689678-08:00
     description: Open Liberty is a highly composable, fast to start, dynamic application
       server runtime environment.
     digest: a4b9a05e659866ede8df2e3a1e9f763320e5a2b673023e4398abea2fe1dcb8fb
@@ -837,11 +837,11 @@ entries:
     - https://github.com/OpenLiberty/open-liberty
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-open-liberty-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-open-liberty-0.1.0.tgz
     version: 0.1.0
   ibm-openldap:
   - appVersion: 2.4.44
-    created: 2018-11-13T22:50:59.507267429-08:00
+    created: 2018-11-08T04:25:14.204747566-08:00
     description: Community developed LDAP software
     digest: 0dc9d62a3e265736d490c92767069c16bc1ace41abeac38befd56ee6063165bd
     engine: gotpl
@@ -862,12 +862,12 @@ entries:
     - https://github.com/kubernetes/charts
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-openldap-0.1.1.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-openldap-0.1.1.tgz
     version: 0.1.1
   ibm-orientdb:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.510433874-08:00
+    created: 2018-11-08T04:25:14.206697283-08:00
     description: OrientDB is the most versatile DBMS supporting Graph, Document, Reactive,
       Full-Text, Geospatial and Key-Value models in one Multi-Model product.
     digest: a984dea6701a384154403d50b7848d224991ede4d9d2f26d8f55673c0309f183
@@ -889,12 +889,12 @@ entries:
     - https://hub.docker.com/r/ppc64le/orientdb/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-orientdb-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-orientdb-0.1.0.tgz
     version: 0.1.0
   ibm-pdserver:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.512252749-08:00
+    created: 2018-11-08T04:25:14.208224702-08:00
     description: Placement driver for TiKV.
     digest: 739bf36718318bc6a88afae4daa8e8cd952177aaeee41c9081b799cd0212cdef
     engine: gotpl
@@ -915,11 +915,11 @@ entries:
     - https://hub.docker.com/r/ibmcom/pd-server-ppc64le/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-pdserver-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-pdserver-0.1.0.tgz
     version: 0.1.0
   ibm-postgresql:
   - appVersion: 9.6.2
-    created: 2018-11-13T22:50:59.514713636-08:00
+    created: 2018-11-08T04:25:14.210441414-08:00
     description: Object-relational database management system (ORDBMS) with an emphasis
       on extensibility and on standards-compliance.
     digest: 242911a9894ae214a7f6452344ab63a8296dab835b2c26026d2ca8959a5bf9e0
@@ -944,11 +944,11 @@ entries:
     - https://github.com/docker-library/postgres
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-postgresql-0.11.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-postgresql-0.11.0.tgz
     version: 0.11.0
   ibm-prometheus:
   - appVersion: 2.3.2
-    created: 2018-11-13T22:50:59.518997155-08:00
+    created: 2018-11-08T04:25:14.214449169-08:00
     description: Prometheus is a monitoring system and time series database.
     digest: 4c6d731e7229218add14ee378400f8b815e0eac1e62cb28eff26973c78f3052c
     engine: gotpl
@@ -974,11 +974,11 @@ entries:
     - https://github.com/kubernetes/kube-state-metrics
     tillerVersion: '>=2.7.3'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-prometheus-7.0.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-prometheus-7.0.0.tgz
     version: 7.0.0
   ibm-prometheus-adapter:
   - appVersion: 0.2.1
-    created: 2018-11-13T22:50:59.521380059-08:00
+    created: 2018-11-08T04:25:14.215634521-08:00
     description: A Helm chart for k8s prometheus adapter
     digest: 331852bef006ddc7abd4e5a5701d44c0f380cb16bd751454edf2af03ed1c5a1a
     home: https://github.com/DirectXMan12/k8s-prometheus-adapter
@@ -1000,12 +1000,12 @@ entries:
     - https://github.com/DirectXMan12/k8s-prometheus-adapter
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-prometheus-adapter-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-prometheus-adapter-0.1.0.tgz
     version: 0.1.0
   ibm-prometheus-pushgateway:
   - apiVersion: v1
     appVersion: 0.4.0
-    created: 2018-11-13T22:50:59.524038359-08:00
+    created: 2018-11-08T04:25:14.216584836-08:00
     description: A Helm chart for prometheus pushgateway
     digest: a31292eab33247468f476b3e074f72e382f510a7a97cde268cafc38223da9812
     home: https://github.com/prometheus/pushgateway
@@ -1026,12 +1026,12 @@ entries:
     - https://github.com/prometheus/pushgateway
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-prometheus-pushgateway-0.1.2.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-prometheus-pushgateway-0.1.2.tgz
     version: 0.1.2
   ibm-rabbitmq-ha:
   - apiVersion: v1
     appVersion: 3.7.4
-    created: 2018-11-13T22:50:59.52674954-08:00
+    created: 2018-11-08T04:25:14.218176624-08:00
     description: Highly available RabbitMQ cluster, the open source message broker
       software that implements the Advanced Message Queuing Protocol (AMQP).
     digest: d55bb52b95498caa404d062f2926c2db7196c040d7f882e9ebb136bd44a92689
@@ -1057,11 +1057,11 @@ entries:
     - https://github.com/docker-library/rabbitmq
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-rabbitmq-ha-1.6.3.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-rabbitmq-ha-1.6.3.tgz
     version: 1.6.3
   ibm-redis-ha:
   - appVersion: 4.0.8-r0
-    created: 2018-11-13T22:50:59.530359798-08:00
+    created: 2018-11-08T04:25:14.219274153-08:00
     description: Highly available Redis cluster with multiple sentinels and standbys.
     digest: e4baa1a12d4f5cf0279f5d515d96f241027917aeef16d32016a25318db9d4aa6
     engine: gotpl
@@ -1084,12 +1084,12 @@ entries:
     - https://github.com/diegocn/docker-images/tree/master/redis
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-redis-ha-2.2.1.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-redis-ha-2.2.1.tgz
     version: 2.2.1
   ibm-rethinkdb:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.531858773-08:00
+    created: 2018-11-08T04:25:14.220218607-08:00
     description: RethinkDB is an open-source scalable database built for realtime
       applications. It exposes a new database access model -- instead of polling for
       changes, the developer can tell the database to continuously push updated query
@@ -1110,12 +1110,12 @@ entries:
     name: ibm-rethinkdb
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-rethinkdb-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-rethinkdb-0.1.0.tgz
     version: 0.1.0
   ibm-rstudio:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.533376672-08:00
+    created: 2018-11-08T04:25:14.221207547-08:00
     description: RStudio is an integrated development environment (IDE) for R
     digest: 16876b327bd95c6f01e34f3d660a4f87f766048f04037783433db3470dfb9e27
     engine: gotpl
@@ -1136,12 +1136,12 @@ entries:
     - https://hub.docker.com/r/ppc64le/rstudio/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-rstudio-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-rstudio-0.1.0.tgz
     version: 0.1.0
   ibm-strongloop:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.534873903-08:00
+    created: 2018-11-08T04:25:14.222155566-08:00
     description: Open-source solutions for the API developer community
     digest: 81dbe61493794602524b6b8c587b96eab2ac88114fab9d8c73b30bb71d489b70
     engine: gotpl
@@ -1162,11 +1162,11 @@ entries:
     - https://hub.docker.com/r/ibmcom/strongloop-ppc64le/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-strongloop-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-strongloop-0.1.0.tgz
     version: 0.1.0
   ibm-telegraf:
   - appVersion: "1.5"
-    created: 2018-11-13T22:50:59.536590892-08:00
+    created: 2018-11-08T04:25:14.223417859-08:00
     deprecated: true
     description: Telegraf is an agent written in Go for collecting, processing, aggregating,
       and writing metrics.
@@ -1189,12 +1189,12 @@ entries:
     name: ibm-telegraf
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-telegraf-0.3.3.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-telegraf-0.3.3.tgz
     version: 0.3.3
   ibm-tensorflow-notebook:
   - apiVersion: v1
     appVersion: 1.6.0
-    created: 2018-11-13T22:50:59.538198006-08:00
+    created: 2018-11-08T04:25:14.224285605-08:00
     description: A Helm chart for tensorflow notebook and tensorboard
     digest: 07c2627ecae5227a046a55ec3ca6fd47c2fb2f0cb4227ffdd9e2b9399e8f489f
     home: https://www.tensorflow.org
@@ -1215,12 +1215,12 @@ entries:
     - https://github.com/jupyter
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-tensorflow-notebook-0.1.1.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-tensorflow-notebook-0.1.1.tgz
     version: 0.1.1
   ibm-tidb:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.539510663-08:00
+    created: 2018-11-08T04:25:14.225616631-08:00
     description: TiDB is a distributed NewSQL database compatible with MySQL protocol
     digest: 051bdc2748d6bba5942734ad831053d66de95a4e644df6db371409e7609c87b3
     engine: gotpl
@@ -1242,12 +1242,12 @@ entries:
     - https://hub.docker.com/r/ibmcom/tidb-ppc64le/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-tidb-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-tidb-0.1.0.tgz
     version: 0.1.0
   ibm-tomcat:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.540677042-08:00
+    created: 2018-11-08T04:25:14.228162186-08:00
     description: Apache Tomcat, often referred to as Tomcat Server, is an open-source
       Java Servlet Container
     digest: 434a0fa8889bbac3a24f317fbc27bed189f67fe576d40a363b4d1d73701e91c7
@@ -1273,12 +1273,12 @@ entries:
     - https://hub.docker.com/_/tomcat/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-tomcat-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-tomcat-0.1.0.tgz
     version: 0.1.0
   ibm-tomee:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-13T22:50:59.542140691-08:00
+    created: 2018-11-08T04:25:14.230869226-08:00
     description: Apache TomEE, pronounced "Tommy", is an all-Apache Java EE Web Profile
       certified stack where Apache Tomcat is top dog. Apache TomEE is assembled from
       a vanilla Apache Tomcat zip file. We start with Apache Tomcat, add our jars
@@ -1303,6 +1303,6 @@ entries:
     - https://hub.docker.com/r/ppc64le/tomee/
     tillerVersion: '>=2.7.2'
     urls:
-    - https://github.com/lysannef/chartsrepo.git/ibm-tomee-0.1.0.tgz
+    - https://lysannef.github.io/chartsrepo/ibm-tomee-0.1.0.tgz
     version: 0.1.0
-generated: 2018-11-13T22:50:59.363475468-08:00
+generated: 2018-11-08T04:25:14.088722604-08:00
