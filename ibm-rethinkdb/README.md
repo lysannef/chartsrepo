@@ -63,4 +63,17 @@ $ helm install --name my-release -f values.yaml stable/ibm-rethinkdb
 
 > **Tip**: You can use the default `values.yaml`
 
+### Persistence
+
+If `persistence` is enabled, PVC's will be used to store the web root and the db root. If a pod then is redeployed to another node, it will restart within seconds with the old state prevailing. If it is disabled, `EmptyDir` is used, which would lead to deletion of the persistent storage once the pod is moved. Also cloning a chart with `persistence` disabled will not work. Therefor persistence is enabled by default and should only be disabled in a testing environment. In environments where no PVCs are available you can use `persistence.hostPath` instead. This will store the charts persistent data on the node it is running on.
+
+| Parameter | Description | Default |
+| - | - | - |
+| `persistence.enabled` | Enables persistent volume - PV provisioner support necessary | true |
+| `persistence.keep` | Keep persistent volume after helm delete | false |
+| `persistence.accessMode` | PVC Access Mode | ReadWriteOnce |
+| `persistence.size` | PVC Size | 5Gi |
+| `persistence.storageClass` | PVC Storage Class | _empty_ |
+
+
 ## Limitations

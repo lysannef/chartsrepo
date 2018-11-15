@@ -40,5 +40,6 @@ resources: {}
 
 nodeSelector: {}
 tolerations: []
+
 node: "ppc64le"
 affinity: {}
