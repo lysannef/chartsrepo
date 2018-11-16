@@ -47,7 +47,8 @@ php:
 
   ## php.oldHTTPRoot Additionally mounts the webroot at `php.oldHTTPRoot` to compensate
   ## for absolute path file links
-  oldHTTPRoot: /var/www/html
+  oldHTTPRoot:
+   ##/var/www/html
 
   ## php.ini additional PHP config values, see examples on how to use
   ini: |
