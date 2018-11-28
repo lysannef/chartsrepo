@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-node-red-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: andrewlaidlaw/node-red-watson-ppc64le:devel
+  references:
+  - repository: andrewlaidlaw/node-red-watson-ppc64le:devel
