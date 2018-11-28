@@ -3,7 +3,7 @@
 [RStudio](https://www.rstudio.com/products/rstudio/) RStudio is an integrated development environment (IDE) for R
 
 ```console
-$ helm install stable/ibm-rstudio
+$ helm install stable/ibm-rstudio-dev
 ```
 ## PodSecurityPolicy Requirements
 This chart requires a PodSecurityPolicy to be bound to the target namespace prior to installation. Choose predefined ibm-anyuid-hostpath-psp PodSecurityPolicy.
@@ -26,7 +26,7 @@ This chart bootstraps a [RStudio](https://hub.docker.com/r/ppc64le/rstudio/) dep
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install --name my-release stable/ibm-rstudio
+$ helm install --name my-release stable/ibm-rstudio-dev
 ```
 
 ## Default Credentials
@@ -57,14 +57,14 @@ The following table lists the configurable parameters of the RStudio chart and t
 | `node`                    | Specify what architecture Node  |  `ppc64le`                                              |
 
 
-The above parameters map to `ibm-rstudio` params.
+The above parameters map to `ibm-rstudio-dev` params.
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. 
 
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
-$ helm install --name my-release -f values.yaml stable/ibm-rstudio
+$ helm install --name my-release -f values.yaml stable/ibm-rstudio-dev
 ```
 
 > **Tip**: You can use the default `values.yaml`

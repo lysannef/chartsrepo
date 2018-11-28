@@ -3,7 +3,7 @@
 [Node Red](http://nodered.org/) A visual tool for wiring the Internet of Things.
 
 ```console
-$ helm install stable/ibm-node-red
+$ helm install stable/ibm-node-red-dev
 ```
 
 ## Prerequisites
@@ -27,7 +27,7 @@ This chart bootstraps a [Node Red](https://github.com/node-red/node-red) deploym
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm intall --name my-release stable/ibm-node-red
+$ helm intall --name my-release stable/ibm-node-red-dev
 ```
 
 ## Uninstalling the Chart
@@ -55,14 +55,14 @@ The following table lists the configurable parameters of the Node Red chart and 
 | `node`                    | Specify what architecture Node  | `ppc64le`                                               |
 
 
-The above parameters map to `ibm-node-red` params.
+The above parameters map to `ibm-node-red-dev` params.
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. 
 
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
-$ helm install --name my-release -f values.yaml stable/ibm-node-red
+$ helm install --name my-release -f values.yaml stable/ibm-node-red-dev
 ```
 
 > **Tip**: You can use the default `values.yaml`

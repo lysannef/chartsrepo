@@ -45,7 +45,7 @@ ingress:
       description: "Specifies whether to use Ingress."
       type: "boolean"
       immutable: false
-      required: true
+      required: false
   path:
     __metadata:
       name: "path"
@@ -53,7 +53,7 @@ ingress:
       description: "Path must match the content of an incoming request before the loadbalancer directs traffic to the backend."
       type: "string"
       immutable: false
-      required: true
+      required: false
   hosts:
     __metadata:
       label: "Virtual hosts"
@@ -67,7 +67,7 @@ ingress:
       description: "TLS consisting of secret name and hosts"
       type: "string"
       immutable: false
-      required: true
+      required: false
 
 
 replicaCount:
@@ -77,7 +77,7 @@ replicaCount:
      description: "Number of replicas of deployment needed to be created"
      type: "string"
      immutable: false
-     required: true
+     required: false
 
 
 service:
@@ -91,7 +91,7 @@ service:
       description: "Type of service"
       type: "string"
       immutable: false
-      required: true
+      required: false
       options:
         - label: "Cluster IP"
           value: "ClusterIP"
@@ -104,7 +104,7 @@ service:
       description: "The HTTP port that the container will expose."
       type: "number"
       immutable: false
-      required: true
+      required: false
   internalPort:
     __metadata:
       name: "internalPort"
@@ -112,7 +112,7 @@ service:
       description: "This is the internal port number"
       type: "number"
       immutable: false
-      required: true
+      required: false
   externalPort:
     __metadata:
       name: "externalPort"
@@ -120,7 +120,7 @@ service:
       description: "This is the external port number"
       type: "number"
       immutable: false
-      required: true
+      required: false
 
 
 node: 
