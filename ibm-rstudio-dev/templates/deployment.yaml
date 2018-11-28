@@ -40,10 +40,6 @@ spec:
             readOnlyRootFilesystem: false
             allowPrivilegeEscalation: false
             runAsNonRoot: false
-            capabilities:
-             drop:
-             - all
-             add: []
           command: ["sh","-c","set -e && useradd -m -d /home/test test && echo test:test | chpasswd; rstudio-server online;/usr/sbin/rstudio-server start;sleep infinity;"]
           ports:
           - name: http

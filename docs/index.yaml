@@ -3,7 +3,7 @@ entries:
   ibm-node-red-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-28T06:21:20.09989737-08:00
+    created: 2018-11-28T06:44:41.999810574-08:00
     description: A visual tool for wiring the Internet of Things system.
     digest: 89f0260fc70ee9eb3d0a860f7b0a46d631032e5c068d4da090ff0676235735f5
     engine: gotpl
@@ -32,9 +32,9 @@ entries:
   ibm-rstudio-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-28T06:21:20.101100663-08:00
+    created: 2018-11-28T06:44:42.000793856-08:00
     description: RStudio is an integrated development environment (IDE) for R
-    digest: 40c970ba21f5ff3b027087ca904bb3f8de12048a6888b308d7c3adba7f3576ab
+    digest: 4b593e5076a3ce2676a6d886791e84ed3bfa3014b86a534f36e838086eafd6b4
     engine: gotpl
     home: https://www.rstudio.com/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/rstudio.png
@@ -57,4 +57,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-rstudio-dev-0.1.0.tgz
     version: 0.1.0
-generated: 2018-11-28T06:21:20.098501004-08:00
+generated: 2018-11-28T06:44:41.998582378-08:00
