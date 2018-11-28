@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-rstudio-dev-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ppc64le/rstudio:0.99
+  references:
+  - repository: ppc64le/rstudio:0.99
