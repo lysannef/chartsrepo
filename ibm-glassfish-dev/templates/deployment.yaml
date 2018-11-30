@@ -1,32 +1,29 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: {{ template "rstudio.fullname" . }}
+  name: {{ template "glassfish.fullname" . }}
   labels:
-    app: {{ template "rstudio.name" . }}
-    chart: {{ template "rstudio.chart" . }}
+    app: {{ template "glassfish.name" . }}
+    chart: {{ template "glassfish.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "rstudio.name" . }}
+      app: {{ template "glassfish.name" . }}
       release: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "rstudio.name" . }}
+        app: {{ template "glassfish.name" . }}
         release: {{ .Release.Name }}
-        chart: {{ template "rstudio.chart" . }}
+        chart: {{ template "glassfish.chart" . }}
         heritage: {{ .Release.Service }}
       annotations:
-        productName: rstudio
-        productID: rstudio_{{ .Chart.Version }}
+        productName: glassfish
+        productID: glassfish_{{ .Chart.Version }}
         productVersion: {{ .Chart.Version }}
-      {{- if .Values.annotations }}
-{{ toYaml .Values.annotations | indent 8 }}
-      {{- end }}
     spec:
       hostNetwork: false
       hostPID: false
@@ -38,17 +35,17 @@ spec:
           securityContext:
             privileged: false
             readOnlyRootFilesystem: false
-            allowPrivilegeEscalation: true
-            runAsNonRoot: false
-            runAsUser: 0
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            runAsUser: 1000
             capabilities:
              drop:
-             - MKNOD
-          command: ["sh","-c","set -e && useradd -m -d /home/test test && echo test:test | chpasswd; rstudio-server online;/usr/sbin/rstudio-server start;sleep infinity;"]
+              - ALL
           ports:
-          - name: http
-            containerPort: 8787
-            protocol: TCP
+            - name: http1
+              containerPort: 4848
+            - name: http
+              containerPort: 8080
           livenessProbe:
             httpGet:
               path: /

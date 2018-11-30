@@ -1,0 +1,10 @@
+charts:
+  - archive: file:ibm-alertmanager-0.1.0.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: ibmcom/alertmanager-ppc64le:v0.13.0
+  references:
+  - repository:  ibmcom/alertmanager-ppc64le:v0.13.0
+

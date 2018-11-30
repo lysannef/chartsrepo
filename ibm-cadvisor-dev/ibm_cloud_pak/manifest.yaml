@@ -1,0 +1,10 @@
+charts:
+  - archive: file:ibm-cadvisor-0.1.0.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: ppc64le/cadvisor:v0.27.1
+  references:
+  - repository: ppc64le/cadvisor:v0.27.1
+

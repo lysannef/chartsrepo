@@ -1,9 +1,149 @@
 apiVersion: v1
 entries:
+  ibm-alertmanager-dev:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-11-30T03:26:15.105520551-08:00
+    description: The Alertmanager handles alerts sent by client applications.
+    digest: 791a30685fa6e4b0a80e6968ab71113438289cc50a507106a2dc84bf0e56b948
+    engine: gotpl
+    home: https://prometheus.io/docs/alerting/alertmanager/
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/prometheus-alertmanager.jpg
+    keywords:
+    - alertmanager
+    - prometheus
+    - Limited
+    - ppc64le
+    - Tools
+    - ICP
+    - Beta
+    kubeVersion: '>=1.7.0'
+    maintainers:
+    - email: smohite@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-alertmanager-dev
+    sources:
+    - https://github.com/prometheus/alertmanager
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-alertmanager-dev-0.1.0.tgz
+    version: 0.1.0
+  ibm-cadvisor-dev:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-11-30T03:26:15.106570746-08:00
+    description: Analyzes resource usage and performance characteristics of running
+      containers.
+    digest: bb5e03b752442dc5f8cf2c1f7a58b6040bdb9d2d98bb59906835db2e87933a6c
+    engine: gotpl
+    home: https://prometheus.io/docs/guides/cadvisor/
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/cadvisor.png
+    keywords:
+    - cadvisor
+    - analyser
+    - Limited
+    - amd64
+    - ppc64le
+    - Tools
+    - ICP
+    - Beta
+    kubeVersion: '>=1.7.0'
+    maintainers:
+    - email: lysannef@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-cadvisor-dev
+    sources:
+    - https://github.com/google/cadvisor
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-cadvisor-dev-0.1.0.tgz
+    version: 0.1.0
+  ibm-collectd-dev:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-11-30T03:26:15.107522405-08:00
+    description: Collectd-exporter
+    digest: c54b9aee5647009783d4bee6da899b65f8d95f93d3165f38af649a969488875d
+    engine: gotpl
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/collectd.png
+    keywords:
+    - Limited
+    - ppc64le
+    - Tools
+    - ICP
+    - collectd
+    - Beta
+    kubeVersion: '>=1.7.0'
+    maintainers:
+    - email: smohite@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-collectd-dev
+    sources:
+    - https://hub.docker.com/r/ibmcom/collectd-exporter-ppc64le/
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-collectd-dev-0.1.0.tgz
+    version: 0.1.0
+  ibm-glassfish-dev:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-11-30T03:26:15.10850392-08:00
+    description: The Open Source Java EE Reference Implementation
+    digest: 9a329cda2a7e4b3ebe165de53c87bcf7743409ffebb523bc22bc0adc97d47b0f
+    engine: gotpl
+    home: https://javaee.github.io/glassfish/
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/glassfish.png
+    keywords:
+    - glassfish
+    - deploy
+    - Java EE
+    - Limited
+    - ppc64le
+    - Tools
+    - ICP
+    - Beta
+    kubeVersion: '>=1.7.0'
+    maintainers:
+    - email: smohite@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-glassfish-dev
+    sources:
+    - https://javaee.github.io/glassfish/
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-glassfish-dev-0.1.0.tgz
+    version: 0.1.0
+  ibm-jupyter-notebook-dev:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-11-30T03:26:15.109458011-08:00
+    description: Jupyter notebook is a web-based environment for interactive computing.
+    digest: 6504bb1c0b6418a51ddbee4a8e8e9ca862732cdaaaa7e0b071cfe05552ae6e48
+    engine: gotpl
+    home: https://jupyter-notebook.readthedocs.io/
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/jupyter-notebook.png
+    keywords:
+    - jupyter-notebook
+    - Limited
+    - ppc64le
+    - Tools
+    - ICP
+    - Beta
+    kubeVersion: '>=1.7.0'
+    maintainers:
+    - email: lysannef@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-jupyter-notebook-dev
+    sources:
+    - https://github.com/jupyter/notebook
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-jupyter-notebook-dev-0.1.0.tgz
+    version: 0.1.0
   ibm-node-red-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-28T06:44:41.999810574-08:00
+    created: 2018-11-30T03:26:15.110445149-08:00
     description: A visual tool for wiring the Internet of Things system.
     digest: 89f0260fc70ee9eb3d0a860f7b0a46d631032e5c068d4da090ff0676235735f5
     engine: gotpl
@@ -32,9 +172,9 @@ entries:
   ibm-rstudio-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-28T06:44:42.000793856-08:00
+    created: 2018-11-30T03:26:15.111435916-08:00
     description: RStudio is an integrated development environment (IDE) for R
-    digest: 4b593e5076a3ce2676a6d886791e84ed3bfa3014b86a534f36e838086eafd6b4
+    digest: 0dea478fa91c0cd46e9fe4d3c097bd9f1248d807c582fea9037d9793f336741e
     engine: gotpl
     home: https://www.rstudio.com/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/rstudio.png
@@ -57,4 +197,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-rstudio-dev-0.1.0.tgz
     version: 0.1.0
-generated: 2018-11-28T06:44:41.998582378-08:00
+generated: 2018-11-30T03:26:15.104287547-08:00

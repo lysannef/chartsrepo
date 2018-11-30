@@ -6,7 +6,7 @@
 $ helm install stable/ibm-rstudio-dev
 ```
 ## PodSecurityPolicy Requirements
-This chart requires a PodSecurityPolicy to be bound to the target namespace prior to installation. Choose predefined ibm-anyuid-hostpath-psp PodSecurityPolicy.
+This chart requires a PodSecurityPolicy to be bound to the target namespace prior to installation. Choose predefined ibm-anyuid-psp PodSecurityPolicy.
 
 ## Prerequisites
 

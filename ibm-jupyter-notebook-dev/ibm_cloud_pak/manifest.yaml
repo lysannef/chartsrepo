@@ -1,0 +1,10 @@
+charts:
+  - archive: file:ibm-alertmanager-0.1.0.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: ibmcom/jupyter-base-notebook-ppc64le:5.0
+  references:
+  - repository: ibmcom/jupyter-base-notebook-ppc64le:5.0
+

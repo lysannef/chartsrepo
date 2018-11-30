@@ -1,0 +1,10 @@
+charts:
+  - archive: file:ibm-collectd-0.1.0.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: ibmcom/collectd-exporter-ppc64le:v0.4.0
+  references:
+  - repository: ibmcom/collectd-exporter-ppc64le:v0.4.0
+
