@@ -55,7 +55,7 @@ The following table lists the configurable parameters of the Glassfish chart and
 |---------------------------|---------------------------------|---------------------------------------------------------|
 | `image`                   | The image to pull and run       | default ex. ibmcom/glassfish-ppc64le:4.1                |
 | `imagePullPolicy`         | Image pull policy               | `Always` if `imageTag` is `latest`, else `IfNotPresent` |
-| `nodeSelector`            | Specify what architecture Node  | `amd64` or `ppc64le`                                    |
+| `nodeSelector`            | Specify what architecture Node  | `ppc64le`                                               |
 
 
 The above parameters map to `ibm-glassfish-dev` params.
