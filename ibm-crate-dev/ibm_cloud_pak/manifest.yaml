@@ -1,0 +1,10 @@
+charts:
+  - archive: file:ibm-crate-0.1.0.tgz 
+    repository-keys:
+      - image.repository
+
+images:
+- image: ibmcom/crate-ppc64le:1.0.5
+  references:
+  - repository: ibmcom/crate-ppc64le:1.0.5
+

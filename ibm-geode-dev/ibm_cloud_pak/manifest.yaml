@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-geode-0.1.0.tgz 
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/geode-ppc64le:v1.2.1
+  references:
+  - repository: ibmcom/geode-ppc64le:v1.2.1

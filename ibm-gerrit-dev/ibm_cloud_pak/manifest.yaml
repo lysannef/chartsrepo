@@ -1,0 +1,10 @@
+charts:
+  - archive: file:ibm-gerrit-0.1.0.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: geissonator/ubuntu-gerrit-ppc64le:v1
+  references:
+  - repository: geissonator/ubuntu-gerrit-ppc64le:v1
+

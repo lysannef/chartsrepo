@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-node-exporter-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/node-exporter-ppc64le:v0.15.2
+  references:
+  - repository:  ibmcom/node-exporter-ppc64le:v0.15.2
