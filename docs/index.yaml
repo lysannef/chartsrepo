@@ -3,9 +3,9 @@ entries:
   ibm-alertmanager-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.691102563-08:00
+    created: 2018-12-03T22:49:24.492955213-08:00
     description: The Alertmanager handles alerts sent by client applications.
-    digest: 791a30685fa6e4b0a80e6968ab71113438289cc50a507106a2dc84bf0e56b948
+    digest: 49f946bcc6637319d621c9e5bce72e6cca9d79ae25bc301bf08c1307a200f6e1
     engine: gotpl
     home: https://prometheus.io/docs/alerting/alertmanager/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/prometheus-alertmanager.jpg
@@ -31,10 +31,10 @@ entries:
   ibm-cadvisor-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.692824431-08:00
+    created: 2018-12-03T22:49:24.494727722-08:00
     description: Analyzes resource usage and performance characteristics of running
       containers.
-    digest: bb5e03b752442dc5f8cf2c1f7a58b6040bdb9d2d98bb59906835db2e87933a6c
+    digest: 8cfae542eedef40f60a781a4b22c2f64d296e7d7d4d47d18da9e6c4d4225807b
     engine: gotpl
     home: https://prometheus.io/docs/guides/cadvisor/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/cadvisor.png
@@ -61,9 +61,9 @@ entries:
   ibm-collectd-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.694611394-08:00
+    created: 2018-12-03T22:49:24.495683529-08:00
     description: Collectd-exporter
-    digest: c54b9aee5647009783d4bee6da899b65f8d95f93d3165f38af649a969488875d
+    digest: 36a546878a0f05e5a035941bb790740a9fcea84ba814e38af395337d37f85c94
     engine: gotpl
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/collectd.png
     keywords:
@@ -87,9 +87,9 @@ entries:
   ibm-crate-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.696574348-08:00
+    created: 2018-12-03T22:49:24.496637357-08:00
     description: A distributed SQL DBMS built atop NoSQL storage & indexing.
-    digest: b1ea6c75a5b85cb4c13ae239821498d0c5c5dcf350dea7f001cfe1e6dda0fe2b
+    digest: a48974b526f76873e7ef22d9462b86294121cf45f2ecda600e053cebeaa03232
     engine: gotpl
     home: https://crate.io/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/crateDB.png
@@ -114,9 +114,9 @@ entries:
   ibm-etcd-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.698437091-08:00
+    created: 2018-12-03T22:49:24.497585571-08:00
     description: Distributed reliable key-value store for the most critical data.
-    digest: 00d6f26ddb59a55670d708f6b2dff85bf5ee77418482372fb998c8dd3458c830
+    digest: d8dc515e8a1e2b4ecab273b02832dd9442899f355ed3cdf4ce68ce2d4a630d11
     engine: gotpl
     home: https://coreos.com/etcd/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/etcd.png
@@ -142,9 +142,9 @@ entries:
   ibm-geode-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.699906964-08:00
+    created: 2018-12-03T22:49:24.498567327-08:00
     description: Apache Geode provides a database-like consistency mode.
-    digest: e2a0dcf9ab5e0ccaa78294a6dfd283ace5e0a384dac0a42c3a63aa127d5003df
+    digest: d257feec00227643328c96efe60aab98cc833b3c50e1ca11cd86b704a7d435c4
     engine: gotpl
     home: http://geode.apache.org/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/geode.png
@@ -170,9 +170,9 @@ entries:
   ibm-gerrit-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.700839443-08:00
+    created: 2018-12-03T22:49:24.499515381-08:00
     description: Basic gerrit server.
-    digest: a1663194612a69735bf0720bf6ecca40501da4d89674df3e9881b43c4d241d84
+    digest: 055f5c450da8e17b900403318c91e6bf82818f1093f89e31994545bcb72c5d13
     engine: gotpl
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/gerrit.png
     keywords:
@@ -197,9 +197,9 @@ entries:
   ibm-glassfish-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.70197053-08:00
+    created: 2018-12-03T22:49:24.5004818-08:00
     description: The Open Source Java EE Reference Implementation
-    digest: 9a329cda2a7e4b3ebe165de53c87bcf7743409ffebb523bc22bc0adc97d47b0f
+    digest: d3b407de7fcfc02f7edc6244f66d0220e1aba00cf4c1b9742a3e9d1a195d952d
     engine: gotpl
     home: https://javaee.github.io/glassfish/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/glassfish.png
@@ -226,9 +226,9 @@ entries:
   ibm-jupyter-notebook-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.702906481-08:00
+    created: 2018-12-03T22:49:24.50143651-08:00
     description: Jupyter notebook is a web-based environment for interactive computing.
-    digest: 6504bb1c0b6418a51ddbee4a8e8e9ca862732cdaaaa7e0b071cfe05552ae6e48
+    digest: d8c49d5cc8cad2c54f4859581833e170230b3729ecf30806a37585c207839a91
     engine: gotpl
     home: https://jupyter-notebook.readthedocs.io/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/jupyter-notebook.png
@@ -253,9 +253,9 @@ entries:
   ibm-node-exporter-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.703919418-08:00
+    created: 2018-12-03T22:49:24.502426319-08:00
     description: Prometheus exporter written in Go with pluggable metric collectors.
-    digest: da955c6f66e98c422cb0624dd1adb2f6ff3f0e0dd925bbd6440b530afb9db461
+    digest: 56786df4246c1ae79964c44cf31db9571550c32e56a8ccb7525adaa51b04cec1
     engine: gotpl
     home: https://prometheus.io/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
@@ -281,9 +281,9 @@ entries:
   ibm-node-red-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.704876906-08:00
+    created: 2018-12-03T22:49:24.503418696-08:00
     description: A visual tool for wiring the Internet of Things system.
-    digest: 89f0260fc70ee9eb3d0a860f7b0a46d631032e5c068d4da090ff0676235735f5
+    digest: cb7d5eabe2160fa35c97046bfad87c5e15fe04d161d8d6465c3f97048d910ee3
     engine: gotpl
     home: http://nodered.org/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/node-red.png
@@ -310,7 +310,7 @@ entries:
   ibm-rstudio-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T03:39:39.705889288-08:00
+    created: 2018-12-03T22:49:24.504539014-08:00
     description: RStudio is an integrated development environment (IDE) for R
     digest: 0dea478fa91c0cd46e9fe4d3c097bd9f1248d807c582fea9037d9793f336741e
     engine: gotpl
@@ -335,4 +335,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-rstudio-dev-0.1.0.tgz
     version: 0.1.0
-generated: 2018-12-03T03:39:39.688989765-08:00
+generated: 2018-12-03T22:49:24.490782349-08:00
