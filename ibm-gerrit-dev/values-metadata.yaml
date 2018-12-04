@@ -29,6 +29,8 @@ service:
         value: "NodePort"
       - label: "LoadBalancer"
         value: "LoadBalancer"
+      - label: "IfNotPresent"
+        value: "IfNotPresent"
   port:
     __metadata:
       name: "port"
