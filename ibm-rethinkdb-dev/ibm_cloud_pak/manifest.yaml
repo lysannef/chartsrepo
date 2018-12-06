@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-rethinkdb-dev-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/rethinkdb-ppc64le:2.3.6
+  references:
+  - repository: ibmcom/rethinkdb-ppc64le:2.3.6

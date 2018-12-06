@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-memcached-dev-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: memcached:1.5.6-alpine
+  references:
+  - repository: memcached:1.5.6-alpine

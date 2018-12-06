@@ -1,5 +1,5 @@
 charts:
-  - archive: file:ibm-crate-0.1.0.tgz 
+  - archive: file:ibm-crate-dev-0.1.0.tgz 
     repository-keys:
       - image.repository
 

@@ -3,7 +3,7 @@ entries:
   ibm-alertmanager-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.492955213-08:00
+    created: 2018-12-06T05:39:12.688656519-08:00
     description: The Alertmanager handles alerts sent by client applications.
     digest: 49f946bcc6637319d621c9e5bce72e6cca9d79ae25bc301bf08c1307a200f6e1
     engine: gotpl
@@ -31,7 +31,7 @@ entries:
   ibm-cadvisor-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.494727722-08:00
+    created: 2018-12-06T05:39:12.689655658-08:00
     description: Analyzes resource usage and performance characteristics of running
       containers.
     digest: 8cfae542eedef40f60a781a4b22c2f64d296e7d7d4d47d18da9e6c4d4225807b
@@ -61,7 +61,7 @@ entries:
   ibm-collectd-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.495683529-08:00
+    created: 2018-12-06T05:39:12.690617787-08:00
     description: Collectd-exporter
     digest: 36a546878a0f05e5a035941bb790740a9fcea84ba814e38af395337d37f85c94
     engine: gotpl
@@ -87,7 +87,7 @@ entries:
   ibm-crate-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.496637357-08:00
+    created: 2018-12-06T05:39:12.691563253-08:00
     description: A distributed SQL DBMS built atop NoSQL storage & indexing.
     digest: a48974b526f76873e7ef22d9462b86294121cf45f2ecda600e053cebeaa03232
     engine: gotpl
@@ -114,7 +114,7 @@ entries:
   ibm-etcd-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.497585571-08:00
+    created: 2018-12-06T05:39:12.692538939-08:00
     description: Distributed reliable key-value store for the most critical data.
     digest: d8dc515e8a1e2b4ecab273b02832dd9442899f355ed3cdf4ce68ce2d4a630d11
     engine: gotpl
@@ -142,7 +142,7 @@ entries:
   ibm-geode-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.498567327-08:00
+    created: 2018-12-06T05:39:12.693492767-08:00
     description: Apache Geode provides a database-like consistency mode.
     digest: d257feec00227643328c96efe60aab98cc833b3c50e1ca11cd86b704a7d435c4
     engine: gotpl
@@ -170,7 +170,7 @@ entries:
   ibm-gerrit-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.499515381-08:00
+    created: 2018-12-06T05:39:12.694742813-08:00
     description: Basic gerrit server.
     digest: 055f5c450da8e17b900403318c91e6bf82818f1093f89e31994545bcb72c5d13
     engine: gotpl
@@ -197,7 +197,7 @@ entries:
   ibm-glassfish-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.5004818-08:00
+    created: 2018-12-06T05:39:12.695858139-08:00
     description: The Open Source Java EE Reference Implementation
     digest: d3b407de7fcfc02f7edc6244f66d0220e1aba00cf4c1b9742a3e9d1a195d952d
     engine: gotpl
@@ -226,7 +226,7 @@ entries:
   ibm-jupyter-notebook-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.50143651-08:00
+    created: 2018-12-06T05:39:12.697211847-08:00
     description: Jupyter notebook is a web-based environment for interactive computing.
     digest: d8c49d5cc8cad2c54f4859581833e170230b3729ecf30806a37585c207839a91
     engine: gotpl
@@ -250,10 +250,38 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-jupyter-notebook-dev-0.1.0.tgz
     version: 0.1.0
+  ibm-memcached-dev:
+  - appVersion: 1.5.6
+    created: 2018-12-06T05:39:12.698223444-08:00
+    description: Free & open source, high-performance, memory object caching system.
+    digest: a9f8dd5e79b174813dec98b2bde1a1290b6661183914695d957ddfda21d88fdd
+    engine: gotpl
+    home: http://memcached.org/
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/memcached.png
+    keywords:
+    - memcached
+    - cache
+    - Limited
+    - amd64
+    - ppc64le
+    - Tools
+    - ICP
+    - Beta
+    kubeVersion: '>=1.7.0'
+    maintainers:
+    - email: smohite@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-memcached-dev
+    sources:
+    - https://github.com/docker-library/memcached
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-memcached-dev-0.1.0.tgz
+    version: 0.1.0
   ibm-node-exporter-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.502426319-08:00
+    created: 2018-12-06T05:39:12.699229944-08:00
     description: Prometheus exporter written in Go with pluggable metric collectors.
     digest: 56786df4246c1ae79964c44cf31db9571550c32e56a8ccb7525adaa51b04cec1
     engine: gotpl
@@ -281,7 +309,7 @@ entries:
   ibm-node-red-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.503418696-08:00
+    created: 2018-12-06T05:39:12.700310413-08:00
     description: A visual tool for wiring the Internet of Things system.
     digest: cb7d5eabe2160fa35c97046bfad87c5e15fe04d161d8d6465c3f97048d910ee3
     engine: gotpl
@@ -307,10 +335,62 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-node-red-dev-0.1.0.tgz
     version: 0.1.0
+  ibm-orientdb-dev:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-12-06T05:39:12.701303587-08:00
+    description: OrientDB is the most versatile DBMS.
+    digest: 52785496ae232405f7584507699c1b6c416d9f332b3892aadd3545bcf94128a2
+    engine: gotpl
+    home: http://orientdb.com/
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/Orientdb.png
+    keywords:
+    - orientdb
+    - DBMS
+    - database
+    - Limited
+    - ppc64le
+    - ICP
+    - Beta
+    kubeVersion: '>=1.7.0'
+    maintainers:
+    - email: smohite@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-orientdb-dev
+    sources:
+    - https://hub.docker.com/r/ppc64le/orientdb/
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-orientdb-dev-0.1.0.tgz
+    version: 0.1.0
+  ibm-rethinkdb-dev:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-12-06T05:39:12.702328701-08:00
+    description: RethinkDB is an open-source scalable database for realtime applications.
+    digest: 5851ad35d55352811bbc07b574d3469e2b1a8241a33651a46a6311d8b0570f6a
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/rethinkdb.svg?sanitize=true
+    keywords:
+    - Limited
+    - ppc64le
+    - Tools
+    - ICP
+    - database
+    - rethinkdb
+    - Beta
+    kubeVersion: '>=1.7.0'
+    maintainers:
+    - email: smohite@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-rethinkdb-dev
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-rethinkdb-dev-0.1.0.tgz
+    version: 0.1.0
   ibm-rstudio-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-03T22:49:24.504539014-08:00
+    created: 2018-12-06T05:39:12.70331634-08:00
     description: RStudio is an integrated development environment (IDE) for R
     digest: 0dea478fa91c0cd46e9fe4d3c097bd9f1248d807c582fea9037d9793f336741e
     engine: gotpl
@@ -335,4 +415,60 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-rstudio-dev-0.1.0.tgz
     version: 0.1.0
-generated: 2018-12-03T22:49:24.490782349-08:00
+  ibm-strongloop-dev:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: 2018-12-06T05:39:12.704892446-08:00
+    description: Open-source solutions for the API developer community
+    digest: c35d7c08633ca2239e36cdfe9615cba9dfd7e9c90ef3818cf6a40eee89cb1643
+    engine: gotpl
+    home: https://strongloop.com/
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/strongloop.png
+    keywords:
+    - strongloop
+    - IBM
+    - Limited
+    - ppc64le
+    - Tools
+    - ICP
+    - Beta
+    kubeVersion: '>=1.7.0'
+    maintainers:
+    - email: smohite@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-strongloop-dev
+    sources:
+    - https://hub.docker.com/r/ibmcom/strongloop-ppc64le/
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-strongloop-dev-0.1.0.tgz
+    version: 0.1.0
+  ibm-tensorflow-notebook-dev:
+  - apiVersion: v1
+    appVersion: 1.6.0
+    created: 2018-12-06T05:39:12.70624407-08:00
+    description: A Helm chart for tensorflow notebook and tensorboard
+    digest: 485d4310aef13827087931456bd58a62ba18557e4cc032aa701ae1b4dbddbf63
+    home: https://www.tensorflow.org
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/tensorflow-notebook.png
+    keywords:
+    - tenserflow
+    - adapter
+    - Limited
+    - ppc64le
+    - Tools
+    - ICP
+    - Beta
+    kubeVersion: '>=1.7.0'
+    maintainers:
+    - email: smohite@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-tensorflow-notebook-dev
+    sources:
+    - https://github.com/tensorflow/tensorflow
+    - https://github.com/jupyter
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-tensorflow-notebook-dev-0.1.1.tgz
+    version: 0.1.1
+generated: 2018-12-06T05:39:12.687356295-08:00

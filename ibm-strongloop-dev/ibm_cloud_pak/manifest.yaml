@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-strongloop-dev-0.1.0.tgz 
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/strongloop-ppc64le:v6.0.3
+  references:
+  - repository: ibmcom/strongloop-ppc64le:v6.0.3

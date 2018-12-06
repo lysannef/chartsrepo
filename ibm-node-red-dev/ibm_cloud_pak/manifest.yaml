@@ -1,5 +1,5 @@
 charts:
-  - archive: file:ibm-node-red-0.1.0.tgz
+  - archive: file:ibm-node-red-dev-0.1.0.tgz
     repository-keys: 
       - image.repository
 

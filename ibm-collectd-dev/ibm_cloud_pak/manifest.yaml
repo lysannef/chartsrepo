@@ -1,5 +1,5 @@
 charts:
-  - archive: file:ibm-collectd-0.1.0.tgz
+  - archive: file:ibm-collectd-dev-0.1.0.tgz
     repository-keys:
       - image.repository
 

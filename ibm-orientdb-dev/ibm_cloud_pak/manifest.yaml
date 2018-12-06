@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-orientdb-dev-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/orientdb-ppc64le:2.2.15
+  references:
+  - repository: ibmcom/orientdb-ppc64le:2.2.15
