@@ -75,7 +75,7 @@ If `persistence` is enabled, PVC's will be used to store the web root and the db
 | `persistence.enabled` | Enables persistent volume - PV provisioner support necessary | true |
 | `persistence.keep` | Keep persistent volume after helm delete | false |
 | `persistence.accessMode` | PVC Access Mode | ReadWriteOnce |
-| `persistence.size` | PVC Size | 5Gi |
+| `persistence.size` | PVC Size | 2Gi |
 | `persistence.storageClass` | PVC Storage Class | _empty_ |
 
 ## Limitations

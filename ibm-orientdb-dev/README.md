@@ -21,6 +21,8 @@ This chart requires a PodSecurityPolicy to be bound to the target namespace prio
 
 This chart bootstraps a [OrientDB](https://hub.docker.com/r/ppc64le/orientdb/) deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
+## Default Credentials
+The default credentials for the OrientDB service are username - root and password - test123 . You can create use it for creating NEWDB. 
 
 ## Installing the Chart
 

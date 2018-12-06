@@ -20,6 +20,9 @@ This chart requires a PodSecurityPolicy to be bound to the target namespace prio
 
 The chart deploys pods consuming minimum resources as specified in values.yaml file.
 
+## Default Credentials
+The default credentials for the jupyter service is password - tensorflow
+
 ## Introduction
 
 This chart will deploy Jupyter Notebook with TensorFlow
@@ -68,7 +71,7 @@ The original work for this helm chart is present @ [Helm Charts Charts]( https:/
       tag: 1.3.1-gpu
       pullPolicy: IfNotPresent
   service:
-    type: LoadBalancer
+    type: NodePort
   ```
 
 
