@@ -250,6 +250,33 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-jupyter-notebook-dev-0.1.0.tgz
     version: 0.1.0
+  ibm-kibana-dev:
+  - appVersion: 6.3.1
+    created: 2018-12-11T02:29:33.76021236-08:00
+    description: Kibana is an open source data visualization plugin for Elasticsearch
+    digest: c90b737f6ba9bc417e5a8190fa0ed33f57e687a8764ac0dd015da959239f4c86
+    engine: gotpl
+    home: https://www.elastic.co/products/kibana
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/kibana.png
+    keywords:
+    - elasticsearch
+    - kibana
+    - Limited
+    - ppc64le
+    - Tools
+    - ICP
+    - Beta
+    kubeVersion: '>=1.7'
+    maintainers:
+    - email: smohite@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-kibana-dev
+    sources:
+    - https://github.com/elastic/kibana
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-kibana-dev-0.10.0.tgz
+    version: 0.10.0
   ibm-memcached-dev:
   - appVersion: 1.5.6
     created: 2018-12-06T05:39:12.698223444-08:00
@@ -471,4 +498,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-tensorflow-notebook-dev-0.1.1.tgz
     version: 0.1.1
-generated: 2018-12-06T05:39:12.687356295-08:00
+generated: 2018-12-11T02:29:33.758685082-08:00
