@@ -3,9 +3,9 @@ entries:
   ibm-alertmanager-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.688656519-08:00
+    created: 2018-12-12T01:25:11.460268778-08:00
     description: The Alertmanager handles alerts sent by client applications.
-    digest: 49f946bcc6637319d621c9e5bce72e6cca9d79ae25bc301bf08c1307a200f6e1
+    digest: 444e9264a8a10c25bf359d047ea18cd84180eec3bc3c870fb4920757cc7e0676
     engine: gotpl
     home: https://prometheus.io/docs/alerting/alertmanager/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/prometheus-alertmanager.jpg
@@ -31,10 +31,10 @@ entries:
   ibm-cadvisor-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.689655658-08:00
+    created: 2018-12-12T01:25:11.461256042-08:00
     description: Analyzes resource usage and performance characteristics of running
       containers.
-    digest: 8cfae542eedef40f60a781a4b22c2f64d296e7d7d4d47d18da9e6c4d4225807b
+    digest: 45c94e6eca62984f9e638e531d88829d3dcfc8e7514a10c5406492a4f3e16063
     engine: gotpl
     home: https://prometheus.io/docs/guides/cadvisor/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/cadvisor.png
@@ -61,9 +61,9 @@ entries:
   ibm-collectd-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.690617787-08:00
+    created: 2018-12-12T01:25:11.462402045-08:00
     description: Collectd-exporter
-    digest: 36a546878a0f05e5a035941bb790740a9fcea84ba814e38af395337d37f85c94
+    digest: c5fe46a8e3d347fd2d80a74a0c61b3df85bab207213b2911d61b89e08bf1929d
     engine: gotpl
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/collectd.png
     keywords:
@@ -87,9 +87,9 @@ entries:
   ibm-crate-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.691563253-08:00
+    created: 2018-12-12T01:25:11.463348043-08:00
     description: A distributed SQL DBMS built atop NoSQL storage & indexing.
-    digest: a48974b526f76873e7ef22d9462b86294121cf45f2ecda600e053cebeaa03232
+    digest: 000f9d94aaf1f50a58f8cfce23c8aab60edf84a1cc39e50bea31f4b2406587a3
     engine: gotpl
     home: https://crate.io/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/crateDB.png
@@ -114,9 +114,9 @@ entries:
   ibm-etcd-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.692538939-08:00
+    created: 2018-12-12T01:25:11.464383446-08:00
     description: Distributed reliable key-value store for the most critical data.
-    digest: d8dc515e8a1e2b4ecab273b02832dd9442899f355ed3cdf4ce68ce2d4a630d11
+    digest: 7537d13b50db910b452f3fea9faa685199803f8357632d79a813259b90d5f8bd
     engine: gotpl
     home: https://coreos.com/etcd/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/etcd.png
@@ -142,9 +142,9 @@ entries:
   ibm-geode-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.693492767-08:00
+    created: 2018-12-12T01:25:11.465337555-08:00
     description: Apache Geode provides a database-like consistency mode.
-    digest: d257feec00227643328c96efe60aab98cc833b3c50e1ca11cd86b704a7d435c4
+    digest: 83be3a3e957cbedd2513843f2c5d2280bd145e7c2a845cee735509795f8239b5
     engine: gotpl
     home: http://geode.apache.org/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/geode.png
@@ -170,9 +170,9 @@ entries:
   ibm-gerrit-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.694742813-08:00
+    created: 2018-12-12T01:25:11.466319977-08:00
     description: Basic gerrit server.
-    digest: 055f5c450da8e17b900403318c91e6bf82818f1093f89e31994545bcb72c5d13
+    digest: 65d6cd81b8d486efe154907a0f46606a83b5af60d38061ca12ed296dbeb9fce2
     engine: gotpl
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/gerrit.png
     keywords:
@@ -197,9 +197,9 @@ entries:
   ibm-glassfish-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.695858139-08:00
+    created: 2018-12-12T01:25:11.467294965-08:00
     description: The Open Source Java EE Reference Implementation
-    digest: d3b407de7fcfc02f7edc6244f66d0220e1aba00cf4c1b9742a3e9d1a195d952d
+    digest: 7e45cc98b1d05c6d303f2e5cd35eadd45da1d1fd940aa81abd9a356910efe087
     engine: gotpl
     home: https://javaee.github.io/glassfish/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/glassfish.png
@@ -226,9 +226,9 @@ entries:
   ibm-jupyter-notebook-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.697211847-08:00
+    created: 2018-12-12T01:25:11.468419926-08:00
     description: Jupyter notebook is a web-based environment for interactive computing.
-    digest: d8c49d5cc8cad2c54f4859581833e170230b3729ecf30806a37585c207839a91
+    digest: 3bec3287c0fa188768440ac8402ca815afce5c9e6bcb00c95ed3df0fa93d634d
     engine: gotpl
     home: https://jupyter-notebook.readthedocs.io/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/jupyter-notebook.png
@@ -252,9 +252,9 @@ entries:
     version: 0.1.0
   ibm-kibana-dev:
   - appVersion: 6.3.1
-    created: 2018-12-11T02:29:33.76021236-08:00
+    created: 2018-12-12T01:25:11.469672091-08:00
     description: Kibana is an open source data visualization plugin for Elasticsearch
-    digest: c90b737f6ba9bc417e5a8190fa0ed33f57e687a8764ac0dd015da959239f4c86
+    digest: 7e104b26828b7843bbf311390024c9fc078225eadbfb7c3f1965d5c12b7ccdab
     engine: gotpl
     home: https://www.elastic.co/products/kibana
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/kibana.png
@@ -279,9 +279,9 @@ entries:
     version: 0.10.0
   ibm-memcached-dev:
   - appVersion: 1.5.6
-    created: 2018-12-06T05:39:12.698223444-08:00
+    created: 2018-12-12T01:25:11.470664574-08:00
     description: Free & open source, high-performance, memory object caching system.
-    digest: a9f8dd5e79b174813dec98b2bde1a1290b6661183914695d957ddfda21d88fdd
+    digest: bfbac8c3b3a7b7432a8692f486a475b6c368d7405f3be09709a5b550de2b9399
     engine: gotpl
     home: http://memcached.org/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/memcached.png
@@ -308,9 +308,9 @@ entries:
   ibm-node-exporter-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.699229944-08:00
+    created: 2018-12-12T01:25:11.471656437-08:00
     description: Prometheus exporter written in Go with pluggable metric collectors.
-    digest: 56786df4246c1ae79964c44cf31db9571550c32e56a8ccb7525adaa51b04cec1
+    digest: a1e62b1ec7ac69f33cbffcc69a3d4b8d177ee22ab0ad04fb051c611381691b7b
     engine: gotpl
     home: https://prometheus.io/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
@@ -336,9 +336,9 @@ entries:
   ibm-node-red-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.700310413-08:00
+    created: 2018-12-12T01:25:11.472626429-08:00
     description: A visual tool for wiring the Internet of Things system.
-    digest: cb7d5eabe2160fa35c97046bfad87c5e15fe04d161d8d6465c3f97048d910ee3
+    digest: 05827a03bb2ee6364230b92d9759b7dce8b61c98d87c4c319982726fda92ac69
     engine: gotpl
     home: http://nodered.org/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/node-red.png
@@ -365,9 +365,9 @@ entries:
   ibm-orientdb-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.701303587-08:00
+    created: 2018-12-12T01:25:11.473770092-08:00
     description: OrientDB is the most versatile DBMS.
-    digest: 52785496ae232405f7584507699c1b6c416d9f332b3892aadd3545bcf94128a2
+    digest: a97efdeca3266dbd01c1fc26d0031987b1b8e1c28bc397859babfb8c62c46896
     engine: gotpl
     home: http://orientdb.com/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/Orientdb.png
@@ -393,9 +393,9 @@ entries:
   ibm-rethinkdb-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.702328701-08:00
+    created: 2018-12-12T01:25:11.474832357-08:00
     description: RethinkDB is an open-source scalable database for realtime applications.
-    digest: 5851ad35d55352811bbc07b574d3469e2b1a8241a33651a46a6311d8b0570f6a
+    digest: 9938dc7ec41451e0dbe80c34be983d880ef182b3be9a62367964078f564fcdbc
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/rethinkdb.svg?sanitize=true
     keywords:
     - Limited
@@ -417,9 +417,9 @@ entries:
   ibm-rstudio-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.70331634-08:00
+    created: 2018-12-12T01:25:11.475888944-08:00
     description: RStudio is an integrated development environment (IDE) for R
-    digest: 0dea478fa91c0cd46e9fe4d3c097bd9f1248d807c582fea9037d9793f336741e
+    digest: cc6e3dfa330a5b57e95ae9e30f228c4f931593e94a02459213230a9bea147f4f
     engine: gotpl
     home: https://www.rstudio.com/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/rstudio.png
@@ -445,9 +445,9 @@ entries:
   ibm-strongloop-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-12-06T05:39:12.704892446-08:00
+    created: 2018-12-12T01:25:11.483368712-08:00
     description: Open-source solutions for the API developer community
-    digest: c35d7c08633ca2239e36cdfe9615cba9dfd7e9c90ef3818cf6a40eee89cb1643
+    digest: 3b1e96c9038a38af4658a19a02fb28065c35ab94db575f144158f65618acaf9a
     engine: gotpl
     home: https://strongloop.com/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/strongloop.png
@@ -473,9 +473,9 @@ entries:
   ibm-tensorflow-notebook-dev:
   - apiVersion: v1
     appVersion: 1.6.0
-    created: 2018-12-06T05:39:12.70624407-08:00
+    created: 2018-12-12T01:25:11.485095033-08:00
     description: A Helm chart for tensorflow notebook and tensorboard
-    digest: 485d4310aef13827087931456bd58a62ba18557e4cc032aa701ae1b4dbddbf63
+    digest: ebc546d2f837f703b29e06b68cae481fa5b7c990b8b120a20cb1a3cdf8b12fe8
     home: https://www.tensorflow.org
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/tensorflow-notebook.png
     keywords:
@@ -498,4 +498,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-tensorflow-notebook-dev-0.1.1.tgz
     version: 0.1.1
-generated: 2018-12-11T02:29:33.758685082-08:00
+generated: 2018-12-12T01:25:11.45899161-08:00
