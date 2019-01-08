@@ -252,9 +252,9 @@ entries:
     version: 0.1.0
   ibm-kibana-dev:
   - appVersion: 6.3.1
-    created: 2018-12-12T01:25:11.469672091-08:00
+    created: 2019-01-08T01:40:19.310477061-08:00
     description: Kibana is an open source data visualization plugin for Elasticsearch
-    digest: 7e104b26828b7843bbf311390024c9fc078225eadbfb7c3f1965d5c12b7ccdab
+    digest: 87d866c3cd391a1daa2c759ef1279e867749fdfd24f455dd466a4d552c271db3
     engine: gotpl
     home: https://www.elastic.co/products/kibana
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/kibana.png
@@ -279,9 +279,9 @@ entries:
     version: 0.10.0
   ibm-memcached-dev:
   - appVersion: 1.5.6
-    created: 2018-12-12T01:25:11.470664574-08:00
+    created: 2019-01-08T01:40:19.311428975-08:00
     description: Free & open source, high-performance, memory object caching system.
-    digest: bfbac8c3b3a7b7432a8692f486a475b6c368d7405f3be09709a5b550de2b9399
+    digest: f9cdabf4af982fb561d305cdb9434a05b3911d5d3f70cc0268ea8ad2de005a78
     engine: gotpl
     home: http://memcached.org/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/memcached.png
@@ -498,4 +498,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-tensorflow-notebook-dev-0.1.1.tgz
     version: 0.1.1
-generated: 2018-12-12T01:25:11.45899161-08:00
+generated: 2019-01-08T01:40:19.309096521-08:00

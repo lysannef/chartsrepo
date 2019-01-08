@@ -9,6 +9,10 @@ metadata:
   name: {{ template "kibana.fullname" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "kibana.name" . }}
+      release: {{ .Release.Name }}
   template:
     metadata:
       annotations:
@@ -21,7 +25,7 @@ spec:
       labels:
         app: {{ template "kibana.name" . }}
         release: "{{ .Release.Name }}"
-        chart: "{{ .Chart.Name }}"
+        chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
         heritage: {{ .Release.Service }}
     spec:
       {{- if .Values.serviceAccountName }}

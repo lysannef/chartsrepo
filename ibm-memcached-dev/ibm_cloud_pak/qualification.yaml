@@ -8,4 +8,4 @@ prereqs:
   security:
     kubernetes: 
       podSecurityPolicy: 
-        name: "ibm-restricted-psp"
+        name: "ibm-anyuid-psp"

@@ -11,7 +11,7 @@ $ helm install stable/ibm-memcached-dev
 The chart deploys pods consuming minimum resources. 
 
 ## PodSecurityPolicy Requirements
-This chart requires a PodSecurityPolicy to be bound to the target namespace prior to installation. Choose predefined ibm-restricted-psp PodSecurityPolicy.
+This chart requires a PodSecurityPolicy to be bound to the target namespace prior to installation. Choose predefined ibm-anyuid-psp PodSecurityPolicy.
 
 ## Introduction
 

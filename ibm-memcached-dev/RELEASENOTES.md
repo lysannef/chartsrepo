@@ -1,6 +1,6 @@
 # Release Notes
 
-## What's new in Chart Version 1.1.0
+## What's new in Chart Version 0.1.0
 
 - Added liveness and readiness probes
 - Added a helm test
@@ -21,4 +21,4 @@
 
 | Chart | Date | Kubernetes Version Required | Breaking Changes | Details |
 | ----- | ---- | --------------------------- | ---------------- | ------- |
-| 2.1.1 | March 21, 2018 | >= 1.7 | None | Initial version |
+| 0.1.0 | March 21, 2018 | >= 1.7 | None | Initial version |
