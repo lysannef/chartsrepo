@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-tomcat-dev-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ppc64le/tomcat:8.0
+  references:
+  - repository: ppc64le/tomcat:8.0

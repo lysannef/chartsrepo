@@ -1,0 +1,10 @@
+charts:
+  - archive: file:ibm-kube-state-metrics-dev-0.8.1.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: ibmcom/kube-state-metrics-ppc64le:1.3.0 
+  references:
+  - repository: ibmcom/kube-state-metrics-ppc64le
+

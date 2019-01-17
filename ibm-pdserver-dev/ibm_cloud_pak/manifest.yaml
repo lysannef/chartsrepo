@@ -1,0 +1,10 @@
+charts:
+  - archive: file:ibm-pdserver-dev-0.10.0.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: ibmcom/pd-server-ppc64le:v2.0.10
+  references:
+  - repository: ibmcom/pd-server-ppc64le
+

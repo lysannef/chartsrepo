@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-prometheus-adapter-dev-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: directxman12/k8s-prometheus-adapter-ppc64le:v0.2.1
+  references:
+  - repository: directxman12/k8s-prometheus-adapter-ppc64le:v0.2.1

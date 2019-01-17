@@ -1,0 +1,13 @@
+charts:
+  - archive: file:ibm-rabbitmq-ha-1.6.3.tgz
+    repository-keys: 
+      - image.repository
+      - prometheus.exporter.image.repository
+
+images:
+- image: rabbitmq:3.7.5-alpine
+  references:
+  - repository: rabbitmq:3.7.5-alpine
+- image: kbudde/rabbitmq-exporter:v0.28.0
+  references:
+  - repository: kbudde/rabbitmq-exporter:v0.28.0

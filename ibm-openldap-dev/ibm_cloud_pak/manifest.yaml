@@ -1,0 +1,10 @@
+charts:
+  - archive: file:ibm-openldap-dev-0.1.1.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: siji/openldap-ppc64le:2.4.42
+  references:
+  - repository: siji/openldap-ppc64le
+

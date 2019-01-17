@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-mesos-dev-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/mesos-ppc64le:1.1.0
+  references:
+  - repository: ibmcom/mesos-ppc64le:1.1.0

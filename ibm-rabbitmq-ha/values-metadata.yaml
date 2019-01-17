@@ -1,0 +1,669 @@
+node:
+   __metadata:
+     name: "Node"
+     label: "Node"
+     description: "Node Prefernce"
+     type: "string"
+     required: true
+     options:
+     - label: "ppc64le"
+       value: "ppc64le"
+existingConfigMap:
+  __metadata:
+    name: "existingConfigMap"
+    label: "Existing ConfigMap"
+    description: "Use Existing ConfigMap"
+    type: "boolean"
+    required: false
+
+existingSecret:
+  __metadata:  
+    name: "existingSecret"
+    label: "Existing Secret"
+    description: "Use Existing Secret"
+    type: "string"
+    required: false
+image:
+  __metadata:
+    label: "Image"
+    description: "Docker image details"
+  repository:
+    __metadata:
+      name: "repository"
+      label: "Repository"
+      description: "Docker image location"
+      type: "string"
+      immutable: false
+      required: true
+  tag:
+    __metadata:
+      name: "tag"
+      label: "Tag"
+      description: "Docker image tag"
+      type: "string"
+      immutable: false
+      required: true
+  pullPolicy:
+    __metadata:
+      name: "pullPolicy"
+      label: "Docker image pull policy"
+      description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+      type: "string"
+      immutable: false
+      required: true
+      options:
+      - label: "Always"
+        value: "Always"
+      - label: "Never"
+        value: "Never"
+      - label: "IfNotPresent"
+        value: "IfNotPresent"
+
+ingress:
+  __metadata:
+    label: "Ingress settings"
+    description: "Ingress Details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable Ingress"
+      description: "Specifies whether to use Ingress."
+      type: "boolean"
+      immutable: false
+      required: false
+  path:
+    __metadata:
+      name: "path"
+      label: "Path"
+      description: "Path must match the content of an incoming request before the loadbalancer directs traffic to the backend."
+      type: "string"
+      immutable: false
+      required: false
+  hostName:
+    __metadata:
+      name: "hostName"
+      label: "Virtual hosts"
+      description: "Name-based virtual hosts"
+      type: "string"
+      required: false
+  tls:
+    __metadata:
+      name: "tls"
+      label: "TLS"
+      description: "Specifies wether to enable TLS on the ingress record"
+      type: "boolean"
+      immutable: false
+      required: false
+  tlsSecret:
+    __metadata:
+      name: "tlsSecret"
+      label: "TLS Secret"
+      description: "TLS secret will store the key/certificate for TLS"
+      type: "string"
+      immutable: false
+      required: false
+  annotations:
+    __metadata:
+      name: "annotations"
+      label: "Annotation"
+      description: "Ingress annotations done as key:value pairs"
+      type: "string"
+      required: false
+persistentVolume:
+  __metadata:
+     name: "persistentVolume"
+     label: "Persistent Volume"
+     description: "Persistent Storage details"
+  enabled:
+     __metadata:
+      name: "Enabled"
+      label: "Enable/Disable"
+      description: "(Recommended) Select this checkbox to store data on persistent volumes"
+      type: "boolean"
+      required: false
+  useDynamicProvisioning:
+    __metadata:
+      name: "UseDynamicProvisioning"
+      label: "Dynamic Provisioning"
+      description: "Use dynamically provisioned persistent volumes to store Mesos data"
+      type: "boolean"
+      required: false
+  name:
+    __metadata:
+      name: "Name"
+      label: "Name"
+      description: "Name of persistent volume"
+      type: "string"
+      required: false
+  accessModes:
+    __metadata:
+      name: "AccessModes"
+      label: "Access Modes"
+      description: "Access mode details"
+      type: "string"
+      required: false
+  size:
+    __metadata:
+      name: "Size"
+      label: "Storage Size"
+      description: "Specify the size of the data storage volume"
+      type: "string"
+      required: false
+  storageClassName:
+    __metadata:
+      name: "StorageClassName"
+      label: "Storage class name"
+      description: "Set this value if you want to use only a specific storage class for dynamic provisioning or with your volume selector"
+      type: "string"
+      required: false
+service:
+  __metadata:
+    label: "Service"
+    description: "Application Service Details"
+  type:
+    __metadata:
+      name: "type"
+      label: "Service Type"
+      description: "Type of service"
+      type: "string"
+      immutable: false
+      required: false
+      options:
+        - label: "Cluster IP"
+          value: "ClusterIP"
+        - label: "Node Port"
+          value: "NodePort"
+  externalIPs:
+    __metadata:
+      name: "externalIPs"
+      label: "External IPs"
+      description: "This is the external IP addresses"
+      type: "string"
+      immutable: false
+      required: false
+  clusterIP:
+    __metadata:
+      name: "clusterIP"
+      label: "Cluster IP"
+      description: "Specify Cluster IP for service"
+      type: "string"
+      immutable: false
+      required: false
+  loadBalancerIP:
+    __metadata:
+      name: "loadBalancerIP"
+      label: "LoadBalancer IP"
+      description: "IP address for LoadBalancer"
+      type: "string"
+      required: false
+  loadBalancerSourceRanges:
+    __metadata:
+      name: "loadBalancerSourceRanges"
+      label: "loadBalancer Source Ranges"
+      description: "LoadBalancer Source IP Ranges"
+      type: "string"
+      required: false
+
+replicaCount:
+   __metadata:
+     name: "replicaCount"
+     label: "Replica Count"
+     description: "Number of replicas of deployment needed to be created"
+     type: "string"
+     immutable: false
+     required: false
+
+terminationGracePeriodSeconds:
+   __metadata:
+     name: "terminationGracePeriodSeconds"
+     label: "TerminationGracePeriodSeconds"
+     description: "Grace period in seconds to wait before termination"
+     type: "number"
+     required: false
+
+tolerations:
+  __metadata:
+    name: "tolerations"
+    label: "Tolerations"
+    description: "Toleration labels for pod assignment, e.g. [{\"key\": \"key\", \"operator\":\"Equal\", \"value\": \"value\", \"effect\":\"NoSchedule\"}]"
+    type: "string"
+    immutable: false
+    required: false
+
+updateStrategy:
+  __metadata:
+    name: "updateStrategy"
+    label: "Update Strategy"
+    description: "Updation strategy for Helm Chart"
+    type: "string"
+    required: false   
+
+podAntiAffinity:
+  __metadata:
+    name: "podAntiAffinity"
+    label: "Pod AnitAffinity"
+    description: "Whether Kubernetes may (soft) or must not (hard) deploy client pods onto the same node."
+    type: "string"
+    required: false
+
+serviceAccount:
+  __metadata:
+    name: "serviceAccount"
+    label: "Service account"
+    description: "Service Account details"
+  create:
+    __metadata:
+      name: "create"
+      label: "Create"
+      description: "Create a ServiceAccount"
+      type: "boolean"
+      required: true
+  name:
+    __metadata:
+      name: "name"
+      label: "Name"
+      description: "ServiceAccount name"
+      type: "string"
+      required: false
+
+rbac:
+  __metadata:
+    label: "RBAC roles and bindings"
+    description: "RBAC roles and bindings"
+  create:
+    __metadata:
+      name: "create"
+      label: "Create"
+      description: "Create RBAC roles and bindings"
+      type: "boolean"
+      immutable: false
+      required: true
+
+prometheus:
+  __metadata:
+    label: "Prometheus"
+    description: "Prometheus Monitoring & Alerts"
+  exporter:
+    enabled:
+      __metadata:
+        name: "enabled"
+        label: "Enabled"
+        description: "Configures Prometheus Exporter to expose and scrape stats"
+        type: "boolean"
+        required: false
+    image:
+      repository:
+        __metadata:
+          name: "repository"
+          label: "Repository"
+          description: "Prometheus Exporter repository"
+          type: "string"
+          required: false
+      tag:
+        __metadata:
+          name: "tag"
+          label: "Tag"
+          description: "Image Tag"
+          type: "string"
+          required: false
+      pullPolicy:
+        __metadata:
+          name: "pullPolicy"
+          label: "PullPolicy"
+          description: "Image Pull Policy"
+          type: "string"
+          required: false
+    port:
+      __metadata:
+        name: "port"
+        label: "Port"
+        description: "Port Prometheus scrapes for metrics"
+        type: "number"
+        required: false
+  operator:
+    enabled:
+      __metadata:
+        name: "enabled"
+        label: "Enabled"
+        description: "If true Prometheus Operator will be used"
+        type: "boolean"
+        required: false
+    alerts:
+      enabled:
+        __metadata:
+          name: "enabled"
+          label: "Enabled"
+          description: "Create default Alerts for RabbitMQ"
+          type: "boolean"
+          required: false
+      selector:
+        role:
+          __metadata:
+            name: "role"
+            label: "Role"
+            description: "Selector Role"
+            type: "string"
+            required: false
+    serviceMonitor:
+      interval:
+        __metadata:
+          name: "interval"
+          label: "Interval"
+          description: "How often Prometheus Scrapes metrics"
+          type: "string"
+          required: false
+      namespace:
+        __metadata:
+          name: "namespace"
+          label: "Namespace"
+          description: "Namespace which Prometheus is installed"
+          type: "string"
+          required: false
+      selector:
+        prometheus:
+          __metadata:
+            name: "prometheus"
+            label: "Prometheus"
+            description: "Name of Service Monitor"
+            type: "string"
+            required: false
+rabbitmqUsername:
+  __metadata:
+    name: "rabbitmqUsername"
+    label: "RabbitmqUsername"
+    description: "RabbitMQ application username"
+    type: "string"
+    required: false
+rabbitmqPassword:
+  __metadata:
+    name: "rabbitmqPassword"
+    label: "RabbitmqPassword"
+    description: "RabbitMQ application password"
+    type: "string"
+    required: false
+rabbitmqVhost:
+  __metadata:
+    name: "rabbitmqVhost"
+    label: "RabbitmqVhost"
+    description: "RabbitMQ application vhost"
+    type: "string"
+    required: false
+rabbitmqErlangCookie:
+  __metadata:
+    name: "rabbitmqErlangCookie"
+    label: "RabbitmqErlangCookie"
+    description: "Erlang cookie for RabbitMQ"
+    type: "string"
+    required: false
+rabbitmqMemoryHighWatermark:
+  __metadata:
+    name: "rabbitmqMemoryHighWatermark"
+    label: "RabbitmqMemoryHighWatermark"
+    description: "Memory high watermark for RabbitMQ"
+    type: "string"
+    required: false
+rabbitmqEpmdPort:
+  __metadata:
+    name: "rabbitmqEpmdPort"
+    label: "RabbitmqEpmdPort"
+    description: "EPMD port used for cross cluster replication"
+    type: "number"
+    required: false
+rabbitmqNodePort:
+  __metadata:
+    name: "rabbitmqNodePort"
+    label: "RabbitmqNodePort"
+    description: "Node port for RabbitMQ"
+    type: "number"
+    required: false
+rabbitmqManagerPort:
+   __metadata:
+    name: "rabbitmqManagerPort"
+    label: "RabbitmqManagerPort"
+    description: "Manager port for RabbitMQ"
+    type: "number"
+    required: false
+rabbitmqHipeCompile:
+  __metadata:
+    name: "rabbitmqHipeCompile"
+    label: "RabbitmqHipeCompile"
+    description: "RabbitMQ Manager port"
+    type: "boolean"
+    required: false
+rabbitmqCert:
+  __metadata:
+    name: "rabbitmqCert"
+    label: "RabbitmqCert"
+    description: "RabbitMQ Certificates"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Mount a Secret container certificates"
+      type: "boolean"
+      required: false
+  existingSecret:
+    __metadata:
+      name: "existingSecret"
+      label: "ExistingSecret"
+      description: "Name of an existing `Secret` to mount for amqps"
+      type: "string"
+      required: false
+  cacertfile:
+    __metadata:
+      name: "cacertfile"
+      label: "Cacertfile"
+      description: "base64 encoded CA certificate (overwrites existing Secret)"
+      type: "string"
+      required: false
+  certfile:
+    __metadata:
+      name: "certfile"
+      label: "Certfile"
+      description: "base64 encoded server certificate (overwrites existing Secret)"
+      type: "string"
+      required: false
+  keyfile:
+    __metadata:
+      name: "keyfile"
+      label: "Keyfile"
+      description: "base64 encoded server private key (overwrites existing Secret)"
+      type: "string"
+      required: false
+rabbitmqAmqpsSupport:
+  __metadata:
+    name: "rabbitmqAmqpsSupport"
+    label: "RabbitmqAmqpsSupport"
+    description: "Rabbitmq Amqps Support details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Set true to enable RabbitMQ AMQPS support"
+      type: "boolean"
+      required: false
+  amqpsNodePort:
+    __metadata:
+      name: "amqpsNodePort"
+      label: "AmqpsNodePort"
+      description: "Node port details for amqps service"
+      type: "number"
+      required: false
+  config:
+    __metadata:
+      name: "config"
+      label: "Config"
+      description: "Configuration details for RabbitMQ AMQPS support"
+      type: "string"
+      required: false
+rabbitmqAuth:
+  __metadata:
+    name: "rabbitmqAuth"
+    label: "RabbitmqAuth"
+    description: "RabbitMQ Authentication details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Set true to enable RabbitMQ Authentication"
+      type: "boolean"
+      required: false
+  config:
+    __metadata:
+      name: "config"
+      label: "Config"
+      description: "Configuration details for RabbitMQ Authentication"
+      type: "string"
+      required: false
+rabbitmqLDAPPlugin:
+  __metadata:
+    name: "rabbitmqLDAPPlugin"
+    label: "RabbitmqLDAPPlugin"
+    description: "RabbitMQ LDAP Plugin details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Set true to enable RabbitMQ LDAP Plugin"
+      type: "boolean"
+      required: false
+  config:
+    __metadata:
+      name: "config"
+      label: "Config"
+      description: "Configuration details for RabbitMQ LDAP Plugin"
+      type: "string"
+      required: false
+rabbitmqMQTTPlugin:
+  __metadata:
+    name: "rabbitmqMQTTPlugin"
+    label: "RabbitmqMQTTPlugin"
+    description: "RabbitMQ MQTT Plugin Details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Set true to enable RabbitMQ MQTT Plugin"
+      type: "boolean"
+      required: false
+  config:
+    __metadata:
+      name: "config"
+      label: "Config"
+      description: "Configuration details for RabbitMQ MQTT Plugin"
+      type: "string"
+      required: false
+rabbitmqWebMQTTPlugin:
+  __metadata:
+    name: "rabbitmqWebMQTTPlugin"
+    label: "RabbitmqWebMQTTPlugin"
+    description: "RabbitMQ Web MQTT Plugin Details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Set true to enable RabbitMQ Web MQTT Plugin"
+      type: "boolean"
+      required: false
+  config:
+    __metadata:
+      name: "config"
+      label: "Config"
+      description: "Configuration details for RabbitMQ Web MQTT Plugin"
+      type: "string"
+      required: false
+rabbitmqSTOMPPlugin:
+  __metadata:
+    name: "rabbitmqSTOMPPlugin"
+    label: "RabbitmqSTOMPPlugin"
+    description: "RabbitMQ STOMP Plugin Details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Set true to enable RabbitMQ STOMP Plugin"
+      type: "boolean"
+      required: false
+  config:
+    __metadata:
+      name: "config"
+      label: "Config"
+      description: "Configuration details for RabbitMQ STOMP Plugin"
+      type: "string"
+      required: false
+rabbitmqWebSTOMPPlugin:
+  __metadata:
+    name: "rabbitmqWebSTOMPPlugin"
+    label: "RabbitmqWebSTOMPPlugin"
+    description: "RabbitMQ Web STOMP Plugin Details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Set true to enable RabbitMQ Web STOMP Plugin"
+      type: "boolean"
+      required: false
+  config:
+    __metadata:
+      name: "config"
+      label: "Config"
+      description: "Configuration details for RabbitMQ Web STOMP Plugin"
+      type: "string"
+      required: false
+livenessProbe:
+  __metadata:
+    label: "Liveness Probe"
+    description: "Configure when to restart container"
+  initialDelaySeconds:
+    __metadata:
+      name: "initialDelaySeconds"
+      label: "Initial delay"
+      description: "Number of seconds after the container has started before liveness probe is initiated."
+      type: "number"
+      immutable: false
+      required: true
+  timeoutSeconds:
+    __metadata:
+      name: "timeoutSeconds"
+      label: "TimeoutSeconds"
+      description: "Number of seconds after which the probe times out."
+      type: "number"
+      immutable: false
+      required: true
+  failureThreshold:
+    __metadata:
+      name: "failureThreshold"
+      label: "FailureThreshold"
+      description: "Number of retires on probe failure before giving up on Pods"
+      type: "number"
+      immutable: false
+      required: true
+readinessProbe:
+  __metadata:
+    label: "Readiness Probe"
+    description: "Configure when container is ready to start accepting traffic"
+  initialDelaySeconds:
+    __metadata:
+      name: "initialDelaySeconds"
+      label: "Initial delay"
+      description: "Number of seconds after the container has started before liveness probe is initiated."
+      type: "number"
+      immutable: false
+      required: true
+  timeoutSeconds:
+    __metadata:
+      name: "timeoutSeconds"
+      label: "TimeoutSeconds"
+      description: "Number of seconds after which the probe times out."
+      type: "number"
+      immutable: false
+      required: true
+  periodSeconds:
+    __metadata:
+      name: "periodSeconds"
+      label: "Period"
+      description: "How often (in seconds) to perform the readiness probe. Minimum value is 1."
+      type: "number"
+      immutable: false
+      required: true
+

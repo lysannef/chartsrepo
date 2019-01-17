@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-tomee-dev-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: tomee:8-jre-1.7.5-webprofile
+  references:
+  - repository: tomee:8-jre-1.7.5-webprofile

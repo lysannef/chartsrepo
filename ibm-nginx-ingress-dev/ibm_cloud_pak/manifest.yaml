@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-nginx-ingress-dev-0.28.1.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/nginx-ingress-controller-ppc64le:0.9.0-beta.13
+  references:
+  - repository: ibmcom/nginx-ingress-controller-ppc64le:0.9.0-beta.13

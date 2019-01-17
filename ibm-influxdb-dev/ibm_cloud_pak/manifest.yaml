@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-influxdb-dev-0.10.0.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: ibmcom/influxdb-ppc64le:0.10
+  references:
+  - repository: ibmcom/influxdb-ppc64le

@@ -1,0 +1,233 @@
+node:
+   __metadata:
+     label: "Node"
+     description: "Node Prefernce"
+     type: "string"
+     immutable: false
+     required: true
+     options:
+     - label: "ppc64le"
+       value: "ppc64le"
+image:
+  __metadata:
+    label: "Image"
+    description: "Docker Image Details"
+  repository:
+    __metadata:
+      name: "repository"
+      label: "Repository"
+      description: "Docker image location"
+      type: "string"
+      immutable: false
+      required: true
+  tag:
+    __metadata:
+      name: "tag"
+      label: "Tag"
+      description: "Docker image tag"
+      type: "string"
+      immutable: false
+      required: true
+  pullPolicy:
+     __metadata:
+       name: "pullPolicy"
+       label: "Docker image pull policy"
+       description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+       type: "string"
+       immutable: true
+       required: true
+       options:
+       - label: "Always"
+         value: "Always"
+       - label: "Never"
+         value: "Never"
+tolerations:
+  __metadata:
+    name: "tolerations"
+    label: "Tolerations"
+    description: "Toleration labels for pod assignment, e.g. [{\"key\": \"key\", \"operator\":\"Equal\", \"value\": \"value\", \"effect\":\"NoSchedule\"}]"
+    type: "string"
+    immutable: false
+    required: false
+persistence:
+  __metadata:
+    label: "Data persistence configuration"
+    description: "Persistence module configuration needed for deployment"
+  enabled:
+   __metadata:
+      name: "enabled"
+      label: "Enable persistence for this deployment"
+      description: "Enables persistence for this deployment. Defaults to true."
+      type: "boolean"
+      immutable: false
+      required: true
+  accessMode:
+    __metadata:
+      name: "Accessmode"
+      label: "accessmode"
+      description: "Access mode for PersistentVolumes.Default is ReadWriteOnce"
+      type: "string"
+      immutable: false
+      required: true
+  useDynamicProvisioning:
+    __metadata:
+      name: "useDynamicProvisioning"
+      label: "Use dynamic provisioning for persistent volume"
+      description: "If dynamic provisioning is available in the cluster this option will automatically provision the requested volume if set to true."
+      type: "boolean"
+      immutable: false
+      required: true
+  existingClaim:
+    __metadata:
+      name: "ExistingClaim"
+      label: "existingClaim"
+      description: "specify the existing claim"
+      type: "string"
+      immutable: false
+  size:
+    __metadata:
+      name: "Size"
+      label: "size"
+      description: "PersistentVolumeClaim storage size . Default is 8Gi"
+      type: "string"
+      immutable: false
+  storageClass:
+    __metadata:
+      name: "Storage Class"
+      label: "storageClass"
+      description: "Storage class for PersistentVolume."
+      type: "string"
+      immutable: false
+replicas:
+   __metadata:
+     name: "replicas"
+     label: "Replicas"
+     description: "Number of replicas of deployment needed to be created"
+     type: "string"
+     immutable: false
+     required: true
+service:
+  __metadata:
+     label: "Service"
+     description: "Specifies the Service for Openldap"
+  ldapPort:
+    __metadata:
+      name: "LdapPort"
+      label: "ldapPort"
+      description: "External service port for LDAP"
+      type: "number"
+      immutable: false
+      required: true
+  sslLdapPort:
+    __metadata:
+      name: "SslLdapPort"
+      label: "sslLdapPort"
+      description: "External service port for SSL+LDAP"
+      type: "number"
+      immutable: false
+      required: true
+  type:
+    __metadata:
+      name: "type"
+      label: "Service Type"
+      description: "Type of Service- NodePort, ClusterIP"
+      type: "string"
+      immutable: false
+      required: true
+      options:
+      - label: "ClusterIP"
+        value: "ClusterIP"
+      - label: "NodePort"
+        value: "NodePort"
+      - label: "LoadBalancer"
+        value: "LoadBalancer"
+      - label: "IfNotPresent"
+        value: "IfNotPresent"
+env:
+  __metadata:
+      label: "Env"
+      description: "List of key value pairs as env variables to be sent to the docker image."
+  domain:
+    __metadata:
+      name: "Domain"
+      label: "domain"
+      description: "Ldap domain. Defaults to example.org"
+      type: "string"
+      immutable: false
+      required: true
+  organisation:
+    __metadata:
+      name: "Organisation"
+      label: "organisation"
+      description: "Organisation name. Defaults to Example Inc."
+      type: "string"
+      immutable: false
+      required: true
+  domain:
+    __metadata:
+      name: "Domain"
+      label: "domain"
+      description: "Ldap domain. Defaults to example.org"
+      type: "string"
+      immutable: false
+      required: true
+  password:
+    __metadata:
+      name: "Password"
+      label: "password"
+      description: "Read only user password. Defaults to readonly"
+      type: "string"
+      immutable: false
+      required: true
+adminPassword:
+  __metadata:
+      name: "Adminpassword"
+      label: "AdminPassword"
+      description: "Ldap Admin password. Defaults to admin"
+      type: "string"
+      immutable: false
+      required: true
+configPassword:
+  __metadata:
+      name: "Configpassword"
+      label: "ConfigPassword"
+      description: "Ldap Config password. Defaults to config"
+      type: "string"
+      immutable: false
+      required: true
+containerName:
+  __metadata:
+      name: "Containername"
+      label: "ContainerName"
+      description: "specifies the Ldap container name"
+      type: "string"
+      immutable: false
+      required: true
+customLdifFiles:
+  __metadata: 
+      label: "CustomLdifFiles"
+      description: "Custom ldif files to seed the LDAP server. List of filename -> data pairs"
+      type: "string"
+      immutable: false
+      required: false
+test:
+  __metadata:
+      label: "Test"
+      description: "test container"
+  image: 
+    repository:
+      __metadata:
+        name: "repository"
+        label: "Repository"
+        description: "Docker image location"
+        type: "string"
+        immutable: false
+        required: true
+    tag:
+      __metadata:
+        name: "tag"
+        label: "Tag"
+        description: "Docker image tag"
+        type: "string"
+        immutable: false
+        required: true

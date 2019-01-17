@@ -1,0 +1,21 @@
+charts:
+  - archive: file:ibm-mongodb-replicaset-3.5.6.tgz 
+    repository-keys: 
+      - installImage.repository
+      - image.repository
+      - metrics.image.repository
+
+images:
+- image: ckandag/mongodb-install-ppc64le:0.5
+  references:
+  - repository: ckandag/mongodb-install-ppc64le:0.5
+
+
+- image: ppc64le/mongodb:2.6.10
+  references:
+  - repository: ppc64le/mongodb:2.6.10
+
+
+- image: ssalaues/mongodb-exporter:0.6.1
+  references:
+  - repository: ssalaues/mongodb-exporter:0.6.1

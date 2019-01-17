@@ -1,0 +1,419 @@
+node:
+   __metadata:
+     label: "Node"
+     description: "Node Prefernce"
+     type: "string"
+     immutable: false
+     required: true
+     options:
+     - label: "ppc64le"
+       value: "ppc64le"
+
+auth:
+  __metadata:
+    label: "Auth"
+    description: " Auth Details"
+  adminPassword:
+    __metadata:
+      label: "Admin Password"
+      description: "Admin Password Details"
+      type: "string"
+      required: false
+      immutable: false
+  adminUser:
+    __metadata:
+      label: "Admin User"
+      description: "Admin User Name"
+      type: "string"
+      required: false
+      immutable: false
+  enabled:
+    __metadata:
+      label: "Enabled"
+      description: "Auth Enabled"
+      type: "boolean"
+      required: false
+      immutable: false
+  existingAdminSecret:
+    __metadata:
+      label: "Existing Admin Secret"
+      description: "Existing Admin Secret Details"
+      type: "string"
+      required: false
+      immutable: false
+  existingKeySecret:
+    __metadata:
+      label: "Existing Key Secret"
+      description: "Existing Key Secrets Details"
+      type: "string"
+      required: false
+      immutable: false
+  existingMetricsSecret:
+    __metadata:
+      label: "Existing  Metric Secret"
+      description: "Existing Metric Secret Details"
+      type: "string"
+      required: false
+      immutable: false
+  key:
+    __metadata:
+      label: " Key"
+      description: "New auth key"
+      type: "string"
+      required: false
+      immutable: false
+  metricsPassword:
+    __metadata:
+      label: " Metrics Password"
+      description: " Auth metrics password "
+      type: "string"
+      required: false
+      immutable: false
+  metricsUser:
+    __metadata:
+      label: " Metrics User" 
+      description: " Auth metrics user"
+      type: "string"
+      required: false
+      immutable: false
+
+image:
+  __metadata:
+    label: "Image"
+    description: "Docker Image Details"
+  repository:
+    __metadata:
+      name: "repository"
+      label: "Repository"
+      description: "Docker image location"
+      type: "string"
+      immutable: false
+      required: true
+  tag:
+    __metadata:
+      name: "tag"
+      label: "Tag"
+      description: "Docker image tag"
+      type: "string"
+      immutable: false
+      required: true
+  pullPolicy:
+     __metadata:
+       name: "pullPolicy"
+       label: "Docker image pull policy"
+       description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+       type: "string"
+       immutable: true
+       required: true
+       options:
+       - label: "Always"
+         value: "Always"
+       - label: "Never"
+         value: "Never"
+
+
+installImage:
+  __metadata:
+    label: "Image"
+    description: "Docker Image Details"
+  repository:
+    __metadata:
+      name: "repository"
+      label: "Repository"
+      description: "Docker image location"
+      type: "string"
+      immutable: false
+      required: true
+  tag:
+    __metadata:
+      name: "tag"
+      label: "Tag"
+      description: "Docker image tag"
+      type: "string"
+      immutable: false
+      required: true
+  pullPolicy:
+     __metadata:
+       name: "pullPolicy"
+       label: "Docker image pull policy"
+       description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+       type: "string"
+       immutable: true
+       required: true
+       options:
+       - label: "Always"
+         value: "Always"
+       - label: "Never"
+         value: "Neveer"
+
+livenessProbe:
+  __metadata:
+    label: "Liveness Probe"
+    description: " Liveness Probe Details"
+  failureThreshold:
+    __metadata:
+      label: " Failure Threshold"
+      description: "Threshold of failure"
+      type: "number"
+      immutable: false
+      required: false
+  initialDelaySeconds:
+    __metadata:
+      label: "Initial Delay"
+      description: "Initial Delay allowance in seconds"
+      type: "number"
+      immutable: false
+      required: false
+  periodSeconds:
+    __metadata:
+      label: "Time Period"
+      description: "Time period in seconds"
+      type: "number"
+      immutable: false
+      required: false
+  successThreshold:
+    __metadata:
+      label: "Success Threshold"
+      description: "Threshold seconds for success"
+      type: "number"
+      immutable: false
+      required: false
+  timeoutSeconds: 
+    __metadata:
+      label: "Timeout"
+      description: "Seconds to Timeout"
+      type: "number"
+      immutable: false
+      required: false
+
+
+readinessProbe:
+  __metadata:
+    label: " Readiness Probe"
+    description: "Readiness Probe details"
+  initialDelaySeconds:
+    __metadata:
+      label: "Initial Delay"
+      description: " Initial Delay for Readiness Probe in seconds"
+      type: "number"
+      required: false
+  timeoutSeconds:
+    __metadata:
+      label: "Time Out"
+      description: "Time out in seconds for Readiness Probe"
+      required: false
+  successThreshold:
+    __metadata:
+      label: "Success Threshold"
+      description: "Threshold seconds for success"
+      type: "number"
+      immutable: false
+      required: false
+  failureThreshold:
+    __metadata:
+      label: " Failure Threshold"
+      description: "Threshold of failure"
+      type: "number"
+      immutable: false
+      required: false
+  periodSeconds:
+    __metadata:
+      label: "Time Period"
+      description: "Time period in seconds"
+      type: "number"
+      immutable: false
+      required: false
+
+metrics:
+  __metadata:
+    label: " Metrics"
+    description: "Metrics Details"
+  enabled:
+    __metadata:
+      label: "Time Period"
+      description: "Time period in seconds"
+      type: "boolean"
+      immutable: false
+      required: false
+  image:
+    pullPolicy:
+      __metadata:
+        label: "Pull Policy"
+        description: " Image pull policy "
+        type: "string"
+        immutable: false
+        required: false
+    repository:
+      __metadata:
+        label: "Repository"
+        description: " Metrics Image Repository"
+        type: "string"
+        immutable: false
+        required: false
+    tag:
+      __metadata:
+        label: " Tag"
+        description: "Metrics Image Tag"
+        type: "string"
+        immutable: false
+        required: false
+  path:
+    __metadata:
+      label: " Path"
+      description: "Path to Metrics data"
+      type: "string"
+      immutable: false
+      required: false
+  port:
+    __metadata:
+      label: "Port"
+      description: " Metrics Port"
+      type: "number"
+      immutable: false
+      required: false
+  prometheusServiceDiscovery:
+    __metadata:
+      label: " Prometheus Service Discovery"
+      description: "Prometheus Service Discovery Enable/Disabled"
+      type: "boolean"
+      immutable: false
+      required: false
+  socketTimeout:
+    __metadata:
+      label: "Socket Timeout"
+      description: "Socket Timeout in seconds"
+      type: "number"
+      immutable: false
+      required: false
+  syncTimeout:
+    __metadata:
+      label: " Sync Timeout"
+      description: " Timeout till sync in minutes"
+      type: "number"
+      immutable: false
+      required: false
+
+port:
+  __metadata:
+    label: "Mongodb Port"
+    description: "MongoDB Port number"
+    type: "number"
+    immutable: false
+    required: false
+
+
+persistentVolume:
+  __metadata:
+    label: "Persistent Volumes"
+    description: "Storage data"
+  accessModes:
+    __metadata:
+      label: "Access Modes"
+      description: "Storage access modes"
+      type: "string"
+      immutable: false
+      required: false
+  enabled:
+    __metadata:
+      label: "Enabled"
+      description: "Storage enabled/disabled"
+      type: "boolean"
+      immutable: false
+      required: false
+  size:
+    __metadata:
+      label: "Size"
+      description: "Storage Size"
+      type: "string"
+      immutable: false
+      required: false
+  storageClass:
+    __metadata:
+      label: "Storage Class"
+      description: "Type of Storage Class"
+      type: "string"
+      immutable: false
+      required: false
+  useDynamicProvisioning:
+    __metadata:
+      label: "Dyanmic Provisioning"
+      description: " Storage dynamically provisioned"
+      type: "boolean"
+      immutable: false
+      required: false
+
+securityContext:
+  __metadata:
+    label: " Security Context"
+    description: "Security Context Details"
+  fsGroup:
+    __metadata: 
+      label: " FSGroup"
+      description: " File system Group"
+      type: "string"
+      required: false
+  runAsNonRoot:
+    __metadata:
+      label: "Non Root"
+      description: "Run as Non root enabled/disabled"
+      type: "boolean"
+      required: false
+  runAsUser:
+    __metadata:
+      label: "User"
+      description: "Specify non root user"
+      type: "string"
+      required: false
+
+
+tls:
+  __metadata:
+    label: "TLS"
+    description: "TLS Details"
+  cacert:
+    __metadata:
+      label: "CA certificate"
+      description: "Specify certificates"
+      type: "string"
+      required: false
+  cakey:
+    __metadata:
+      label: "CA Key"
+      description: "Specify CA Keys"
+      type: "string"
+      required: false
+  enabled:
+    __metadata:
+      label: "Enabled"
+      description: "TLS Enabled/Disabled"
+      type: "boolean"
+      required: false
+
+
+replicaSetName:
+  __metadata:
+    label: "Replica Set"
+    description: "Replica Set Name"
+    type: "string"
+    required: false
+
+configmap:
+  __metadata:
+    label: " Config Map"
+    description: " Config Map details"
+    type: "string"
+    required: false
+
+replicas:
+  __metadata:
+    label: "Replicas"
+    description: "Replica count"
+    type: "number"
+    required: false
+
+tolerations:
+  __metadata:
+    label: "Tolerations"
+    description: "Tolerations for chart"
+    type: "string"
+    required: false
