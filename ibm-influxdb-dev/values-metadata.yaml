@@ -962,7 +962,7 @@ config:
         description: "Specify http.httpsPrivateKey."
         type: "string"
         immutable: false
-        required: true
+        required: false
     maxRowLimit: 
       __metadata:
         name: "maxRowLimit"
