@@ -364,9 +364,9 @@ entries:
   ibm-kube-state-metrics-dev:
   - apiVersion: v1
     appVersion: 1.3.1
-    created: 2019-01-17T12:10:59.462490638+05:30
+    created: 2019-01-18T16:11:54.882824764+05:30
     description: Install kube-state-metrics to generate and expose cluster-level metrics
-    digest: 3fe78fd0722ffc3b50ccb5cd9768a4fada14e22bad71bf5ba157329a2f06b40c
+    digest: 2d7fc1331805256806c2ffe05a5b61a1e97116cee87290653df7752d20fa297c
     home: https://github.com/kubernetes/kube-state-metrics/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
     keywords:
@@ -612,9 +612,9 @@ entries:
   ibm-pdserver-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-17T12:10:59.484170197+05:30
+    created: 2019-01-18T16:09:42.653977971+05:30
     description: Placement driver for TiKV.
-    digest: 7e572ad73ca5c2da9796a07aeadb3482e36c990c20ffc19f17d96e35457ebf78
+    digest: cffd7be7b7e0fa954931b3751ad2e5c320519ceb6cfef05bf6042241b7484a7b
     engine: gotpl
     home: https://github.com/pingcap/pd
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
@@ -866,4 +866,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-tomee-dev-0.1.0.tgz
     version: 0.1.0
-generated: 2019-01-18T15:58:44.485494845+05:30
+generated: 2019-01-18T16:11:54.881448697+05:30

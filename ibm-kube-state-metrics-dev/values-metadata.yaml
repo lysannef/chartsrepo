@@ -148,7 +148,7 @@ namespace:
       description: "specify the kube-state-metrics namespace"
       type: "string"
       immutable: false
-      required: true
+      required: false
 collectors:
   __metadata:
       name: "namespace"
