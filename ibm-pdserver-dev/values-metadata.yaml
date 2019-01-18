@@ -83,7 +83,7 @@ ingress:
       description: "TLS consisting of secret name and hosts"
       type: "string"
       immutable: false
-      required: true
+      required: false
 replicaCount:
    __metadata:
      name: "replicaCount"

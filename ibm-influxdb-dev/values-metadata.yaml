@@ -475,7 +475,7 @@ config:
         description: "specifies the caCerts"
         type: "string"
         immutable: false
-        required: true
+        required: false
     writeConcurrency:
       __metadata:
         name: "WriteConcurrency"

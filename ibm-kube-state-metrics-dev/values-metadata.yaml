@@ -217,7 +217,7 @@ collectors:
       description: "Enable the namespaces collector.Default is true"
       type: "boolean"
       immutable: false
-      required: true
+      required: false
   nodes:
     __metadata:
       name: "Nodes"
