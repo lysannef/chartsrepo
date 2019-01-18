@@ -281,9 +281,9 @@ entries:
     version: 0.1.0
   ibm-influxdb-dev:
   - appVersion: "1.4"
-    created: 2019-01-17T12:10:59.450470242+05:30
+    created: 2019-01-18T15:58:44.487848047+05:30
     description: Scalable datastore for metrics, events, and real-time analytics.
-    digest: c985c4cfda54882c093819e46370e85a31b87d4bdac9527c242c970b7cf9e2d9
+    digest: 51c637f30d6e6cda338960c63332ded26b1b12e81aa75e82f96f7dcd8e7ea49b
     engine: gotpl
     home: https://www.influxdata.com/time-series-platform/influxdb/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/influxdb.png
@@ -866,4 +866,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-tomee-dev-0.1.0.tgz
     version: 0.1.0
-generated: 2019-01-17T12:10:59.433729498+05:30
+generated: 2019-01-18T15:58:44.485494845+05:30

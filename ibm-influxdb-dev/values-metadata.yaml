@@ -144,7 +144,7 @@ persistence:
       description: "Name of existing PVC to be used in the influx deployment"
       type: "string"
       immutable: false
-      required: true
+      required: false
   useDynamicProvisioning:
     __metadata:
       name: "useDynamicProvisioning"
@@ -289,7 +289,7 @@ setDefaultUser:
         description: "Specify password for Default user.single quotes must be escaped (\').Default: (Randomly generated 10 characters of AlphaNum)"
         type: "password"
         immutable: false
-        required: true
+        required: false
     privileges:
       __metadata:
         name: "privileges"
@@ -471,8 +471,8 @@ config:
     caCerts:
       __metadata:
         name: "cacerts"
-        label: "caCerts"
-        description: "specifies the caCerts"
+        label: "ca erts"
+        description: "specifies the ca erts"
         type: "string"
         immutable: false
         required: false
