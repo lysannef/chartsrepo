@@ -12,7 +12,7 @@ env:
   # To adjust a config option to an env var uppercase + replace `.` with `_`
   # Ref: https://www.elastic.co/guide/en/kibana/current/settings.html
   #
-  elasticsearchUrl: http://elasticsearch-client:9200
+  elasticsearchUrl: http://elasticsearch-client-url:9200
   serverPort: 5601
   loggingVerbose: true
   serverDefaultRoute: "/app/kibana"
@@ -23,7 +23,7 @@ files:
     server.name: kibana
     server.host: "0"
 ## Please specify the IP or the path to where you have the elasticsearch service running 
-    elasticsearch.url: http://elasticsearch-client:9200
+    elasticsearch.url: http://elasticsearch-client-url:9200
 
     ## Custom config properties below
     ## Ref: https://www.elastic.co/guide/en/kibana/current/settings.html

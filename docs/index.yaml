@@ -279,6 +279,36 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-glassfish-dev-0.1.0.tgz
     version: 0.1.0
+  ibm-heapster-dev:
+  - apiVersion: v1
+    appVersion: 1.3.0
+    created: 2019-01-30T17:03:53.082919902+05:30
+    description: Heapster enables Container Cluster Monitoring and Performance Analysis.
+    digest: 8396208e56baf1524ac16a3ff5ddcd9161cb1beada0dea4c9ebdf87ca53adc01
+    engine: gotpl
+    home: https://github.com/kubernetes/heapster
+    icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
+    keywords:
+    - metrics
+    - cadvisor
+    - monitoring
+    - Limited
+    - ppc64le
+    - Tools
+    - ICP
+    - Beta
+    kubeVersion: '>=1.7'
+    maintainers:
+    - email: smohite@us.ibm.com
+      name: IBM ISV Team
+    name: ibm-heapster-dev
+    sources:
+    - https://github.com/kubernetes/heapster
+    - https://github.com/kubernetes/contrib/tree/master/addon-resizer
+    tillerVersion: '>=2.7.2'
+    urls:
+    - https://lysannef.github.io/chartsrepo/ibm-heapster-dev-0.2.10.tgz
+    version: 0.2.10
   ibm-influxdb-dev:
   - appVersion: "1.4"
     created: 2019-01-18T15:58:44.487848047+05:30
@@ -866,4 +896,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-tomee-dev-0.1.0.tgz
     version: 0.1.0
-generated: 2019-01-18T16:11:54.881448697+05:30
+generated: 2019-01-30T17:03:53.081479253+05:30

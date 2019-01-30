@@ -1,0 +1,286 @@
+node:
+   __metadata:
+     label: "Node"
+     description: "Node Prefernce"
+     type: "string"
+     immutable: false
+     required: true
+     options:
+     - label: "ppc64le"
+       value: "ppc64le"
+image:
+  __metadata:
+    label: "Image"
+    description: "Docker Image Details"
+  repository:
+    __metadata:
+      name: "repository"
+      label: "Repository"
+      description: "Docker image location"
+      type: "string"
+      immutable: false
+      required: true
+  tag:
+    __metadata:
+      name: "tag"
+      label: "Tag"
+      description: "Docker image tag"
+      type: "string"
+      immutable: false
+      required: true
+  pullPolicy:
+     __metadata:
+       name: "pullPolicy"
+       label: "Docker image pull policy"
+       description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+       type: "string"
+       immutable: true
+       required: true
+       options:
+       - label: "Always"
+         value: "Always"
+       - label: "Never"
+         value: "Never"
+service:
+  __metadata:
+    label: "service"
+    description: "Application Service Details"
+  type:
+    __metadata:
+      name: "type"
+      label: "Service Type"
+      description: "Type of Service- NodePort, ClusterIP"
+      type: "string"
+      immutable: false
+      required: true
+      options:
+      - label: "ClusterIP"
+        value: "ClusterIP"
+      - label: "NodePort"
+        value: "NodePort"
+      - label: "LoadBalancer"
+        value: "LoadBalancer"
+      - label: "IfNotPresent"
+        value: "IfNotPresent"
+  internalPort:
+    __metadata:
+      name: "internalPort"
+      label: "Internal HTTP Port"
+      description: "This is the internal port number"
+      type: "number"
+      immutable: false
+      required: true
+  externalPort:
+    __metadata:
+      name: "externalPort"
+      label: "External HTTP Port"
+      description: "This is the external port number"
+      type: "number"
+      immutable: false
+      required: true
+  labels:
+    __metadata:
+      label: "Service Labels"
+      description: "Specify labels for Service"
+      type: "string"
+      immutable: false
+      required: false
+
+replicaCount:
+   __metadata:
+     name: "replicaCount"
+     label: "Replica Count"
+     description: "Number of replicas of deployment needed to be created"
+     type: "string"
+     immutable: false
+     required: true
+
+## Resource requests and limits configuration metadata
+resources:
+  __metadata:
+    label: "Resource configuration"
+    description: "Docker Image Details"
+  requests:
+    cpu: 
+      __metadata: 
+        label: "CPU request"
+        description: "The requested CPU"
+        type: "string"
+        required: true   
+    memory: 
+      __metadata: 
+        label: "Memory request"
+        description: "The memory request"
+        type: "string"
+        required: true   
+  limits:
+    cpu: 
+      __metadata: 
+        label: "CPU limit"
+        description: "The CPU limit"
+        type: "string"
+        required: true   
+    memory: 
+      __metadata: 
+        label: "Memory limit"
+        description: "The memory limit"
+        type: "string"
+        required: true  
+
+env:
+  __metadata:
+    name: "env"
+    label: "Env"
+    description: "Environment variables"
+    type: "string"
+    immutable: false
+    required: false
+
+resizer:
+  __metadata:
+    label: "Resizer settings"
+    description: "Resizer Details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable Resizer"
+      description: "Specifies whether to use Resizer."
+      type: "boolean"
+      immutable: false
+      required: true
+  image: 
+    repository:
+      __metadata:
+        name: "repository"
+        label: "Repository"
+        description: "Docker image location"
+        type: "string"
+        immutable: false
+        required: true
+    tag:
+      __metadata:
+        name: "tag"
+        label: "Tag"
+        description: "Docker image tag"
+        type: "string"
+        immutable: false
+        required: true
+    pullPolicy:
+      __metadata:
+        name: "pullPolicy"
+        label: "Docker image pull policy"
+        description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+        type: "string"
+        immutable: true
+        required: true
+        options:
+        - label: "Always"
+          value: "Always"
+        - label: "Never"
+          value: "Never"  
+  resources:
+    requests:
+      cpu:
+        __metadata:
+          label: "CPU request"
+          description: "The requested CPU"
+          type: "string"
+          required: true
+      memory:
+        __metadata:
+          label: "Memory request"
+          description: "The memory request"
+          type: "string"
+          required: true
+    limits:
+      cpu:
+        __metadata:
+          label: "CPU limit"
+          description: "The CPU limit"
+          type: "string"
+          required: true
+      memory:
+        __metadata:
+          label: "Memory limit"
+          description: "The memory limit"
+          type: "string"
+          required: true
+  flags:
+    __metadata:
+      name: "enabled"
+      label: "Enable Eventer"
+      description: "Specifies whether to use Eventer."
+      type: "string"
+      immutable: false
+      required: true
+
+      
+rbac:
+  __metadata:
+    label: "RBAC roles and bindings"
+    description: "RBAC roles contain rules that represent a set of permissions."  
+  create:
+    __metadata:
+      name: "create"
+      label: "Create"
+      description: "Create RBAC roles and bindings"
+      type: "boolean"
+      immutable: false
+      required: true 
+  serviceAccountName:
+    __metadata:
+      name: "default"
+      label: "Existing ClusterRoleBinding name"
+      description: "The name of an existing ClusterRoleBinding to use if not installing"
+      type: "string"
+      immutable: false
+      required: true
+
+eventer:
+  __metadata:
+    label: "Eventer"
+    description: "eventer can send the kubernetes event logs to a remote destination"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable Eventer"
+      description: "Specifies whether to use Eventer."
+      type: "boolean"
+      immutable: false
+      required: true
+  resizer:
+    enabled:
+      __metadata:
+        name: "resizer"
+        label: "Enable resizer"
+        description: "Specifies whether to use resizer for Eventer."
+        type: "boolean"
+        immutable: false
+        required: true
+    flags:
+      __metadata:
+        name: "resizer flags"
+        label: "Resizer Flags"
+        description: "Species resizer flags for Eventer."
+        type: "string"
+        immutable: false
+        required: true
+
+  flags:
+   __metadata:
+     name: "flags"
+     label: "Eventer flags"
+     description: "Specifies Eventer flags."
+     type: "string"
+     immutable: false
+     required: true
+
+command:
+  __metadata:
+    name: "command"
+    label: "Command"
+    description: "Specifies which commands are used"
+    type: "string"
+    immutable: false
+    required: true
+ 

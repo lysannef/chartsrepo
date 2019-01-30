@@ -30,6 +30,15 @@ The chart deploys pods consuming minimum resources as specified in the values.ya
 
 To install the chart with the release name `my-release`:
 
+1. First have a running instance of the Elasticsearch Service,
+```console
+$ docker run -it -p 9200:9200 ibmcom/elasticsearch-ppc64le:5.6.10
+```
+2. Change the elasticsearchUrl entry in the values.yaml file to reflect the IP of the elasticsearch service
+```
+eg. http://1.2.3.4:9200
+```
+
 ```console
 $ helm install stable/ibm-kibana-dev --name my-release
 ```
@@ -96,5 +105,22 @@ $ helm install stable/ibm-kibana-dev --name my-release -f values.yaml
 ```
 
 > **Tip**: You can use the default `values.yaml`
+
+## Support
+
+ The helm charts are provided "as-is" and without warranty of any kind.
+
+ All helm charts and packages are supported through standard open source forums and helm charts are updated on a best effort basis.
+
+ Any issues found can be reported through the links below, and fixes may be proposed/submitted using standard git issues as noted below.
+
+ [Submit issue to Helm Chart] ( https://github.com/ppc64le/charts/issues )
+
+ [Submit issue to Kibana docker image]  ( https://github.com/ppc64le/build-scripts/issues )
+
+ [Submit issue to Kibana open source community] ( https://github.com/elastic/kibana/issues  )
+
+ [ICP Support] ( https://ibm.biz/icpsupport )
+
 
 ## Limitations

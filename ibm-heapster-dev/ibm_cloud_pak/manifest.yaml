@@ -1,0 +1,11 @@
+charts:
+  - archive: file:ibm-heapster-dev-0.2.10.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: ibmcom/heapster-ppc64le:v1.4.0
+  references:
+  - repository: ibmcom/heapster-ppc64le
+
+
