@@ -421,9 +421,9 @@ entries:
     version: 0.8.1
   ibm-memcached-dev:
   - appVersion: 1.5.6
-    created: 2019-01-17T12:10:59.464899478+05:30
+    created: 2019-01-31T03:25:49.376958891-08:00
     description: Free & open source, high-performance, memory object caching system.
-    digest: f9cdabf4af982fb561d305cdb9434a05b3911d5d3f70cc0268ea8ad2de005a78
+    digest: bfd92aa7a46c61e33b98a82287e9014104affe9e231198e2aeebbe3813f40db9
     engine: gotpl
     home: http://memcached.org/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/memcached.png
@@ -896,4 +896,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-tomee-dev-0.1.0.tgz
     version: 0.1.0
-generated: 2019-01-30T17:03:53.081479253+05:30
+generated: 2019-01-31T03:25:49.375122479-08:00
