@@ -87,6 +87,24 @@ Alternatively, a YAML file that specifies the values for the above parameters ca
 ```console
 $ helm install --name my-release -f values.yaml stable/ibm-prometheus-adapter-dev
 ```
+
+## Note (Cluster Image Security)
+As container image security feature is enabled, create an image policy for a namespace with the following rule for the chart to be deployed in the `default` namespace:
+
+```console
+apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
+kind: ImagePolicy
+metadata:
+  name: helm-chart
+  namespace: default
+spec:
+  repositories:
+  - name: docker.io/directxman12/k8s-prometheus-adapter-ppc64le:v0.2.1
+    policy:
+      va:
+        enabled: false
+```
+
 ## Limitations
 
 ##NOTE This chart has been validated on ppc64le.

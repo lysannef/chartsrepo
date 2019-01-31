@@ -67,5 +67,23 @@ $ helm install --name my-release -f values.yaml stable/ibm-tomee-dev
 
 > **Tip**: You can use the default `values.yaml`
 
+## Note (Cluster Image Security)
+As container image security feature is enabled, create an image policy for a namespace with the following rule for the chart to be deployed in the `default` namespace:
+
+```console
+apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
+kind: ImagePolicy
+metadata:
+  name: helm-chart
+  namespace: default
+spec:
+  repositories:
+  - name: docker.io/tomee:8-jre-1.7.5-webprofile
+    policy:
+      va:
+        enabled: false
+```
+
+
 ## Limitations
 ##NOTE This chart has been validated on ppc64le.
