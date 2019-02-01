@@ -3,7 +3,7 @@
 replicaCount: 1
 image:
   repository: ibmcom/heapster-ppc64le
-  tag: v1.4.0
+  tag: v1.4.0.2
   pullPolicy: IfNotPresent
 ## Here labels can be added to the heapster deployment
 # labels:

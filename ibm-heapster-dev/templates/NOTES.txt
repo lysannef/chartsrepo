@@ -3,6 +3,6 @@
   kubectl --namespace {{ .Release.Namespace }} port-forward $POD_NAME {{ .Values.service.externalPort }}
   
   To check the logs run the below commands
-  1. #kubectl logs `echo $POD_NAME` -c ibm-heapster 
-  2. #kubectl logs `echo $POD_NAME` -c ibm-heapster-nanny
+  1. #kubectl logs `echo $POD_NAME` -c ibm-heapster-dev
+  2. #kubectl logs `echo $POD_NAME` -c ibm-heapster-dev-nanny
 

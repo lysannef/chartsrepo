@@ -48,8 +48,6 @@ spec:
           capabilities:
            drop:
            - MKNOD
-#        ports:
-#        - containerPort: {{ .Values.service.internalPort }}
         livenessProbe:
           httpGet:
             path: /healthz
