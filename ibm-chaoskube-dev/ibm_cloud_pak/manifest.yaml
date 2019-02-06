@@ -1,9 +1,0 @@
-charts:
-  - archive: file:ibm-chaoskube-dev-0.7.0.tgz
-    repository-keys: 
-      - image.repository
-
-images:
-- image: quay.io/linki/chaoskube:v0.11.0-ppc64le
-  references:
-  - repository: quay.io/linki/chaoskube:v0.11.0-ppc64le

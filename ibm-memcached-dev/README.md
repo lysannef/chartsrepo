@@ -73,7 +73,7 @@ The following table lists the configurable parameters of the Memcached chart and
 
 |      Parameter            |          Description            |                         Default                         |
 |---------------------------|---------------------------------|---------------------------------------------------------|
-| `image`                   | The image to pull and run       | default ex. memcached:1.5.6-alpine                      |
+| `image`                   | The image to pull and run       | default ex. memcached:1.5.11-alpine                      |
 | `imagePullPolicy`         | Image pull policy               | `Always` if `imageTag` is `latest`, else `IfNotPresent` |
 | `memcached.verbosity`     | Verbosity level (v, vv, or vvv) | Un-set.                                                 |
 | `memcached.maxItemMemory` | Max memory for items (in MB)    | `64`                                                    |
@@ -98,6 +98,22 @@ $ helm install --name my-release -f values.yaml stable/ibm-memcached-dev
 
 > **Tip**: You can use the default `values.yaml`
 
+## Support
+
+The helm charts are provided "as-is" and without warranty of any kind.
+
+All helm charts and packages are supported through standard open source forums and helm charts are updated on a best effort basis.
+
+Any issues found can be reported through the links below, and fixes may be proposed/submitted using standard git issues as noted below.
+
+[Submit issue to Helm Chart] ( https://github.com/ppc64le/charts/issues )
+
+[Submit issue to Memcached docker image]  ( https://hub.docker.com/_/memcached )
+
+[Submit issue to Memcached open source community] ( https://github.com/memcached/memcached/issues )
+
+[ICP Support] ( https://ibm.biz/icpsupport )
+
 ## Note (Cluster Image Security)
 As container image security feature is enabled, create an image policy for a namespace with the following rule for the chart to be deployed in the `default` namespace:
 
@@ -109,7 +125,7 @@ metadata:
   namespace: default
 spec:
   repositories:
-  - name: docker.io/memcached:1.5.6-alpine
+  - name: docker.io/memcached:1.5.11-alpine
     policy:
       va:
         enabled: false

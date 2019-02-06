@@ -88,6 +88,25 @@ $ helm install \
     - --excludedTimesOfDay="12:00-18:00"
     - --excludedDaysOfYear="Apr1,Dec24"
 ```
+
+## Note (Cluster Image Security)
+As container image security feature is enabled, create an image policy for a namespace with the following rule for the chart to be deployed in the `default` namespace:
+
+```console
+apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
+kind: ImagePolicy
+metadata:
+  name: helm-chart
+  namespace: default
+spec:
+  repositories:
+  - name: 
+    policy: quay.io/linki/chaoskube:v0.11.0-ppc64le
+      va:
+        enabled: false
+``` 
+
+
 ## Limitations
 
 ##NOTE This chart has been validated on ppc64le.

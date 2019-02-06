@@ -60,9 +60,9 @@ entries:
     version: 0.1.0
   ibm-chaoskube-dev:
   - appVersion: 0.8.0
-    created: 2019-01-17T12:10:59.437146922+05:30
+    created: 2019-02-06T03:55:28.742637689-08:00
     description: Chaoskube periodically kills random pods in your Kubernetes cluster.
-    digest: 921b07d52441695e40be5eafd7ec44b9e771baca0a7799e4e4ae5b9ea1d58847
+    digest: 6342a4366227b3bbe38a7d7d105a239c0d4655e97076fffb8f06c9703fac2027
     engine: gotpl
     home: https://github.com/linki/chaoskube
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
@@ -141,9 +141,9 @@ entries:
   ibm-elasticsearch-exporter-dev:
   - apiVersion: v1
     appVersion: 1.0.2
-    created: 2019-01-17T12:10:59.440201781+05:30
+    created: 2019-02-06T03:55:28.743853075-08:00
     description: Elasticsearch stats exporter for Prometheus
-    digest: 0fb6535aa49575c12c8a0fb8342dfef269277877b0ca4dd9e0c3c0d6228bc186
+    digest: 5e9bd5c3921b2bf8d62a44824e521cdacdb2d4e06434efac5f150aad0d950852
     home: https://github.com/justwatchcom/elasticsearch_exporter
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/elasticsearch_exporter.png
     keywords:
@@ -226,9 +226,9 @@ entries:
   ibm-gerrit-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-01-17T12:10:59.445784658+05:30
+    created: 2019-02-06T03:57:17.939643752-08:00
     description: Basic gerrit server.
-    digest: 65d6cd81b8d486efe154907a0f46606a83b5af60d38061ca12ed296dbeb9fce2
+    digest: c49f769ba784aad6846c35a4f89c122beb764a9a4ffd060c5009ead0ade89b3f
     engine: gotpl
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/gerrit.png
     keywords:
@@ -394,9 +394,9 @@ entries:
   ibm-kube-state-metrics-dev:
   - apiVersion: v1
     appVersion: 1.3.1
-    created: 2019-01-18T16:11:54.882824764+05:30
+    created: 2019-02-06T03:55:28.745097306-08:00
     description: Install kube-state-metrics to generate and expose cluster-level metrics
-    digest: 2d7fc1331805256806c2ffe05a5b61a1e97116cee87290653df7752d20fa297c
+    digest: d7613e145982f2e89a60c041a6e456e3bf3f5f6484df0ca384221f683a609a02
     home: https://github.com/kubernetes/kube-state-metrics/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
     keywords:
@@ -896,4 +896,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-tomee-dev-0.1.0.tgz
     version: 0.1.0
-generated: 2019-02-01T17:45:51.021575725+05:30
+generated: 2019-02-06T03:57:17.938385255-08:00
