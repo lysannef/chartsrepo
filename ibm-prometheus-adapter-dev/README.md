@@ -105,6 +105,22 @@ spec:
         enabled: false
 ```
 
+## Support
+
+The helm charts are provided "as-is" and without warranty of any kind.
+
+All helm charts and packages are supported through standard open source forums and helm charts are updated on a best effort basis.
+
+Any issues found can be reported through the links below, and fixes may be proposed/submitted using standard git issues as noted below.
+
+[Submit issue to Helm Chart] ( https://github.com/ppc64le/charts/issues )
+
+[Submit issue to prometheus-adapter docker image]  ( https://hub.docker.com/r/directxman12/k8s-prometheus-adapter-ppc64le )
+
+[Submit issue to prometheus-adapter open source community] ( https://github.com/DirectXMan12/k8s-prometheus-adapter/issues )
+
+[ICP Support] ( https://ibm.biz/icpsupport )
+
 ## Limitations
 
 ##NOTE This chart has been validated on ppc64le.

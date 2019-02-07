@@ -1,9 +1,0 @@
-charts:
-  - archive: file:ibm-elasticsearch-exporter-dev-0.2.2.tgz
-    repository-keys: 
-      - image.repository
-
-images:
-- image: ibmcom/elasticsearch-exporter-ppc64le:1.0.2
-  references:
-  - repository: ibmcom/elasticsearch-exporter-ppc64le:1.0.2

@@ -106,6 +106,21 @@ spec:
         enabled: false
 ``` 
 
+## Support
+
+The helm charts are provided "as-is" and without warranty of any kind.
+
+All helm charts and packages are supported through standard open source forums and helm charts are updated on a best effort basis.
+
+Any issues found can be reported through the links below, and fixes may be proposed/submitted using standard git issues as noted below.
+
+[Submit issue to Helm Chart] ( https://github.com/ppc64le/charts/issues )
+
+[Submit issue to chaoskube docker image]  ( https://quay.io/repository/linki/chaoskube?tab=info )
+
+[Submit issue to chaoskube open source community] ( https://github.com/linki/chaoskube/issues )
+
+[ICP Support] ( https://ibm.biz/icpsupport )
 
 ## Limitations
 
