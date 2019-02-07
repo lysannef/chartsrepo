@@ -198,9 +198,9 @@ entries:
   ibm-geode-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-02-07T01:02:30.67608598-08:00
+    created: 2019-02-07T01:31:34.020146779-08:00
     description: Apache Geode provides a database-like consistency mode.
-    digest: 83be3a3e957cbedd2513843f2c5d2280bd145e7c2a845cee735509795f8239b5
+    digest: 1c8957543c29671fdb9575baecdb04938479e15c029eaa3b96bfba37de5c7a0a
     engine: gotpl
     home: http://geode.apache.org/
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/geode.png
@@ -642,9 +642,9 @@ entries:
   ibm-pdserver-dev:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2019-02-07T01:02:30.749363227-08:00
+    created: 2019-02-07T01:31:34.021795094-08:00
     description: Placement driver for TiKV.
-    digest: cffd7be7b7e0fa954931b3751ad2e5c320519ceb6cfef05bf6042241b7484a7b
+    digest: 317e75aae3447d7d377c1d08f6d46f805dd80991f8534d8d03892669cdcefa64
     engine: gotpl
     home: https://github.com/pingcap/pd
     icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/ibm-default-icon.svg?sanitize=true
@@ -896,4 +896,4 @@ entries:
     urls:
     - https://lysannef.github.io/chartsrepo/ibm-tomee-dev-0.1.0.tgz
     version: 0.1.0
-generated: 2019-02-07T01:02:30.64756592-08:00
+generated: 2019-02-07T01:31:34.018171497-08:00

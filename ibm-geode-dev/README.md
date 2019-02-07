@@ -32,7 +32,7 @@ $ helm install --name my-release stable/ibm-geode-dev
 ```
 
 ## Default Credentials
-The default credentials for the Glassfish service are username - admin and password - admin
+The default credentials for the Geode service are username - admin and password - admin
 
 
 ## Uninstalling the Chart
@@ -71,6 +71,41 @@ $ helm install --name my-release -f values.yaml stable/ibm-geode-dev
 ```
 
 > **Tip**: You can use the default `values.yaml`
+
+## Support
+
+The helm charts are provided "as-is" and without warranty of any kind.
+
+All helm charts and packages are supported through standard open source forums and helm charts are updated on a best effort basis.
+
+Any issues found can be reported through the links below, and fixes may be proposed/submitted using standard git issues as noted below.
+
+[Submit issue to Helm Chart] ( https://github.com/ppc64le/charts/issues )
+
+[Submit issue to Geode docker image]  ( https://github.com/ppc64le/build-scripts/issues )
+
+[Submit issue to Geode open source community] ( https://issues.apache.org/jira/projects/GEODE/issues/GEODE-6152?filter=allopenissues )
+
+
+
+## Note (Cluster Image Security)
+As container image security feature is enabled, create an image policy for a namespace with the following rule for the chart to be deployed in the `default` namespace:
+
+```console
+apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
+kind: ImagePolicy
+metadata:
+  name: helm-chart
+  namespace: default
+spec:
+  repositories:
+  - name: docker.io/ibmcom/geode-ppc64le:v1.2.1
+    policy:
+      va:
+        enabled: false
+```
+
+
 
 ## Limitations
 
