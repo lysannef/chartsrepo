@@ -1,0 +1,315 @@
+node:
+   __metadata:
+     name: "Node"
+     label: "Node Preference"
+     description: "Select node architecture to deploy chart on"
+     type: "string"
+     immutable: false
+     required: true
+     options:
+     - label: "ppc64le"
+       value: "ppc64le"
+     - label: "amd64"
+       value: "amd64"
+hdfs:
+  nameNode:
+    pdbMinAvailable:
+     __metadata:
+       name: "pdbMinAvailable"
+       label: "pdbMin Availableu"
+       description: "pdbMinAvailable Details"
+       type: "string"
+       immutable: false
+    resources:
+      limits:
+        cpu:
+          __metadata:
+            name: "cpu"
+            label: "Cpu"
+            description: "cpu Details"
+            type: "string"
+            immutable: false
+        memory:
+          __metadata:
+            name: "memory"
+            label: "Memory"
+            description: "memory Details"
+            type: "string"
+            immutable: false
+            required: true
+      requests:
+        cpu:
+          __metadata:
+            name: "cpu"
+            label: "Cpu"
+            description: "cpu Details"
+            type: "string"
+            immutable: false
+        memory:
+          __metadata:
+            name: "memory"
+            label: "Memory"
+            description: "memory Details"
+            type: "string"
+            immutable: false
+            required: true
+  dataNode:
+    pdbMinAvailable:
+     __metadata:
+       name: "pdbMinAvailable"
+       label: "pdbMin Available"
+       description: "pdbMinAvailable Details"
+       type: "string"
+       immutable: false
+    replicas:
+     __metadata:
+       name: "replicas"
+       label: "replicas count"
+       description: "replicas Details"
+       type: "string"
+       immutable: false
+    resources:
+      limits:
+        cpu:
+          __metadata:
+            name: "cpu"
+            label: "Cpu"
+            description: "cpu Details"
+            type: "string"
+            immutable: false
+        memory:
+          __metadata:
+            name: "memory"
+            label: "Memory"
+            description: "memory Details"
+            type: "string"
+            immutable: false
+            required: true
+      requests:
+        cpu:
+          __metadata:
+            name: "cpu"
+            label: "Cpu"
+            description: "cpu Details"
+            type: "string"
+            immutable: false
+        memory:
+          __metadata:
+            name: "memory"
+            label: "Memory"
+            description: "memory Details"
+            type: "string"
+            immutable: false
+            required: true
+
+yarn:
+  nodeManager:
+    parallelCreate:
+     __metadata:
+       name: "parallelCreate"
+       label: "parallel Create"
+       description: "parallelCreate Details"
+       type: "string"
+       immutable: false
+    pdbMinAvailable:
+     __metadata:
+       name: "pdbMinAvailable"
+       label: "pdbMin Availableu"
+       description: "pdbMinAvailable Details"
+       type: "string"
+       immutable: false
+    replicas:
+     __metadata:
+       name: "replicas"
+       label: "replicas count"
+       description: "replicas Details"
+       type: "string"
+       immutable: false
+    resources:
+      limits:
+        cpu:
+          __metadata:
+            name: "cpu"
+            label: "Cpu"
+            description: "cpu Details"
+            type: "string"
+            immutable: false
+        memory:
+          __metadata:
+            name: "memory"
+            label: "Memory"
+            description: "memory Details"
+            type: "string"
+            immutable: false
+            required: true
+      requests:
+        cpu:
+          __metadata:
+            name: "cpu"
+            label: "Cpu"
+            description: "cpu Details"
+            type: "string"
+            immutable: false
+        memory:
+          __metadata:
+            name: "memory"
+            label: "Memory"
+            description: "memory Details"
+            type: "string"
+            immutable: false
+            required: true
+  resourceManager:
+    pdbMinAvailable:
+     __metadata:
+       name: "pdbMinAvailable"
+       label: "pdbMin Availableu"
+       description: "pdbMinAvailable Details"
+       type: "string"
+       immutable: false
+    resources:
+      limits:
+        cpu:
+          __metadata:
+            name: "cpu"
+            label: "Cpu"
+            description: "cpu Details"
+            type: "string"
+            immutable: false
+        memory:
+          __metadata:
+            name: "memory"
+            label: "Memory"
+            description: "memory Details"
+            type: "string"
+            immutable: false
+            required: true
+      requests:
+        cpu:
+          __metadata:
+            name: "cpu"
+            label: "Cpu"
+            description: "cpu Details"
+            type: "string"
+            immutable: false
+        memory:
+          __metadata:
+            name: "memory"
+            label: "Memory"
+            description: "memory Details"
+            type: "string"
+            immutable: false
+            required: true
+image:
+  __metadata:
+    label: "Image"
+    description: "Docker Image Details"
+    type: "string"
+    immutable: false
+    required: true
+
+imagePullPolicy:
+  __metadata:
+    label: "image Pull Policy"
+    description: "Docker Image Pull Policy Details"
+    type: "string"
+    immutable: false
+    required: true
+
+hadoopVersion:
+  __metadata:
+    label: "hadoop version"
+    description: "Hadoop Version Details"
+    type: "string"
+    immutable: false
+    required: true
+
+antiAffinity:
+  __metadata:
+    label: "anti Affinity"
+    description: "antiAffinity Details"
+    type: "string"
+    immutable: false
+    required: true
+
+## Persistence options
+persistence:
+ __metadata:
+    label: "Data persistence configuration"
+    description: "Specify Persistence options."
+ useDynamicProvisioning:
+   __metadata:
+      name: "useDynamicProvisioning"
+      label: "Use dynamic provisioning for persistent volume"
+      description: "If true, storage will be automatically provisioned. If false, you can create your persistent volumes manually."
+      type: "boolean"
+      required: false
+ dataNode:
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable persistence for this deployment"
+      description: "Enables persistence for this deployment. Default to false. A persistent volume is required."
+      type: "boolean"
+      required: true
+  storageClassName:
+    __metadata:
+      name: "storageClass Name"
+      label: "Storage class name"
+      description: "Choose a specific storage class name. Defaults to the default storage class in the cluster."
+      type: "string"
+      required: false
+  accessMode:
+    __metadata:
+      name: "accessMode"
+      label: "Storage access mode"
+      description: "Use volume as ReadOnlyMany or ReadWriteOnce. Default is ReadWriteOnce."
+      type: "string"
+      required: true
+      options:
+      - label: "ReadWriteOnce"
+        value: "ReadWriteOnce"
+      - label: "ReadOnlyMany"
+        value: "ReadOnlyMany"
+  size:
+    __metadata:
+      name: "size"
+      label: "Size of the volume claim"
+      description: "Defaults to 1Gi of storage request. Choose a different size of disk if needed."
+      type: "string"
+      required: true
+ nameNode:
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable persistence for this deployment"
+      description: "Enables persistence for this deployment. Default to false. A persistent volume is required."
+      type: "boolean"
+      required: true
+  storageClassName:
+    __metadata:
+      name: "storageClass Name"
+      label: "Storage class name"
+      description: "Choose a specific storage class name. Defaults to the default storage class in the cluster."
+      type: "string"
+      required: false
+  accessMode:
+    __metadata:
+      name: "accessMode"
+      label: "Storage access mode"
+      description: "Use volume as ReadOnlyMany or ReadWriteOnce. Default is ReadWriteOnce."
+      type: "string"
+      required: true
+      options:
+      - label: "ReadWriteOnce"
+        value: "ReadWriteOnce"
+      - label: "ReadOnlyMany"
+        value: "ReadOnlyMany"
+  size:
+    __metadata:
+      name: "size"
+      label: "Size of the volume claim"
+      description: "Defaults to 1Gi of storage request. Choose a different size of disk if needed."
+      type: "string"
+      required: true
+      
+

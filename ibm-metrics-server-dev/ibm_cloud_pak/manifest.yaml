@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-metrics-server-dev-0.0.2.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/metrics-server-ppc64le:v0.2.1
+  references:
+  - repository: ibmcom/metrics-server-ppc64le:v0.2.1

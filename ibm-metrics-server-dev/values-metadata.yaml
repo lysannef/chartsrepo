@@ -1,0 +1,94 @@
+rbac:
+  __metadata:
+     label: "rbac"
+     description: "Specify RBAC resources"
+  create:
+     __metadata:
+       name: "create"
+       label: "Create"
+       description: "Specifies whether RBAC resources should be created"
+       type: "boolean"
+       immutable: false
+       required: true
+
+serviceAccount:
+  __metadata:
+     label: "serviceAccount"
+     description: "ServiceAccount details"
+  create:
+     __metadata:
+       name: "create"
+       label: "Create"
+       description: "Specifies whether a ServiceAccount should be created"
+       type: "boolean"
+       immutable: false
+       required: true
+  name:
+     __metadata:
+       name: "name"
+       label: "Name"
+       description: "The name of the ServiceAccount to use."
+       type: "string"
+       immutable: false
+       required: true
+
+image:
+  __metadata:
+    label: "Image"
+    description: "Docker image details"
+  repository:
+    __metadata:
+      name: "repository"
+      label: "Repository"
+      description: "Docker image location"
+      type: "string"
+      immutable: false
+      required: true
+  tag:
+    __metadata:
+      name: "tag"
+      label: "Tag"
+      description: "Docker image tag"
+      type: "string"
+      immutable: false
+      required: true
+  pullPolicy:
+    __metadata:
+      name: "pullPolicy"
+      label: "Docker image pull policy"
+      description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+      type: "string"
+      immutable: false
+      required: true
+      options:
+      - label: "Always"
+        value: "Always"
+      - label: "Never"
+        value: "Never"
+      - label: "IfNotPresent"
+        value: "IfNotPresent"
+
+apiService:
+  __metadata:
+     label: "ApiService"
+     description: "Specifies if the v1beta1.metrics.k8s.io API service"
+  create:
+    __metadata:
+       name: "create"
+       label: "Create"
+       description: "Specifies if the v1beta1.metrics.k8s.io API service should be created"
+       type: "boolean"
+       immutable: false
+
+node: 
+   __metadata:
+     name: "Node"
+     label: "Node Preference "
+     description: "Select node architecture to deploy chart on"
+     type: "string"
+     immutable: false
+     required: true
+     options:
+     - label: "ppc64le"
+       value: "ppc64le"
+

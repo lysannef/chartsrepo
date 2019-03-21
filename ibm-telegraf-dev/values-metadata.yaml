@@ -1,0 +1,514 @@
+node:
+   __metadata:
+     name: "Node"
+     label: "Node"
+     description: "Node Prefernce"
+     type: "string"
+     immutable: false
+     required: true
+     options:
+     - label: "ppc64le"
+       value: "ppc64le"
+image:
+  __metadata:
+    label: "Image"
+    description: "Docker image details"
+  repo:
+    __metadata:
+      name: "repo"
+      label: "Repo"
+      description: "Docker image location"
+      type: "string"
+      immutable: false
+      required: true
+  tag:
+    __metadata:
+      name: "tag"
+      label: "Tag"
+      description: "Docker image tag"
+      type: "string"
+      immutable: false
+      required: true
+  pullPolicy:
+    __metadata:
+      name: "pullPolicy"
+      label: "Docker image pull policy"
+      description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+      type: "string"
+      immutable: false
+      required: true
+      options:
+      - label: "Always"
+        value: "Always"
+      - label: "Never"
+        value: "Never"
+      - label: "IfNotPresent"
+        value: "IfNotPresent"
+daemonset:
+  __metadata:
+    name: "daemonset"
+    label: "Daemonset"
+    description: "daemonset details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable daemonset"
+      description: "Specifies whether to use daemonset."
+      type: "boolean"
+      immutable: false
+      required: false
+  resources:
+    requests:
+      memory:
+        __metadata:
+          label: "Memory request"
+          description: "resources.requests.memory: The memory request"
+          type: "string"
+          required: true
+      cpu:
+        __metadata:
+          label: "CPU request"
+          description: "resources.requests.cpu: The requested CPU"
+          type: "string"
+          required: true
+    limits:
+      memory:
+        __metadata:
+          label: "Memory limit"
+          description: "resources.limits.memory: The memory limit"
+          type: "string"
+          required: true
+      cpu:
+        __metadata:
+          label: "CPU limit"
+          description: "resources.limits.cpu: The CPU limit"
+          type: "string"
+          required: true
+  config:
+    globalTags:
+      __metadata:
+        label: "Global Tags"
+        description: "Global tags for telegraph Daemonset"
+    agent:
+      interval:
+        __metadata:
+          label: "Interval"
+          description: "Agent interval details"
+          type: "string"
+          required: false
+      roundInterval:
+        __metadata:
+          label: "RoundInterval"
+          description: "Agent RoundInterval details"
+          type: "boolean"
+          required: false
+      metricBatchSize:
+        __metadata:
+          label: "MetricBatchSize"
+          description: "Metric batch size for agent"
+          type: "number"
+          required: false
+      metricBufferLimit:
+        __metadata:
+          label: "MetricBufferLimit"
+          description: "Metric buffer limit for agent"
+          type: "number"
+          required: false
+      collectionJitter:
+        __metadata:
+          label: "CollectionJitter"
+          description: "Collection Jitter time in seconds"
+          type: "string"
+          required: false
+      flushInterval:
+        __metadata:
+          label: "FlushInterval"
+          description: "Flush interval time in seconds"
+          type: "string"
+          required: false
+      flushJitter:
+        __metadata:
+          label: "FlushJitter"
+          description: "Flush Jitter time in seconds"
+          type: "string"
+          required: false
+      precision:
+        __metadata:
+          label: "Precision"
+          description: "Precision for Agent"
+          type: "string"
+          required: false
+      debug:
+        __metadata:
+          label: "Debug"
+          description: "Enable debug option if set to true"
+          type: "boolean"
+          required: false
+      quiet:
+        __metadata:
+          label: "Quiet"
+          description: "Enable Quiet option if set to true"
+          type: "boolean"
+          required: false
+      logfile:
+        __metadata:
+          label: "Logfile"
+          description: "Agent Log File"
+          type: "string"
+          required: false
+      hostname:
+        __metadata:
+          label: "Hostname"
+          description: "Agent Hostname"
+          type: "string"
+          required: false
+      omitHostname:
+        __metadata:
+          label: "Omit Hostname"
+          description: "Omit agent hostname if true"
+          type: "boolean"
+          required: false
+    inputs:
+      cpu:
+        percpu:
+          __metadata:
+            label: "Per cpu"
+            description: "Per CPU Details"
+            type: "boolean"
+            required: false
+        totalcpu:
+          __metadata:
+            label: "Totalcpu"
+            description: "Total CPU Details"
+            type: "boolean"
+            required: false
+        collectCpuTime:
+          __metadata:
+            label: "CollectCpuTime"
+            description: "If true collect CPU Time"
+            type: "boolean"
+            required: false
+      disk:
+        ignoreFs:
+          __metadata:
+            label: "IgnoreFs"
+            description: "Ignore mentioned Fs"
+            type: "string"
+            required: false
+      diskio:
+        __metadata:
+            label: "disk IO"
+            description: "Disk IO details"
+            type: "string"
+            required: false
+      docker:
+        endpoint:
+          __metadata:
+            label: "Endpoint"
+            description: "Docker endpoint details"
+            type: "string"
+            required: false
+        containerNames:
+          __metadata:
+            label: "Container names"
+            description: "Docker container names"
+            type: "string"
+            required: false
+      kernel:
+        __metadata:
+          label: "Kernel"
+          description: "Kernel details"
+          type: "string"
+          required: false
+      mem:
+        __metadata:
+          label: "Memory"
+          description: "Memory details"
+          type: "string"
+          required: false
+      processes:
+        __metadata:
+          label: "Processes"
+          description: "Process details"
+          type: "string"
+          required: false
+      swap:
+        __metadata:
+          label: "Swap"
+          description: "Swap details"
+          type: "string"
+          required: false
+      system:
+        __metadata:
+          label: "System"
+          description: "System details"
+          type: "string"
+          required: false
+    outputs:
+      influxdb:
+        urls:
+          __metadata:
+            label: "URLs"
+            description: "InfluxDB URL details"
+            type: "string"
+            required: false
+        database:
+          __metadata:
+            label: "Database"
+            description: "Database details"
+            type: "string"
+            required: false
+single:
+  __metadata:
+    name: "single"
+    label: "Single"
+    description: "Single deployment details"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable single deployment"
+      description: "Specifies whether to use single deployment"
+      type: "boolean"
+      immutable: false
+      required: false
+  resources:
+    requests:
+      memory:
+        __metadata:
+          label: "Memory request"
+          description: "resources.requests.memory: The memory request"
+          type: "string"
+          required: true
+      cpu:
+        __metadata:
+          label: "CPU request"
+          description: "resources.requests.cpu: The requested CPU"
+          type: "string"
+          required: true
+    limits:
+      memory:
+        __metadata:
+          label: "Memory limit"
+          description: "resources.limits.memory: The memory limit"
+          type: "string"
+          required: true
+      cpu:
+        __metadata:
+          label: "CPU request"
+          description: "resources.limits.cpu: The requested CPU"
+          type: "string"
+          required: true
+  service:
+    enabled:
+      __metadata:
+        label: "Enabled"
+        description: "Enable service"
+        type: "boolean"
+        required: false
+    type:
+      __metadata:
+        label: "Service Type"
+        description: "Type of service"
+        type: "string"
+        immutable: false
+        required: true
+        options:
+          - label: "Cluster IP"
+            value: "ClusterIP"
+          - label: "Node Port"
+            value: "NodePort"
+  config:
+    globalTags:
+      __metadata:
+        label: "Global Tags"
+        description: "Global tags for telegraph single instance."
+    agent:
+      interval:
+        __metadata:
+          label: "Interval"
+          description: "Agent interval details"
+          type: "string"
+          required: false
+      roundInterval:
+        __metadata:
+          label: "RoundInterval"
+          description: "Agent RoundInterval details"
+          type: "boolean"
+          required: false
+      metricBatchSize:
+        __metadata:
+          label: "MetricBatchSize"
+          description: "Metric batch size for agent"
+          type: "number"
+          required: false
+      metricBufferLimit:
+        __metadata:
+          label: "MetricBufferLimit"
+          description: "Metric buffer limit for agent"
+          type: "number"
+          required: false
+      collectionJitter:
+        __metadata:
+          label: "CollectionJitter"
+          description: "Collection Jitter time in seconds"
+          type: "string"
+          required: false
+      flushInterval:
+        __metadata:
+          label: "FlushInterval"
+          description: "Flush interval time in seconds"
+          type: "string"
+          required: false
+      flushJitter:
+        __metadata:
+          label: "FlushJitter"
+          description: "Flush Jitter time in seconds"
+          type: "string"
+          required: false
+      precision:
+        __metadata:
+          label: "Precision"
+          description: "Precision for Agent"
+          type: "string"
+          required: false
+      debug:
+        __metadata:
+          label: "Debug"
+          description: "Enable debug option if set to true"
+          type: "boolean"
+          required: false
+      quiet:
+        __metadata:
+          label: "Quiet"
+          description: "Enable Quiet option if set to true"
+          type: "boolean"
+          required: false
+      logfile:
+        __metadata:
+          label: "Logfile"
+          description: "Agent Log File"
+          type: "string"
+          required: false
+      hostname:
+        __metadata:
+          label: "Hostname"
+          description: "Agent Hostname"
+          type: "string"
+          required: false
+      omitHostname:
+        __metadata:
+          label: "Omit Hostname"
+          description: "Omit agent hostname if true"
+          type: "boolean"
+          required: false
+    outputs:
+      influxdb:
+        urls:
+          __metadata:
+            label: "URLs"
+            description: "InfluxDB URL details"
+            type: "string"
+            required: false
+        database:
+          __metadata:
+            label: "Database"
+            description: "Database details"
+            type: "string"
+            required: false
+    inputs:
+      cpu:
+        percpu:
+          __metadata:
+            label: "Per cpu"
+            description: "Per CPU Details"
+            type: "boolean"
+            required: false
+        totalcpu:
+          __metadata:
+            label: "Totalcpu"
+            description: "Total CPU Details"
+            type: "boolean"
+            required: false
+      influxdb:
+        urls:
+          __metadata:
+            label: "URLs"
+            description: "InfluxDB URL"
+            type: "string"
+            required: false
+        timeout:
+          __metadata:
+            label: "Timeout"
+            description: "Timeout for InfluxDB"
+            type: "string"
+            required: false
+      prometheus:
+        urls:
+          __metadata:
+            label: "URLs"
+            description: "Prometheus URL"
+            type: "string"
+            required: false
+        namePrefix:
+          __metadata:
+            label: "Name Prefix"
+            description: "Prometheus name prefix"
+            type: "string"
+            required: false
+        bearerToken:
+          __metadata:
+            label: "Bearer Token"
+            description: "Bearer token location"
+            type: "string"
+            required: false
+        insecureSkipVerify:
+          __metadata:
+            label: "InsecureSkipVerify"
+            description: "Skip verification for insecure if true"
+            type: "boolean"
+            required: false
+      statsd:
+        serviceAddress:
+          __metadata:
+            label: "ServiceAddress"
+            description: "Statsd service address"
+            type: "string"
+            required: false
+        percentiles:
+          __metadata:
+            label: "Percentiles"
+            description: "Statsd percentiles"
+            type: "string"
+            required: false
+        metricSeparator:
+          __metadata:
+            label: "MetricSeparator"
+            description: "Statsd Metric Separator"
+            type: "string"
+            required: false
+        allowedPendingMessages:
+          __metadata:
+            label: "AllowedPendingMessages"
+            description: "Statsd Allowed Pending Messages count"
+            type: "number"
+            required: false
+        percentileLimit:
+          __metadata:
+            label: "PercentileLimit"
+            description: "Statsd Percentile Limit"
+            type: "number"
+            required: false
+      system:
+        __metadata:
+          label: "System"
+          description: "System info"
+affinity:
+  __metadata:
+    label: "Affinity"
+    description: "Node Affinity Details"
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+        __metadata:
+          label: "NodeSelectorTerms"
+          description: "Terms for node selector"

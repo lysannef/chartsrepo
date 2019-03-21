@@ -1,0 +1,23 @@
+apiVersion: v1
+appVersion: 2.7.3
+description: The Apache Hadoop software library is a framework.
+home: https://hadoop.apache.org/
+
+icon: https://raw.githubusercontent.com/ppc64le/charts/master/logo/hadoop-logo.png
+
+keywords:
+  - Limited
+  - ppc64le
+  - Tools
+  - ICP
+  - hadoop
+  - Beta
+maintainers:
+- email: smohite@us.ibm.com
+  name: IBM ISV Team
+name: ibm-hadoop-dev
+sources:
+- https://github.com/apache/hadoop
+version: 0.1.0
+kubeVersion: ">=1.7.0"
+tillerVersion: '>=2.7.2'

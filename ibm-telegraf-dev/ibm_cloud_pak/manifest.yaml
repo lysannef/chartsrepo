@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-telegraf-dev-0.3.3.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/telegraf-ppc64le:1.5.2
+  references:
+  - repository: ibmcom/telegraf-ppc64le:1.5.2

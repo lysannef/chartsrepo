@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-etcd-operator-0.7.7.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/etcd-ppc64le:v3.2.14
+  references:
+  - repository: ibmcom/etcd-ppc64le:v3.2.14

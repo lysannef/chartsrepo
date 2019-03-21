@@ -1,0 +1,660 @@
+node:
+   __metadata:
+     name: "Node"
+     label: "Node Preference "
+     description: "Select node architecture to deploy chart on"
+     type: "string"
+     immutable: false
+     required: true
+     options:
+     - label: "ppc64le"
+       value: "ppc64le"
+
+backupOperator:
+  __metadata:
+    label: "Backup"
+    description: "backup spec"
+  name:
+    __metadata:
+      name: "name"
+      label: "Name"
+      description: "Docker image name"
+      type: "string"
+      immutable: false
+      required: true
+  replicaCount:
+   __metadata:
+     name: "replicaCount"
+     label: "Replica Count"
+     description: "Number of replicas of deployment needed to be created"
+     type: "string"
+     immutable: false
+     required: false
+  resources:
+    memory:
+      __metadata:
+        name: "memory"
+        label: "Memory"
+        description: "Memory details"
+        type: "string"
+        immutable: false
+        required: true
+    cpu:
+      __metadata:
+        name: "cpu"
+        label: "CPU"
+        description: "CPU details"
+        type: "string"
+        immutable: false
+        required: true
+  spec:
+    s3:
+      awsSecret:
+        __metadata:
+          name: "awsSecret"
+          label: "AwsSecret"
+          description: "awsSecret details"
+          type: "string"
+          immutable: false
+          required: true
+      s3Bucket:
+        __metadata:
+          name: "s3Bucket"
+          label: "S3Bucket"
+          description: "s3Bucket details"
+          type: "string"
+          immutable: false
+          required: true
+    storageType:
+        __metadata:
+          name: "storageType"
+          label: "StorageType"
+          description: "storageType details"
+          type: "string"
+          immutable: false
+          required: true
+  tolerations:
+    __metadata:
+      name: "tolerations"
+      label: "Tolerations"
+      description: "Toleration labels for pod assignment, e.g. [{\"key\": \"key\", \"operator\":\"Equal\", \"value\": \"value\", \"effect\":\"NoSchedule\"}]"
+      type: "string"
+      immutable: false
+      required: false
+  image:
+    tag:
+      __metadata:
+        name: "tag"
+        label: "Tag"
+        description: "Docker image tag"
+        type: "string"
+        immutable: false
+        required: true
+    repository:
+      __metadata:
+        name: "repository"
+        label: "Repository"
+        description: "Docker image location"
+        type: "string"
+        immutable: false
+        required: true
+    pullPolicy:
+      __metadata:
+        name: "pullPolicy"
+        label: "Docker image pull policy"
+        description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+        type: "string"
+        immutable: false
+        required: true
+        options:
+        - label: "Always"
+          value: "Always"
+        - label: "Never"
+          value: "Never"
+        - label: "IfNotPresent"
+          value: "IfNotPresent"          
+
+deployments:
+  __metadata:
+    label: "Deployments"
+    description: "Select what to deploy"
+  backupOperator:
+    __metadata:
+      name: "backupOperator"
+      label: "BackupOperator"
+      description: "Select backup operator"
+      type: "boolean"
+      immutable: false
+      required: true
+  etcdOperator:
+    __metadata:
+      name: "etcdOperator"
+      label: "EtcdOperator"
+      description: "Select etcdOperator"
+      type: "boolean"
+      immutable: false
+      required: true
+  restoreOperator:
+    __metadata:
+      name: "restoreOperator"
+      label: "RestoreOperator"
+      description: "Select RestoreOperator"
+      type: "boolean"
+      immutable: false
+      required: true
+
+customResources:
+  __metadata:
+    label: "customResources"
+    description: "creates custom resources"
+  createBackupCRD:
+    __metadata:
+      name: "createBackupCRD"
+      label: "CreateBackupCRD"
+      description: "create BackupCRD"
+      type: "boolean"
+      immutable: false
+      required: true
+  createEtcdClusterCRD:
+    __metadata:
+      name: "createEtcdClusterCRD"
+      label: "createEtcdClusterCRD"
+      description: "create EtcdClusterCRD"
+      type: "boolean"
+      immutable: false
+      required: true
+  createRestoreCRD:
+    __metadata:
+      name: "createRestoreCRD"
+      label: "CreateRestoreCRD"
+      description: "create RestoreCRD"
+      type: "boolean"
+      immutable: false
+      required: true
+
+etcdCluster:
+  __metadata:
+    label: "etcdCluster"
+    description: "etcd-cluster specific values"
+  enableTLS:
+    __metadata:
+      name: "enableTLS"
+      label: "EnableTLS"
+      description: "tls config"
+      type: "boolean"
+      immutable: false
+      required: true
+  image:
+    tag:
+      __metadata:
+        name: "tag"
+        label: "Tag"
+        description: "Docker image tag"
+        type: "string"
+        immutable: false
+        required: true
+    repository:
+      __metadata:
+        name: "repository"
+        label: "Repository"
+        description: "Docker image location"
+        type: "string"
+        immutable: false
+        required: true
+  name:
+    __metadata:
+      name: "name"
+      label: "Name"
+      description: "Docker image name"
+      type: "string"
+      immutable: false
+      required: true   
+  pod:
+    antiAffinity:
+      __metadata:
+        name: "antiAffinity"
+        label: "AntiAffinity"
+        description: "Antiaffinity for etcd pod assignment"
+        type: "boolean"
+        immutable: false
+        required: true
+    resources:
+      limits:
+        cpu:
+          __metadata:
+            name: "cpu"
+            label: "Cpu"
+            description: "cpu limits"
+            type: "string"
+            immutable: false
+            required: true
+        memory:
+          __metadata:
+            name: "memory"
+            label: "Memory"
+            description: "memory limits"
+            type: "string"
+            immutable: false
+            required: true
+      requests:
+        cpu:
+          __metadata:
+            name: "cpu"
+            label: "Cpu"
+            description: "requested cpu's"
+            type: "string"
+            immutable: false
+            required: true
+        memory:
+          __metadata:
+            name: "memory"
+            label: "Memory"
+            description: "requested memory"
+            type: "string"
+            immutable: false
+            required: true
+  size:
+    __metadata:
+      name: "size"
+      label: "Size"
+      description: "size info"
+      type: "string"
+      immutable: false
+      required: true
+  tls:
+    static:
+      member:
+        peerSecret:    
+          __metadata:
+            name: "peerSecret"
+            label: "PeerSecret"
+            description: "etcd-peer-tls"
+            type: "string"
+            immutable: false
+            required: true
+        serverSecret:
+          __metadata:
+            name: "serverSecret"
+            label: "ServerSecret"
+            description: "etcd-server-tls"
+            type: "string"
+            immutable: false
+            required: true
+      operatorSecret:
+          __metadata:
+            name: "operatorSecret"
+            label: "OperatorSecret"
+            description: "etcd-client-tls"
+            type: "string"
+            immutable: false
+            required: true
+  version:
+    __metadata:
+      name: "version"
+      label: "Version"
+      description: "image version"
+      type: "string"
+      immutable: false
+      required: true
+
+etcdOperator:
+  __metadata:
+    label: "EtcdOperator"
+    description: "EtcdOperator details"
+  name:
+    __metadata:
+      name: "name"
+      label: "Name"
+      description: "opearator name"
+      type: "string"
+      immutable: false
+      required: true
+  image:
+    tag:
+      __metadata:
+        name: "tag"
+        label: "Tag"
+        description: "Docker image tag"
+        type: "string"
+        immutable: false
+        required: true
+    repository:
+      __metadata:
+        name: "repository"
+        label: "Repository"
+        description: "Docker image location"
+        type: "string"
+        immutable: false
+        required: true
+    pullPolicy:
+      __metadata:
+        name: "pullPolicy"
+        label: "Docker image pull policy"
+        description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+        type: "string"
+        immutable: false
+        required: true
+        options:
+        - label: "Always"
+          value: "Always"
+        - label: "Never"
+          value: "Never"
+        - label: "IfNotPresent"
+          value: "IfNotPresent"
+  # livenessProbe:
+    # enabled:
+      # __metadata:
+        # name: "enabled"
+        # label: "Enabled"
+        # description: "enable livenessProbe"
+        # type: "boolean"
+        # immutable: false
+        # required: true
+    # failureThreshold:
+      # __metadata:
+        # name: "failureThreshold"
+        # label: "FailureThreshold"
+        # description: "failureThreshold for livenessProbe"
+        # type: "string"
+        # immutable: false
+        # required: true
+    # timeoutSeconds:
+      # __metadata:
+        # name: "timeoutSeconds"
+        # label: "TimeoutSeconds"
+        # description: "timeoutSeconds for livenessProbe"
+        # type: "string"
+        # immutable: false
+        # required: true
+    # successThreshold:
+      # __metadata:
+        # name: "successThreshold"
+        # label: "SuccessThreshold"
+        # description: "successThreshold for livenessProbe"
+        # type: "string"
+        # immutable: false
+        # required: true
+    # initialDelaySeconds:
+      # __metadata:
+        # name: "initialDelaySeconds"
+        # label: "InitialDelaySeconds"
+        # description: "initialDelaySeconds for livenessProbe"
+        # type: "string"
+        # immutable: false
+        # required: true
+    # periodSeconds:
+      # __metadata:
+        # name: "periodSeconds"
+        # label: "PeriodSeconds"
+        # description: "periodSeconds for livenessProbe"
+        # type: "string"
+        # immutable: false
+        # required: true
+  # readinessProbe:
+    # enabled:
+      # __metadata:
+        # name: "enabled"
+        # label: "Enabled"
+        # description: "enable readinessProbe"
+        # type: "boolean"
+        # immutable: false
+        # required: true
+    # failureThreshold:
+      # __metadata:
+        # name: "failureThreshold"
+        # label: "FailureThreshold"
+        # description: "failureThreshold for readinessProbe"
+        # type: "string"
+        # immutable: false
+        # required: true
+    # timeoutSeconds:
+      # __metadata:
+        # name: "timeoutSeconds"
+        # label: "TimeoutSeconds"
+        # description: "timeoutSeconds for readinessProbe"
+        # type: "string"
+        # immutable: false
+        # required: true
+    # successThreshold:
+      # __metadata:
+        # name: "successThreshold"
+        # label: "SuccessThreshold"
+        # description: "successThreshold for readinessProbe"
+        # type: "string"
+        # immutable: false
+        # required: true
+    # initialDelaySeconds:
+      # __metadata:
+        # name: "initialDelaySeconds"
+        # label: "InitialDelaySeconds"
+        # description: "initialDelaySeconds for readinessProbe"
+        # type: "string"
+        # immutable: false
+        # required: true
+    # periodSeconds:
+      # __metadata:
+        # name: "periodSeconds"
+        # label: "PeriodSeconds"
+        # description: "periodSeconds for readinessProbe"
+        # type: "string"
+        # immutable: false
+        # required: true
+  replicaCount:
+    __metadata:
+      name: "replicaCount"
+      label: "Replica Count"
+      description: "Number of replicas of deployment needed to be created"
+      type: "string"
+      immutable: false
+      required: false
+  tolerations:
+    __metadata:
+      name: "tolerations"
+      label: "Tolerations"
+      description: "Toleration labels for pod assignment, e.g. [{\"key\": \"key\", \"operator\":\"Equal\", \"value\": \"value\", \"effect\":\"NoSchedule\"}]"
+      type: "string"
+      immutable: false
+      required: false
+  resources:
+    cpu:
+      __metadata:
+        name: "cpu"
+        label: "Cpu"
+        description: "cpu details"
+        type: "string"
+        immutable: false
+        required: true
+    memory:
+      __metadata:
+        name: "memory"
+        label: "Memory"
+        description: "memory details"
+        type: "string"
+        immutable: false
+        required: true
+
+rbac:
+  __metadata:
+    label: "Rbac"
+    description: "Install Default RBAC roles and bindings"
+  create:
+    __metadata:
+      name: "create"
+      label: "Create"
+      description: "create details"
+      type: "boolean"
+      immutable: false
+      required: true
+  apiVersion:
+    __metadata:
+      name: "apiVersion"
+      label: "ApiVersion"
+      description: "apiVersion details"
+      type: "string"
+      immutable: false
+      required: true
+
+
+restoreOperator:
+  __metadata:
+    label: "RestoreOperator"
+    description: "restoreOperator details"
+  name:
+    __metadata:
+      name: "name"
+      label: "Name"
+      description: "Docker image name"
+      type: "string"
+      immutable: false
+      required: true
+  replicaCount:
+   __metadata:
+     name: "replicaCount"
+     label: "Replica Count"
+     description: "Number of replicas of deployment needed to be created"
+     type: "string"
+     immutable: false
+     required: false
+  resources:
+    memory:
+      __metadata:
+        name: "memory"
+        label: "Memory"
+        description: "Memory details"
+        type: "string"
+        immutable: false
+        required: true
+    cpu:
+      __metadata:
+        name: "cpu"
+        label: "CPU"
+        description: "CPU details"
+        type: "string"
+        immutable: false
+        required: true
+  spec:
+    s3:
+      awsSecret:
+        __metadata:
+          name: "awsSecret"
+          label: "AwsSecret"
+          description: "awsSecret details"
+          type: "string"
+          immutable: false
+          required: true
+      path:
+        __metadata:
+          name: "path"
+          label: "Path"
+          description: "path details"
+          type: "string"
+          immutable: false
+          required: true
+  tolerations:
+    __metadata:
+      name: "tolerations"
+      label: "Tolerations"
+      description: "Toleration labels for pod assignment, e.g. [{\"key\": \"key\", \"operator\":\"Equal\", \"value\": \"value\", \"effect\":\"NoSchedule\"}]"
+      type: "string"
+      immutable: false
+      required: false
+  port:
+    __metadata:
+      name: "port"
+      label: "Port"
+      description: "Port details"
+      type: "string"
+      immutable: false
+      required: false
+  image:
+    tag:
+      __metadata:
+        name: "tag"
+        label: "Tag"
+        description: "Docker image tag"
+        type: "string"
+        immutable: false
+        required: true
+    repository:
+      __metadata:
+        name: "repository"
+        label: "Repository"
+        description: "Docker image location"
+        type: "string"
+        immutable: false
+        required: true
+    pullPolicy:
+      __metadata:
+        name: "pullPolicy"
+        label: "Docker image pull policy"
+        description: "Defaults to 'Always' when the latest tag is specified. Otherwise the default is 'IfNotPresent'."
+        type: "string"
+        immutable: false
+        required: true
+        options:
+        - label: "Always"
+          value: "Always"
+        - label: "Never"
+          value: "Never"
+        - label: "IfNotPresent"
+          value: "IfNotPresent"
+   
+
+serviceAccount:
+  __metadata:
+    label: "ServiceAccount"
+    description: "serviceAccount names and whether to create them"
+  etcdOperatorServiceAccount:
+    create:
+      __metadata:
+        name: "create"
+        label: "boolean"
+        description: "create etcdOperatorServiceAccount"
+        type: "boolean"
+        immutable: false
+        required: true
+    name:
+      __metadata:
+        name: "name"
+        label: "Name"
+        description: "Name of etcdOperatorServiceAccount"
+        type: "string"
+        immutable: false
+        required: true
+  backupOperatorServiceAccount:
+    create:
+      __metadata:
+        name: "create"
+        label: "Create"
+        description: "create backupOperatorServiceAccount"
+        type: "boolean"
+        immutable: false
+        required: true
+    name:
+      __metadata:
+        name: "name"
+        label: "Name"
+        description: "Name of backupOperatorServiceAccount"
+        type: "string"
+        immutable: false
+        required: true
+  restoreOperatorServiceAccount:
+    create:
+      __metadata:
+        name: "create"
+        label: "Create"
+        description: "create restoreOperatorServiceAccount"
+        type: "boolean"
+        immutable: false
+        required: true
+    name:
+      __metadata:
+        name: "name"
+        label: "Name"
+        description: "Name of restoreOperatorServiceAccount"
+        type: "string"
+        immutable: false
+        required: true
+
+
+

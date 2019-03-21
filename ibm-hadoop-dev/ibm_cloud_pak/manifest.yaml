@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-hadoop-dev-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ynwa/ubuntu-apache-hadoop-ppc64le:2.7.1
+  references:
+  - repository: ynwa/ubuntu-apache-hadoop-ppc64le:2.7.1

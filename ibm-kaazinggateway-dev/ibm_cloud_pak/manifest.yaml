@@ -1,0 +1,9 @@
+charts:
+  - archive: file:ibm-kaazinggateway-dev-0.1.0.tgz
+    repository-keys: 
+      - image.repository
+
+images:
+- image: ibmcom/kaazing-gateway-ppc64le:5.6.0
+  references:
+  - repository: ibmcom/kaazing-gateway-ppc64le:5.6.0
