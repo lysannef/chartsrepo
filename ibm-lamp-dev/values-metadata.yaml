@@ -1,0 +1,749 @@
+node:
+   __metadata:
+     label: "Node"
+     description: "Node Prefernce"
+     type: "string"
+     immutable: false
+     required: true
+     options:
+     - label: "ppc64le"
+       value: "ppc64le"
+replicaCount:
+   __metadata:
+     name: "replicaCount"
+     label: "Replica Count"
+     description: "Number of replicas of deployment needed to be created"
+     type: "string"
+     immutable: false
+     required: true
+service:
+  __metadata:
+    label: "service"
+    description: "Application Service Details"
+  type:
+    __metadata:
+      name: "type"
+      label: "Service Type"
+      description: "Type of Service- NodePort, ClusterIP"
+      type: "string"
+      immutable: false
+      required: true
+      options:
+      - label: "ClusterIP"
+        value: "ClusterIP"
+      - label: "NodePort"
+        value: "NodePort"
+      - label: "LoadBalancer"
+        value: "LoadBalancer"
+      - label: "IfNotPresent"
+        value: "IfNotPresent"
+  httpPort:
+    __metadata:
+      name: "httpport"
+      label: "HTTP Port"
+      description: "The HTTP port that the container will expose."
+      type: "number"
+      immutable: false
+      required: true
+## Persistence options
+persistence:
+  __metadata:
+    label: "Persistence"
+    description: "Data persistence configuration"
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable persistence for this deployment"
+      description: "Enables persistence for this deployment. Defaults to true. A persistent volume is required."
+      type: "boolean"
+      immutable: false
+      required: true
+  useDynamicProvisioning:
+    __metadata:
+      name: "useDynamicProvisioning"
+      label: "Use dynamic provisioning for persistent volume"
+      description: "If dynamic provisioning is available in the cluster this option will automatically provision the requested volume if set to true."
+      type: "boolean"
+      immutable: false
+      required: true
+  storageClass:
+    __metadata:
+      name: "Lamp.persistence.storageClass"
+      label: "Name of the storageClass for the persistence"
+      description: "The storage class name of the persistent volume.  Defaults to -"
+      type: "string"
+      immutable: false
+      required: false
+  size:
+    __metadata:
+      name: "Lamp.persistentVolume.size"
+      label: "Size for the persistent volume"
+      description: "Describes the requested disk size."
+      type: "string"
+      immutable: false
+      required: false
+  accessMode:
+    __metadata:
+      name: "accessMode"
+      label: "CA storage access mode"
+      description: "Use volume as ReadWriteMany, ReadOnlyMany or ReadWriteOnce. Default is ReadWriteMany."
+      type: "string"
+      immutable: false
+      required: false
+      options:
+      - label: "ReadWriteOnce"
+        value: "ReadWriteOnce"
+      - label: "ReadOnlyMany"
+        value: "ReadOnlyMany"
+      - label: "ReadWriteMany"
+        value: "ReadWriteMany"
+  keep:
+    __metadata:
+      name: "Keep"
+      label: "keep"
+      description: "Keep persistent volume after helm delete.Default is false."
+      type: "boolean"
+      immutable: false
+      required: true
+  hostPath:
+    __metadata:
+      name: "hostpath"
+      label: "HostPath"
+      description: "if specified, used as persistent storage instead of PVC"
+      type: "string"
+      immutable: false
+      required: true
+resources:
+  __metadata:
+    label: "Resources"
+    description: "The resources required."
+  requests:
+    cpu:
+      __metadata:
+        label: "CPU Resources Requests"
+        type: "string"
+        description: "Specify the minimum requested CPU."
+        immutable: false
+        required: false
+    memory:
+      __metadata:
+        label: "Memory Resources Requests"
+        type: "string"
+        description: "Specify the minimum requested memory."
+        immutable: false
+        required: false
+wordpress:
+  __metadata:
+    label: "Wordpress"
+    description: "The LAMP chart offers additional wordpress features during the init stage."
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable wordpress for this deployment"
+      description: "Enables wordpress normal mode.Default is false"
+      type: "boolean"
+      immutable: false
+      required: true
+  gdriveRToken:
+    __metadata:
+      name: "GdriveRToken"
+      label: "gdriveRToken"
+      description: "gdrive rtoken for authentication used for downloading InfiniteWP backup from gdrive"
+      type: "string"
+      immutable: false
+      required: true
+  gdriveFolder:
+    __metadata:
+      name: "GdriveFolder"
+      label: "gdriveFolder"
+      description: "gdrive backup folder - the latest backup inside of the folder where the name includes the string _full will be downloaded"
+      type: "string"
+      immutable: false
+      required: true
+  domain:
+    __metadata:
+      name: "Domain"
+      label: "domain"
+      description: "wordpress domain used in dev mode to be search replaced"
+      type: "string"
+      immutable: false
+      required: true
+  develop:
+    enabled:
+      __metadata:
+        name: "enabled"
+        label: "Enabled"
+        description: "Enables develop mode.Default is false"
+        type: "boolean"
+        immutable: false
+        required: true
+    deleteUploads:
+      __metadata:
+        name: "deleteUploads"
+        label: "DeleteUploads"
+        description: "deletes wp_content/uploads folder and links to live site within htaccess.Default is false"
+        type: "boolean"
+        immutable: false
+        required: true
+    devDomain:
+      __metadata:
+        name: "devDomain"
+        label: "DevDomain"
+        description: "used to search replace wordpress.domain to fullname of template.develop.devDomain e.g mysite-com-lamp.dev.example.com"
+        type: "string"
+        immutable: false
+        required: true
+
+git:
+  __metadata:
+    label: "git"
+    description: "If Git is enabled, the contents of the specified repository will be synchronized every git.wait seconds to the web root."
+  enabled:
+      __metadata:
+        name: "enabled"
+        label: "Enabled"
+        description: "Enables Git service.Default is false"
+        type: "boolean"
+        immutable: false
+        required: true
+  repoURL:
+    __metadata:
+      name: "repoUrl"
+      label: "RepoURL"
+      description: "Git Repository URL"
+      type: "string"
+      immutable: false
+      required: true
+  branch:
+    __metadata:
+      name: "branch"
+      label: "Branch"
+      description: "git.branch Repository branch to sync"
+      type: "string"
+      immutable: false
+      required: true 
+  revision:
+    __metadata:
+      name: "revision"
+      label: "Revision"
+      description: "Revision to sync"
+      type: "string"
+      immutable: false
+      required: true
+  wait:
+    __metadata:
+      name: "wait"
+      label: "Wait"
+      description: "Time between Git syncs"
+      type: "string"
+      immutable: false
+      required: true  
+  resources:
+    __metadata:
+      name: "resources"
+      label: "Resources"
+      description: "resource requests/limits"
+      type: "boolean"
+      immutable: false
+      required: true
+
+ingress:
+  __metadata:
+    label: "ingress"
+    description: "If ingress.enabled is set to true, the LAMP charts services are made accessible via ingress rules."
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable Ingress"
+      description: "Enables ingress support - working ingress controller necessary"
+      type: "boolean"
+      immutable: false
+      required: true
+  domain:
+    __metadata:
+      name: "domain"
+      label: "Domain"
+      description: "domain to advertise the services - A records need to point to ingress controllers IP"
+      type: "string"
+      immutable: false
+      required: true
+  subdomainWWW:
+    __metadata:
+      name: "subdomainWWW"
+      label: "SubdomainWWW"
+      description: "enables www subdomain and 301 redirect from domain. Requires nginx ingress controller."
+      type: "boolean"
+      immutable: false
+      required: true
+  ssl:
+    __metadata:
+      name: "ssl"
+      label: "SSL"
+      description: "Enables lego letsencrypt ssl support - working nginx controller and lego container necessary"
+      type: "boolean"
+      immutable: false
+      required: true
+  htpasswdString:
+    __metadata:
+      name: "htpasswdString"
+      label: "HtpasswdString"
+      description: "if specified main web service requires authentication. Requires nginx ingress controller. Format: user:$apr1$F..."
+      type: "string"
+      immutable: false
+      required: true
+  annotations:
+    __metadata:
+      name: "annotations"
+      label: "Annotations"
+      description: "specify custom ingress annotations such as e.g. ingress.kubernetes.io/proxy-body-size"
+      type: "string"
+      immutable: false
+      required: true
+
+init:
+  __metadata:
+    label: "Init"
+    description: "Init container parameters"
+  clone:
+    release:
+      __metadata:
+        name: "release"
+        label: "Release"
+        description: "Fullname of the release to clone"
+        type: "boolean"
+        immutable: false
+        required: true
+    hostPath:
+      __metadata:
+        name: "hostpath"
+        label: "hostPath"
+        description: "If the release to clone uses hostPath instead of PVC, set it here. This will only work if both releases are deployed on the same node"
+        type: "string"
+        immutable: false
+        required: true
+  manually:
+    enabled:
+      __metadata:
+        name: "enabled"
+        label: "Enabled"
+        description: "Enables container for manual initialization"
+        type: "boolean"
+        immutable: false
+        required: true
+    repository:
+      __metadata:
+        name: "repository"
+        label: "Repository"
+        description: "init.manually.repository Containers repository"
+        type: "string"
+        immutable: false
+        required: true
+    tag:
+      __metadata:
+        name: "tag"
+        label: "Tag"
+        description: "Repository tag"
+        type: "string"
+        immutable: false
+        required: true
+    pullPolicy:
+      __metadata:
+        name: "pullPolicy"
+        label: "PullPolicy"
+        description: "Image pull policy"
+        type: "string"
+        immutable: false
+        required: true 
+  resources:
+    __metadata:
+        name: "resources"
+        label: "Resources"
+        description: "init containers resource requests/limits"
+        type: "boolean"
+        immutable: false
+        required: true  
+
+mysql:
+  __metadata:
+    label: "Mysql"
+    description: "The MySQL container is disabled by default, any container with the base image of the official mysql, mariadb or percona should work."
+  rootPassword:
+    __metadata:
+      name: "rootPassword"
+      label: "RootPassword"
+      description: "Sets the MySQL root password, enables MySQL service if not empty"
+      type: "string"
+      immutable: false
+      required: true
+  user:
+    __metadata:
+      name: "user"
+      label: "User"
+      description: "MySQL user"
+      type: "string"
+      immutable: false
+      required: true
+  password:
+    __metadata:
+      name: "password"
+      label: "Password"
+      description: "MySQL user password"
+      type: "string"
+      immutable: false
+      required: true
+  database:
+    __metadata:
+      name: "database"
+      label: "Database"
+      description: "MySQL user database"
+      type: "string"
+      immutable: false
+      required: true
+  repository:
+    __metadata:
+      name: "repository"
+      label: "Repository"
+      description: "MySQL repository - choose one of the official mysql, mariadb or percona images."
+      type: "string"
+      immutable: false
+      required: true
+  tag:
+      __metadata:
+        name: "tag"
+        label: "Tag"
+        description: "Repository tag"
+        type: "string"
+        immutable: false
+        required: true
+  pullPolicy:
+      __metadata:
+        name: "pullPolicy"
+        label: "PullPolicy"
+        description: "Image pull policy"
+        type: "string"
+        immutable: false
+        required: true
+  sockets:
+    __metadata:
+      name: "sockets"
+      label: "Sockets"
+      description: "Enables communication between MySQL and PHP via sockets instead of TCP.Default is true"
+      type: "boolean"
+      immutable: false
+      required: true
+  resources:
+    __metadata:
+      name: "resources"
+      label: "Resources"
+      description: "Resource requests/limits"
+      type: "boolean"
+      immutable: false
+      required: true
+httpd:
+  __metadata:
+    label: "Httpd"
+    description: "HTTPD container which routes PHP request via FCGI to the PHP container"
+  resources:
+    __metadata:
+      name: "resources"
+      label: "Resources"
+      description: "HTTPD container resource requests/limits"
+      type: "boolean"
+      immutable: false
+      required: true
+
+php:
+  __metadata:
+    label: "Php"
+    description: "The PHP container is at the heart of the LAMP chart."
+  version:
+    __metadata:
+      name: "version"
+      label: "Version"
+      description: "default php repository version, you can specify a different version like 5 or 7.0"
+      type: "string"
+      immutable: false
+      required: true 
+  repository:
+    __metadata:
+      name: "repository"
+      label: "Repository"
+      description: "If not empty, repository is chosen over default php repo"
+      type: "string"
+      immutable: false
+      required: true
+  tag:
+    __metadata:
+      name: "tag"
+      label: "Tag"
+      description: "Repository tag"
+      type: "string"
+      immutable: false
+      required: true
+  pullPolicy:
+    __metadata:
+      name: "pullPolicy"
+      label: "PullPolicy"
+      description: "Image pull policy"
+      type: "string"
+      immutable: false
+      required: true
+  fpmEnabled:
+    __metadata:
+      name: "fpmEnabled"
+      label: "FpmEnabled"
+      description: "Enables docker FPM repository, be sure to disable if working with a custom repository based on the apache tag"
+      type: "boolean"
+      immutable: false
+      required: true
+  sockets:
+    __metadata:
+      name: "sockets"
+      label: "Sockets"
+      description: "If FPM is enabled, enables communication between HTTPD and PHP via sockets instead of TCP"
+      type: "boolean"
+      immutable: false
+      required: true
+  oldHTTPRoot:
+    __metadata:
+      name: "oldHTTPRoot"
+      label: "OldHTTPRoot"
+      description: "Additionally mounts the webroot at php.oldHTTPRoot to compensate for absolute path file links"
+      type: "string"
+      immutable: false
+      required: true
+  ini:
+    __metadata:
+      name: "ini"
+      label: "Ini"
+      description: "additional PHP config values, see examples on how to use"
+      type: "string"
+      immutable: false
+      required: true
+  copyRoot:
+    __metadata:
+      name: "copyRoot"
+      label: "CopyRoot"
+      description: "if true, copies the containers web root /var/www/html into persistent storage."
+      type: "boolean"
+      immutable: false
+      required: true
+  persistentSubpaths:
+    __metadata:
+      name: "persistentSubpaths"
+      label: "PersistentSubpaths"
+      description: "instead of enabling persistence for the whole webroot, only subpaths of webroot can be enabled for persistence."
+      type: "boolean"
+      immutable: false
+      required: true
+  resources:
+    __metadata:
+      name: "resources"
+      label: "Resources"
+      description: "PHP container resource requests/limits"
+      type: "boolean"
+      immutable: false
+      required: true
+  envVars:
+    __metadata:
+      name: "envVars"
+      label: "EnvVars"
+      description: "PHP container environment Variables"
+      type: "string"
+      immutable: false
+      required: true
+
+keepSecrets:
+  __metadata:
+    name: "keepsecrets"
+    label: "KeepSecrets"
+    description: "keepSecrets Keep secrets after helm delete"
+    type: "boolean"
+    immutable: false
+    required: true
+
+phpmyadmin:
+  __metadata:
+    label: "Phpmyadmin"
+    description: "An instance of PHPMyAdmin through which you can access the database."
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Enables phpmyadmin service" 
+      type: "boolean"
+      immutable: false
+      required: true
+  port:
+    __metadata:
+      name: "port"
+      label: "Port"
+      description: "Port to advertise service in LoadBalancer mode"
+      type: "number"
+      immutable: false
+      required: true
+  subdomain:
+    __metadata:
+      name: "subdomain"
+      label: "Subdomain"
+      description: "Subdomain to advertise service on if ingress is enabled"
+      type: "string"
+      immutable: false
+      required: true
+  resources:
+    __metadata:
+      name: "resources"
+      label: "Resources"
+      description: "resource requests/limits"
+      type: "boolean"
+      immutable: false
+      required: true 
+sftp:
+  __metadata:
+    label: "Sftp"
+    description: "SFTP is an instance of the atmoz/sftp container, through which you can access the webroot."
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Enables sftp service"
+      type: "boolean"
+      immutable: false
+      required: true
+  port:
+    __metadata:
+      name: "port"
+      label: "Port"
+      description: "Port to advertise service in LoadBalancer mode"
+      type: "number"
+      immutable: false
+      required: true
+  nodePort:
+    __metadata:
+      name: "nodeport"
+      label: "NodePort"
+      description: "Port to advertise service in Ingress mode"
+      type: "number"
+      immutable: false
+      required: true
+  user:
+    __metadata:
+      name: "user"
+      label: "User"
+      description: "SFTP User"
+      type: "string"
+      immutable: false
+      required: true
+  password:
+    __metadata:
+      name: "password"
+      label: "Password"
+      description: "SFTP Password"
+      type: "string"
+      immutable: false
+      required: true
+  resources: 
+    __metadata:
+      name: "resources"
+      label: "Resources"
+      description: "resource requests/limits"
+      type: "boolean"
+      immutable: false
+      required: true 
+svn:
+  __metadata:
+    label: "Svn"
+    description: "If SVN is enabled, the contents of the specified repository will be synchronized every 30 seconds to the web root."
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Enables svn service"
+      type: "boolean"
+      immutable: false
+      required: true
+  user:
+    __metadata:
+      name: "user"
+      label: "User"
+      description: "Svn User"
+      type: "string"
+      immutable: false
+      required: true
+  password:
+    __metadata:
+      name: "password"
+      label: "Password"
+      description: "Svn Password"
+      type: "string"
+      immutable: false
+      required: true
+  repoURL:
+    __metadata:
+      name: "repoURL"
+      label: "RepoURL"
+      description: "SVN Repository URL"
+      type: "string"
+      immutable: false
+      required: true
+  allowOverwrite:
+    __metadata:
+      name: "allowOverwrite"
+      label: "AllowOverwrite"
+      description: "if disabled and files already exist in the web folder will not create working clone or sync files"
+      type: "boolean"
+      immutable: false
+      required: true
+  resources:
+    __metadata:
+      name: "resources"
+      label: "Resources"
+      description: "resource requests/limits"
+      type: "boolean"
+      immutable: false
+      required: true
+webdav:
+  __metadata:
+    label: "webdav"
+    description: "An instance of WebDAV, through which you can access the webroot."
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enabled"
+      description: "Enables webdav service"
+      type: "boolean"
+      immutable: false
+      required: true 
+  port:
+    __metadata:
+      name: "port"
+      label: "Port"
+      description: "Port to advertise service in LoadBalancer mode"
+      type: "number"
+      immutable: false
+      required: true
+  subdomain:
+    __metadata:
+      name: "subdomain"
+      label: "Subdomain"
+      description: "Subdomain to advertise service on if ingress is enabled"
+      type: "string"
+      immutable: false
+      required: true
+  user:
+    __metadata:
+      name: "user"
+      label: "User"
+      description: "WebDAV User"
+      type: "string"
+      immutable: false
+      required: true
+  password:
+    __metadata:
+      name: "password"
+      label: "Password"
+      description: "WebDAV Password"
+      type: "string"
+      immutable: false
+      required: true
+

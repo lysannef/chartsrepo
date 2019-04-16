@@ -1,0 +1,10 @@
+charts:
+  - archive: file:ibm-heapster-dev-0.1.5.tgz
+    repository-keys:
+      - image.repository
+
+images:
+- image: lead4good/init-wp:latest
+  references:
+  - repository: lead4good/init-wp
+
