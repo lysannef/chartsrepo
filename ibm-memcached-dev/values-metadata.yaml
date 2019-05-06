@@ -64,7 +64,7 @@ node:
        value: "amd64"
 memcached:
   __metadata:
-    label: "memcached"
+    label: "memcached values"
     description: "Various values that get set as command-line flags"
   maxItemMemory:
     __metadata:
@@ -76,7 +76,7 @@ memcached:
   verbosity:
     __metadata:
       name: "memcached verbosity"
-      label: "verbosity"
+      label: "verbosity values"
       description: "Various values that get set as command-line flags"
       type: "string"
       required: false
@@ -102,7 +102,7 @@ resources:
         cpu:
            __metadata:
              name: "cpu"
-             label: "cpu"
+             label: "cpu values"
              description: "cpu for Memcached"
              type: "string"
              required: true

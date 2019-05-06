@@ -40,10 +40,63 @@ orientdbPassword:
       type: "password"
       required: false
 
+## Persistence options
+persistence:
+  __metadata:
+    label: "Data persistence configuration"
+    description: "Specify Data Persistence options for 'orientdb' Helm Chart."
+  enabled:
+    __metadata:
+      name: "enabled"
+      label: "Enable persistence for this deployment"
+      description: "Enables persistence for this deployment. Default to false. A persistent volume is required."
+      type: "boolean"
+      required: true
+  useDynamicProvisioning:
+   __metadata:
+      name: "useDynamicProvisioning"
+      label: "Use dynamic provisioning for persistent volume"
+      description: "If true, storage will be automatically provisioned. If false, you can create your persistent volumes manually."
+      type: "boolean"
+      required: false
+  storageClass:
+    __metadata:
+      name: "storageClassName"
+      label: "Storage class name"
+      description: "Choose a specific storage class name. Defaults to the default storage class in the cluster."
+      type: "string"
+      required: false
+  accessMode:
+    __metadata:
+      name: "accessMode"
+      label: "Storage access mode"
+      description: "Use volume as ReadOnlyMany or ReadWriteOnce. Default is ReadWriteOnce."
+      type: "string"
+      required: true
+      options:
+      - label: "ReadWriteOnce"
+        value: "ReadWriteOnce"
+      - label: "ReadOnlyMany"
+        value: "ReadOnlyMany"
+  size:
+    __metadata:
+      name: "size"
+      label: "Size of the volume claim"
+      description: "Defaults to 1Gi of storage request. Choose a different size of disk if needed."
+      type: "string"
+      required: true
+  name:
+    __metadata:
+      name: "orientdb-pv"
+      label: "Name of the persistent volume"
+      description: "Name of the persistent volume for the 'orientdb' Helm Chart."
+      type: "string"
+      required: true
+      
 ingress:
   __metadata:
     label: "Ingress settings"
-    description: "Ingress Details"
+    description: "Ingress Details for 'orientdb' Helm Chart."
   enabled:
     __metadata:
       name: "enabled"

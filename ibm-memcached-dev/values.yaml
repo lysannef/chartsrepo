@@ -37,5 +37,4 @@ resources:
 ## Select ppc64le for deploying chart on power and select amd64 for deploying chart on Intel
 node: "ppc64le"
 
-affinity: {}
 nodeSelector: {}
