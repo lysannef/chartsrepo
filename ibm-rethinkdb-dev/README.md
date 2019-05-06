@@ -3,7 +3,7 @@
 [RethinkDB](https://github.com/rethinkdb/rethinkdb) Open-source database for building realtime web applications.
 
 ```console
-$ helm install stable/ibm-rethinkdb-dev
+$ helm install community/ibm-rethinkdb-dev
 ```
 
 ## Prerequisites
@@ -26,7 +26,7 @@ This chart requires a PodSecurityPolicy to be bound to the target namespace prio
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm intall --name my-release stable/ibm-rethinkdb-dev
+$ helm intall --name my-release community/ibm-rethinkdb-dev
 ```
 
 ## Uninstalling the Chart
@@ -49,9 +49,22 @@ The following table lists the configurable parameters of the rethinkdb chart and
 
 |      Parameter            |          Description            |                         Default                         |
 |---------------------------|---------------------------------|---------------------------------------------------------|
-| `image`                   | The image to pull and run       | `ibmcom/rethinkdb-ppc64le:2.3.6`                        |
-| `imagePullPolicy`         | Image pull policy               | `Always` if `imageTag` is `latest`, else `IfNotPresent` |
+| `image.repository`        | RethinkDB Container Image       | `ibmcom/rethinkdb-ppc64le`                              |
+| `image.tag`               | RethinkDB Container Image Tag   | `2.3.6`                                                 |
+| `image.pullPolicy`        | Image pull policy               | `Always` if `imageTag` is `latest`, else `IfNotPresent` |
 | `node`                    | Specify what architecture Node  | `ppc64le`                                               |
+| `replicaCount`            | RethinkDB node replica count    | `1`                                                     |
+| `service.type`            | RethinkDB service type          | `NodePort`                                              |
+| `service.port`               | RethinkDB service port          | `8080`                                                  |
+| `ingress.enabled`          | If true, RethinkDB Ingress will be created | false                                        |
+| `ingress.annotations`             | RethinkDB Ingress annotations   |  {}                                                     |
+| `ingress.path`                    | RethinkDB Ingress Path          | /                                                       |
+| `ingress.hosts`           | RethinkDB Ingress Hostnames     | []                                                      |
+| `ingress.tls`                     | RethinkDB Ingress TLS configuration (YAML) | []                                           |
+| `resources.limits.cpu`    | RethinkDB node cpu limit       |                                                         |
+| `resources.limits.memory` | RethinkDB node memory limit    |                                                         |
+| `resources.requests.cpu`  | RethinkDB node initial cpu request |                                                     |
+| `resources.requests.memory` | RethinkDB node initial memory request|                                                 |
 
 
 The above parameters map to `ibm-rethinkdb-dev` params.
@@ -61,7 +74,7 @@ Specify each parameter using the `--set key=value[,key=value]` argument to `helm
 Alternatively, a YAML file that specifies the values for the parameters can be provided while installing the chart. For example,
 
 ```bash
-$ helm install --name my-release -f values.yaml stable/ibm-rethinkdb-dev
+$ helm install --name my-release -f values.yaml community/ibm-rethinkdb-dev
 ```
 
 > **Tip**: You can use the default `values.yaml`
@@ -78,8 +91,24 @@ If `persistence` is enabled, PVC's will be used to store the web root and the db
 | `persistence.size` | PVC Size | 2Gi |
 | `persistence.storageClass` | PVC Storage Class | _empty_ |
 
+## Support
+
+The helm charts are provided "as-is" and without warranty of any kind.
+
+All helm charts and packages are supported through standard open source forums and helm charts are updated on a best effort basis.
+
+Any issues found can be reported through the links below, and fixes may be proposed/submitted using standard git issues as noted below.
+
+[Submit issue to Helm Chart](https://github.com/ppc64le/charts/issues )
+
+[Submit issue to RethinkDB docker image](https://github.com/ppc64le/build-scripts/issues )
+
+[Submit issue to RethinkDB open source community](https://github.com/rethinkdb/rethinkdb/issues )
+
+[ICP Support](https://ibm.biz/icpsupport )
+
 ## Limitations
 
-##NOTE
-This chart is validated on ppc64le.
+## NOTE
+This chart is validated on ppc64le only.
 

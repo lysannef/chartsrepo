@@ -37,7 +37,7 @@ image:
 persistence:
   __metadata:
     label: "Data persistence configuration"
-    description: "Specify Persistence options."
+    description: "Specify Data Persistence options for 'rethinkdb' Helm Chart."
   enabled:
     __metadata:
       name: "enabled"
@@ -78,12 +78,19 @@ persistence:
       description: "Defaults to 1Gi of storage request. Choose a different size of disk if needed."
       type: "string"
       required: true
+  name:
+    __metadata:
+      name: "rethinkdb-pv"
+      label: "Name of the persistent volume"
+      description: "Name of the persistent volume for the 'rethinkdb' Helm Chart."
+      type: "string"
+      required: true
       
 
 ingress:
   __metadata:
     label: "Ingress settings"
-    description: "Ingress Details"
+    description: "Ingress Details for 'rethinkdb' Helm Chart."
   enabled:
     __metadata:
       name: "enabled"

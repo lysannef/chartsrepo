@@ -2,9 +2,13 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ .Values.persistence.name | quote  }}
+{{- if not (empty .Values.persistence.name) }}
+  name: {{ .Values.persistence.name }}
+{{- else }}
+  name: {{ template "orientdb.fullname" . }}
+{{- end }}
   labels:
-    app: {{ template "rethinkdb.fullname" . }}
+    app: {{ template "orientdb.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
@@ -22,6 +26,7 @@ spec:
   {{- if .Values.persistence.useDynamicProvisioning  }}
   selector:
     matchLabels:
-      assign-to: "rethinkdb"
+      assign-to: "orientdb"
   {{- end }}
 {{- end -}}
+
